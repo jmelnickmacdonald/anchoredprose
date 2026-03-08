@@ -38,74 +38,81 @@ const SERVICES = [
 
 const PORTFOLIO = [
   {
-    type: 'Speeches',
-    title: 'Wedding Officiant',
-    meta: 'Destination Wedding · Punta Cana DR',
+    type: 'Wedding Officiant',
+    title: 'Setting the Tone',
+    meta: 'Destination Wedding · Punta Cana, Dominican Republic',
     pull: "\"I'm the type B minus to Rebecca's Type A.\"",
-    excerpt: "They'd been together long enough that the inside jokes needed no explanation. Long enough that the awkward silences had turned into comfortable ones. Long enough that when Marcus looked at her across that beach, it wasn't wonder he felt — it was recognition.\n\nThat's what I wanted to capture. Not the beginning of something, but the confirmation of it.\n\n\"You didn't fall in love with me,\" he said. \"You chose me. Every day, quietly, you chose me. And I'm standing here today to choose you back. Out loud. In front of everyone we love.\"\n\nThe room — the beach, the wind, the whole soft Dominican evening — went very still.",
+    excerpt: "Welcome, welcome, beach lovers and party enthusiasts! Can we just take a moment to appreciate how beautiful this backdrop is, how stunning our bride and groom look and how clean my children are for a change?\n\nFor those of you who don't know me, I'm Julianna, immensely proud sister of the bride, chronic thorn in her side, and forever accomplice. I spend my days in equal parts chasing kids, cursing at farm animals, and questioning many of my life choices. Meanwhile, Rebecca is off being crowned a world champion fitness competitor, owning and operating an incredible business, being a thoughtful and generous daughter, sister and friend, and looking fabulous doing it all.\n\nNaturally, I set my bar considerably lower. I'm the type B minus to Rebecca's Type A, and I am simply thrilled to be standing here today in a dress and heels instead of my usual muck-covered rubber boots, celebrating my sister and her perfect match.",
   },
   {
-    type: 'Speeches',
-    title: 'Best Man Toast',
+    type: 'Best Man Toast',
+    title: 'The Turn',
     meta: 'Backyard Wedding · Ontario',
     pull: '"He still can\'t assemble furniture, but he shows up."',
-    excerpt: "I've known Ryan for twenty-two years. I've watched him parallel park into spaces that physically should not have fit his car. I've watched him build furniture using only intuition and a deep, misplaced confidence in himself.\n\nHe still can't assemble furniture, but he shows up.\n\nThat's the thing about Ryan that nobody talks about enough. He's not the guy with all the answers. He's the guy who gets there anyway. Every time. Late, sometimes. Wrong tool, sometimes. But there, always.\n\nMelissa, you already know this. You've seen him show up for you in every version of the word. I'm just here to tell everyone else what you figured out first.",
+    excerpt: "I've known Matt for twenty-two years, which means I've seen every version of this man. The kid who ate an entire sleeve of Oreos before a cross-country meet and threw up at the starting line. The guy who once tried to assemble an IKEA bookshelf without the instructions and ended up with something that looked like modern art and held exactly zero books.\n\nHere's the thing about Claire. She knows exactly what she's getting into. And she chose him anyway. Fully informed, eyes wide open. That's not a small thing.\n\nHe still can't assemble furniture, but he shows up. And that's the part that matters.",
   },
   {
-    type: 'Speeches',
-    title: 'Father of the Bride',
-    meta: 'Vineyard Wedding · Annapolis Valley NS',
+    type: 'Father of the Bride',
+    title: 'Letting Go',
+    meta: 'Vineyard Wedding · Annapolis Valley, Nova Scotia',
     pull: '"The job was never to keep them."',
-    excerpt: "I spent a lot of years trying to hold on.\n\nWhen she was small, I held her hand crossing streets. When she was older, I drove too slowly on the way to school, not because of traffic. When she moved out, I found reasons to call.\n\nThe job was never to keep them. I think I always knew that, even when I was doing the opposite. The job was to raise someone who could leave well. Who could walk toward something without looking back in doubt. Who could love without needing a safety net.\n\nShe does all of that. She has for years. I just didn't want to admit it was already done.\n\nShe doesn't need me to give her away. She's not mine to give. But I am so honoured to watch.",
+    excerpt: "Here's the thing nobody warns you about when you become a parent. You spend years becoming the world's leading expert on one small human: what makes them laugh, what scares them, which breakfast battles aren't worth fighting, the exact pitch of the cry that means something actually hurts versus the one that means her sister looked at her wrong.\n\nAnd then one day, someone else starts learning those things too. And you realize the job was never to keep them. The job was to make sure that when they found their person, they'd know.\n\nShe doesn't need me to give her away. She's not mine to give. But I am so honoured to watch.",
   },
   {
-    type: 'Speeches',
-    title: 'Maid of Honour',
-    meta: 'City Wedding · Halifax NS',
-    pull: '"That\'s sacred. Protect it."',
-    excerpt: "There's a story Clara never tells at parties. We were twenty-three, sitting in her apartment after a bad week — the kind of bad week that doesn't have a single cause, just accumulates — and she said something I've never forgotten.\n\nShe said: \"I know what matters to me. I just have to stop apologising for it.\"\n\nI thought about that line a lot over the years. The way she carried it. The way she built a life around it quietly, without announcement.\n\nShe didn't broadcast her values. She just lived by them. She protected the people she loved the same way — no speeches, no declarations. Just presence. Loyalty that never needed to be named.\n\nThat's sacred. Protect it.",
-  },
-  {
-    type: 'Speeches',
-    title: 'Wedding Vows',
+    type: 'Wedding Vows',
+    title: 'The Ordinary Days',
     meta: 'Autumn Wedding · Prince Edward Island',
     pull: '"I don\'t ever want to come home to a house where this isn\'t happening."',
-    excerpt: "I love the way you move through the world like you're not surprised by it. Like you expected goodness and so goodness tends to show up.\n\nI love our Tuesday evenings most of all. Not the vacations, not the big occasions — the Tuesdays. The soup on the stove and the bad television and the way you laugh at your own jokes before you've even finished telling them.\n\nI don't ever want to come home to a house where this isn't happening.\n\nI vow to be someone who deserves the ordinary days with you. I vow to show up for the Tuesdays. To keep choosing this, quietly, for as long as we get.",
+    excerpt: "I knew I wanted this the night you fell asleep on the couch with both dogs on top of you and the TV still going, and I sat there for a full ten minutes just looking at you, thinking: I don't ever want to come home to a house where this isn't happening.\n\nI'm not going to promise you perfection. I'm going to forget things. I'm going to load the dishwasher wrong. I'm going to need you to tell me what's wrong instead of saying \"I'm fine\" because I will believe you every single time.\n\nBut here's what I can promise: I will always be in your corner. I will always choose us, even when us is hard. I will love you quietly, stubbornly, and without keeping score.",
   },
   {
-    type: 'Editorial',
+    type: 'Maid of Honour',
+    title: 'What They Do for Each Other',
+    meta: 'City Wedding · Halifax, Nova Scotia',
+    pull: '"That\'s sacred. Protect it."',
+    excerpt: "What I love about Nadia and Tom is that they make each other braver. Nadia, who planned every detail of her life down to the font on her planner labels, learned to say yes to things she couldn't control. And Tom, the guy who remembers every bartender's name and asks your parents follow-up questions about their garden, he learned to sit still and be quiet with someone. And like it.\n\nThey didn't sand each other's edges off. They just made room for the parts that were already there.\n\nTom, you made my best friend snort-laugh in public. That's sacred. Protect it.",
+  },
+  {
+    type: 'Sister of the Groom',
+    title: 'Not Weaker. Softer.',
+    meta: 'Lakeside Wedding · Muskoka, Ontario',
+    pull: '"I watched my brother become softer with you."',
+    excerpt: "That's who Daniel is. He doesn't make a big deal out of letting you in. He just does it. And then one day you realize you've been part of his life so quietly and so completely that you can't remember what it was like before.\n\nPriya, that's what he did with you. He let you in, all the way, without any fanfare. And you did the same for him. I watched my brother become softer with you. Not weaker. Softer. He listens differently. He laughs more easily. He calls me back within the hour now, which honestly might be the most impressive thing you've accomplished.",
+  },
+  {
+    type: 'Essay',
     title: 'The Real Damage of Disinformation',
-    meta: 'Opinion Essay · February 2026',
-    pull: '"The collapse of trust rarely looks like anger."',
-    excerpt: "We talk about disinformation as a problem of belief — as though the central damage is that people believe false things, and the fix is correction. More facts. Better journalism. Clearer labelling.\n\nBut the collapse of trust rarely looks like anger. It looks, more often, like exhaustion.\n\nPeople don't stop trusting specific sources and transfer that trust elsewhere. They stop trusting the project of knowing altogether. Why engage with something that will only be contested, reframed, or reversed next week?\n\nThis is the real damage. Not the lies believed, but the legitimacy surrendered. A population that doesn't know what to believe is not, paradoxically, more skeptical. It is more susceptible — not to facts, but to whoever speaks with the most confidence.",
+    meta: 'Opinion · February 2026',
+    pull: '"The collapse of trust rarely looks like anger. More often, it looks like indifference."',
+    excerpt: "We often treat misinformation as though the danger is believing the wrong thing. The deeper risk is the erosion of trust. Democracy does not depend on agreement. It depends on a shared baseline of reality.\n\nWhen my grandmother watched that fake video, she was fooled because it looked real. When she later dismissed a legitimate scandal, she wasn't fooled at all. She was fatigued. And I think that distinction matters more than we realize.\n\nThe collapse of trust rarely looks like anger. More often, it looks like indifference, and indifference corrodes quietly.",
   },
   {
-    type: "Captain's Log",
-    title: 'Area Homesteader Confirms Family Now "One Project Away"',
-    meta: 'Satire · March 2026',
-    pull: '"You can\'t put a price on food security."',
-    excerpt: "CAPE BRETON — Local homesteader and part-time romantic, Darren Fitch, 38, confirmed Tuesday that his family is, by his estimate, approximately one completed project away from full self-sufficiency, a milestone he has described as \"basically imminent\" since 2021.\n\n\"Once we get the second chicken coop sorted,\" said Fitch, gesturing toward a structure that regional architects have described as \"load-bearing optimism,\" \"we're basically there.\"\n\nHis wife, Joanna, who has heard the phrase \"basically there\" applied to the root cellar, the wood-gasifier, the composting toilet, and what Darren refers to as \"the situation with the goats,\" confirmed only that they have eggs most days and that she has learned not to make plans in August.\n\n\"You can't put a price on food security,\" Darren added, from inside the second chicken coop.",
+    type: 'Satire',
+    title: 'Mothers Encouraged to Optimize Their Time',
+    meta: "Captain's Log · February 2026",
+    pull: '"Time doesn\'t just disappear. It reflects your priorities."',
+    excerpt: "In a statement released Monday, national productivity leaders confirmed that every human being receives the same 24 hours in a day, clarifying that mothers who feel otherwise may need to reevaluate how theirs are being used.\n\n\"If you're unloading the dishwasher, you should be completing a series of squats,\" said performance consultant Caleb Rowe. \"If a child is asking why the sky exists at the same time, that's cognitive engagement layered onto physical activation. There's no reason those functions can't operate simultaneously. Anything less is just lazy.\"\n\nAt press time, mothers across the country were microwaving leftovers, responding to questions about dinosaurs, stepping on unidentified objects, and briefly attempting to determine where, precisely, their identical allotment of time had gone.",
   },
 ]
 
 const BLOG_POSTS = [
   {
     category: "Captain's Log",
-    date: 'March 2026',
-    title: 'Area Homesteader Confirms Family Now "One Project Away"',
-    excerpt: 'A deeply reported investigation into the perpetually imminent arrival of self-sufficiency, and the woman who has stopped making plans in August.',
+    date: 'February 2026',
+    title: 'Mothers Encouraged to Optimize Their Time',
+    excerpt: 'A deeply reported investigation into the perpetually imminent arrival of productivity, and the women who have stopped making plans in August.',
   },
   {
     category: 'Essay',
     date: 'February 2026',
     title: 'The Real Damage of Disinformation',
-    excerpt: 'When my neighbour watched that fake video, she was fooled because it looked real. When she later dismissed a legitimate scandal, she wasn\'t fooled at all. She was fatigued.',
+    excerpt: "When my grandmother watched that fake video, she was fooled because it looked real. When she later dismissed a legitimate scandal, she wasn't fooled at all. She was fatigued.",
   },
   {
-    category: 'On Writing',
-    date: 'January 2026',
-    title: "Why the Best Man Speech Is the Hardest Thing You'll Ever Write",
-    excerpt: 'It\'s not the jokes. It\'s not the length. It\'s the fact that you\'re trying to say something true about someone you love in front of everyone they know.',
+    category: 'Editorial',
+    date: 'September 2025',
+    title: 'A Letter from the Annapolis Valley',
+    excerpt: "In Nova Scotia's Annapolis Valley, mornings drift in gently and unhurried. But for families living at the edge, there is nothing slow about survival.",
   },
 ]
 
@@ -217,7 +224,7 @@ export default function Home() {
             </div>
             <div className="about-gold-bar"></div>
             <div className="about-caption">
-              <p>The Captain</p>
+              <p>The Voice Behind the Work</p>
               <span>Julianna Melnick-MacDonald</span>
             </div>
           </div>
@@ -272,6 +279,7 @@ export default function Home() {
           <h2 className="section-title">
             Selected <span className="script-accent">Work</span>
           </h2>
+          <p className="portfolio-note">Excerpts from client projects and personal writing. Names changed where noted.</p>
         </div>
         <div className="portfolio-grid">
           {PORTFOLIO.map((p, i) => (
@@ -418,7 +426,7 @@ export default function Home() {
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-brand">
-            <Image src="/logo.png" alt="Anchored Prose" width={220} height={55} style={{ height: 56, width: 'auto' }} />
+            <Image src="/logo.png" alt="Anchored Prose" width={280} height={70} style={{ height: 70, width: 'auto' }} />
             <p className="footer-tagline">Every word, <span className="script-accent">anchored</span> in purpose.</p>
             <p>Nova Scotia, Canada</p>
           </div>
