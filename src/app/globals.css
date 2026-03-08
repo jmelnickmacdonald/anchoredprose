@@ -178,13 +178,13 @@ nav {
 .portfolio-link { font-family: var(--font-body); font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); }
 
 /* Testimonials */
-.testimonials { background: var(--navy); padding: 120px 64px; position: relative; overflow: hidden; }
+.testimonials { background: var(--navy); padding: 120px 64px; position: relative; overflow: hidden; text-align: center; }
 .testimonials::before {
   content: ''; position: absolute; inset: 0;
   background-image: url('/coastal-blue.jpg');
-  background-size: 500px; opacity: 0.6; pointer-events: none;
+  background-size: 500px; opacity: 0.5; pointer-events: none;
 }
-.testimonials-header { max-width: 900px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; }
+.testimonials-header { display: inline-block; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; background: rgba(255,255,255,0.12); padding: 32px 64px; border: 1px solid rgba(255,255,255,0.1); }
 .testimonials-featured { max-width: 800px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; padding: 48px; background: rgba(13,27,46,0.85); border: 1px solid rgba(184,150,62,0.15); }
 .testimonials-featured blockquote {
   font-family: var(--font-display); font-size: clamp(22px, 3vw, 28px); font-style: italic;
@@ -192,7 +192,7 @@ nav {
 }
 .testimonial-name { font-family: var(--font-body); font-size: 16px; color: var(--gold); font-weight: 600; margin-bottom: 4px; }
 .testimonial-role { font-family: var(--font-body); font-size: 14px; color: rgba(250,247,242,0.5); font-style: italic; }
-.testimonials-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; z-index: 1; }
+.testimonials-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; z-index: 1; text-align: left; }
 .testimonial-card {
   background: rgba(13,27,46,0.85); border: 1px solid rgba(184,150,62,0.15);
   padding: 32px; text-align: left;
@@ -258,9 +258,9 @@ nav {
 .footer { background: var(--navy); padding: 100px 64px 60px; }
 .footer-content { max-width: 1100px; margin: 0 auto; text-align: center; }
 .footer-brand { margin-bottom: 32px; }
-.footer-tagline { font-family: var(--font-display); font-size: 32px; font-style: italic; color: var(--cream); margin-top: 28px; margin-bottom: 12px; }
-.footer-tagline .script-accent { font-size: 1.1em; }
-.footer-brand p { font-family: var(--font-body); font-size: 16px; color: rgba(250,247,242,0.6); margin-top: 8px; }
+.footer-tagline { font-family: var(--font-display); font-size: 44px; font-style: italic; color: var(--cream); margin-top: 28px; margin-bottom: 12px; }
+.footer-tagline .script-accent { font-size: 1.25em; }
+.footer-brand p { font-family: var(--font-body); font-size: 18px; color: rgba(250,247,242,0.7); margin-top: 8px; }
 .footer-links { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid rgba(184,150,62,0.15); }
 .footer-links a { font-family: var(--font-body); font-size: 13px; color: rgba(250,247,242,0.6); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--gold); }
@@ -299,6 +299,7 @@ nav {
   .testimonials { padding: 80px 24px; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .testimonials-featured { padding: 32px 24px; }
+  .testimonials-header { padding: 24px 32px; }
   .blog { padding: 80px 24px; }
   .contact { padding: 80px 24px; }
   .footer { padding: 60px 24px 32px; }
