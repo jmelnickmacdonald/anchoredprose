@@ -68,6 +68,16 @@ nav {
   display: flex; align-items: center;
   position: relative; overflow: hidden; padding-top: 68px;
 }
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url('/rope-pattern.jpg');
+  background-size: 400px; opacity: 0.08; pointer-events: none;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, transparent 30%, rgba(13,27,46,0.7) 100%);
+  pointer-events: none;
+}
 .hero-content {
   position: relative; z-index: 2;
   max-width: 800px; padding: 80px 80px 80px 100px;
@@ -110,6 +120,11 @@ nav {
 
 /* About */
 .about { padding: 120px 0; background: var(--cream); position: relative; overflow: hidden; }
+.about::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url('/coastal-cream.jpg');
+  background-size: 500px; opacity: 0.12; pointer-events: none;
+}
 .about-grid { max-width: 1200px; margin: 0 auto; padding: 0 64px; display: grid; grid-template-columns: 460px 1fr; gap: 80px; align-items: start; position: relative; z-index: 1; }
 .about-image-wrap { position: relative; }
 .about-image-inner { overflow: hidden; position: relative; }
@@ -126,6 +141,11 @@ nav {
 
 /* Services */
 .services { background: var(--navy); padding: 120px 64px; position: relative; overflow: hidden; }
+.services::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url('/nautical-stripe.jpg');
+  background-size: 300px; opacity: 0.06; pointer-events: none;
+}
 .services-header { max-width: 1100px; margin: 0 auto 64px; position: relative; z-index: 1; }
 .services-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; position: relative; z-index: 1; }
 .service-card { position: relative; background: rgba(255,255,255,0.03); border: 1px solid rgba(184,150,62,0.12); padding: 48px 36px; overflow: hidden; transition: background 0.3s, border-color 0.3s; }
@@ -153,6 +173,11 @@ nav {
 
 /* Testimonials */
 .testimonials { background: var(--navy); padding: 120px 64px; position: relative; overflow: hidden; }
+.testimonials::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url('/coastal-blue.jpg');
+  background-size: 500px; opacity: 0.08; pointer-events: none;
+}
 .testimonials-header { max-width: 900px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; }
 .testimonials-featured { max-width: 800px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; }
 .testimonials-featured blockquote {
