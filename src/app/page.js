@@ -6,31 +6,31 @@ import { useState } from 'react'
 const SERVICES = [
   {
     title: 'Wedding & Event Speeches',
-    tagline: "The words you'll wish you'd written yourself — because they will be",
+    tagline: "Words that sound like you on your best day. The ones you couldn't quite find.",
     desc: "Toasts, vows, ceremony scripts, and full wedding writing. Whether you're the best man at midnight or a couple building a ceremony from scratch, I write words that hold the room and hold up over time.",
     href: '/services/wedding-speeches',
   },
   {
     title: 'Keynotes & Public Speaking',
-    tagline: 'From the conference stage to the commencement address — structured to hold a room',
+    tagline: 'From the conference stage to the commencement address. Structured to hold a room.',
     desc: 'Keynotes, TEDx talks, commencement addresses, professional development sessions, panel prep. I work with founders, educators, and leaders to find the through-line and write the words that make their expertise land.',
     href: '/services/keynotes',
   },
   {
     title: 'Educational Content',
-    tagline: 'Thoughtful learning deserves thoughtful language',
+    tagline: 'Thoughtful learning deserves thoughtful language.',
     desc: 'Curriculum, lesson materials, and learning resources grounded in structure, clarity, and respect for learners.',
     href: '/services/educational-content',
   },
   {
     title: 'Brand & Web Copy',
-    tagline: 'Make someone read it and think: yes, this is exactly who I was looking for',
+    tagline: 'Make someone read it and think: yes, this is exactly who I was looking for.',
     desc: 'Website copy, about pages, taglines, brand voice guides. Writing that earns the right reader.',
     href: '/services/brand-copy',
   },
   {
     title: 'Content Strategy',
-    tagline: "A plan you'll actually follow — because it's built around you",
+    tagline: "A plan you'll actually follow. Because it's built around you.",
     desc: "Editorial strategy, content audits, and long-form writing for businesses ready to stop guessing and start publishing with purpose.",
     href: '/services/content-strategy',
   },
@@ -84,7 +84,7 @@ const PORTFOLIO = [
     title: 'The Real Damage of Disinformation',
     meta: 'Opinion · February 2026',
     pull: '"The collapse of trust rarely looks like anger. More often, it looks like indifference."',
-    excerpt: "We often treat misinformation as though the danger is believing the wrong thing. The deeper risk is the erosion of trust. Democracy does not depend on agreement. It depends on a shared baseline of reality.\n\nWhen my grandmother watched that fake video, she was fooled because it looked real. When she later dismissed a legitimate scandal, she wasn't fooled at all. She was fatigued. And I think that distinction matters more than we realize.\n\nThe collapse of trust rarely looks like anger. More often, it looks like indifference, and indifference corrodes quietly.",
+    excerpt: "We often treat misinformation as though the danger is believing the wrong thing. The deeper risk is the erosion of trust. Democracy does not depend on agreement. It depends on a shared baseline of reality.\n\nWhen my neighbour watched that fake video, she was fooled because it looked real. When she later dismissed a legitimate scandal, she wasn't fooled at all. She was fatigued. And I think that distinction matters more than we realize.\n\nThe collapse of trust rarely looks like anger. More often, it looks like indifference, and indifference corrodes quietly.",
   },
   {
     type: 'Satire',
@@ -106,7 +106,7 @@ const BLOG_POSTS = [
     category: 'Essay',
     date: 'February 2026',
     title: 'The Real Damage of Disinformation',
-    excerpt: "When my grandmother watched that fake video, she was fooled because it looked real. When she later dismissed a legitimate scandal, she wasn't fooled at all. She was fatigued.",
+    excerpt: "When my neighbour watched that fake video, she was fooled because it looked real. When she later dismissed a legitimate scandal, she wasn't fooled at all. She was fatigued.",
   },
   {
     category: 'Editorial',
