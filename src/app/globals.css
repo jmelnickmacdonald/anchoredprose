@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+@font-face {
+  font-family: 'SimpleHandwriting';
+  src: url('/Simple_Handwriting.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --navy: #0D1B2E;
+  --navy-mid: #152338;
+  --gold: #B8963E;
+  --gold-light: #D4AF6A;
+  --cream: #FAF7F2;
+  --cream-dark: #F0EBE0;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Crimson Pro', Georgia, serif;
+  --font-script: 'SimpleHandwriting', cursive;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--navy);
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; }
+
+.script-accent {
+  font-family: var(--font-script);
+  font-size: 1.1em;
+  color: var(--gold);
+  font-style: normal;
+}
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px; height: 68px;
+  border-bottom: 1px solid rgba(184,150,62,0.15);
+}
+.logo { display: flex; align-items: center; text-decoration: none; }
+.nav-links { display: flex; list-style: none; gap: 36px; }
+.nav-links a {
+  font-family: var(--font-body); font-size: 11px; letter-spacing: 2.5px;
+  text-transform: uppercase; color: rgba(250,247,242,0.7);
+  text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--gold); }
+.hire-btn {
+  font-family: var(--font-body); font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--navy); background: var(--gold);
+  padding: 10px 24px; text-decoration: none; transition: background 0.2s;
+}
+.hire-btn:hover { background: var(--gold-light); }
+
+/* Hero */
+.hero {
+  min-height: 100vh; background: var(--navy);
+  display: flex; align-items: center;
+  position: relative; overflow: hidden; padding-top: 68px;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url('/images/rope-pattern.jpg');
+  background-size: 400px; opacity: 0.08; pointer-events: none;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, transparent 30%, rgba(13,27,46,0.7) 100%);
+  pointer-events: none;
+}
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 800px; padding: 80px 80px 80px 100px;
+}
+.hero-eyebrow {
+  font-family: var(--font-body); font-size: 11px; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 32px;
+  display: flex; align-items: center; gap: 16px;
+}
+.hero-eyebrow::before {
+  content: ''; display: block; width: 48px; height: 1px; background: var(--gold);
+}
+.hero h1 { font-size: clamp(52px, 7vw, 86px); color: var(--c
