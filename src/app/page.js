@@ -426,7 +426,7 @@ export default function Home() {
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-brand">
-            <Image src="/logo.png" alt="Anchored Prose" width={280} height={70} style={{ height: 70, width: 'auto' }} />
+            <Image src="/logo.png" alt="Anchored Prose" width={360} height={90} style={{ height: 90, width: 'auto' }} />
             <p className="footer-tagline">Every word, <span className="script-accent">anchored</span> in purpose.</p>
             <p>Nova Scotia, Canada</p>
           </div>
