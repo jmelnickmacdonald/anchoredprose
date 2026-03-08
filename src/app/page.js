@@ -174,7 +174,7 @@ export default function Home() {
     <>
       <nav>
         <a href="#" className="logo">
-          <Image src="/logo.png" alt="Anchored Prose" width={160} height={40} style={{ height: 36, width: 'auto' }} priority />
+          <Image src="/logo.png" alt="Anchored Prose" width={200} height={50} style={{ height: 48, width: 'auto' }} priority />
         </a>
         <ul className="nav-links">
           <li><a href="#about">About</a></li>
@@ -204,7 +204,6 @@ export default function Home() {
       </section>
 
       <section className="about" id="about">
-        <div className="about-bg-pattern"></div>
         <div className="about-grid">
           <div className="about-image-wrap">
             <div className="about-image-inner">
@@ -419,8 +418,9 @@ export default function Home() {
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-brand">
-            <Image src="/logo.png" alt="Anchored Prose" width={140} height={35} style={{ height: 32, width: 'auto' }} />
-            <p>Words worth anchoring.</p>
+            <Image src="/logo.png" alt="Anchored Prose" width={220} height={55} style={{ height: 56, width: 'auto' }} />
+            <p className="footer-tagline">Every word, <span className="script-accent">anchored</span> in purpose.</p>
+            <p>Nova Scotia, Canada</p>
           </div>
           <div className="footer-links">
             <a href="#about">About</a>
