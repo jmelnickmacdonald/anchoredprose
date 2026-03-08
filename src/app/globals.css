@@ -35,7 +35,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; line-height
 
 .script-accent {
   font-family: var(--font-script);
-  font-size: 1.1em;
+  font-size: 1.15em;
   color: var(--gold);
   font-style: normal;
 }
@@ -67,16 +67,6 @@ nav {
   min-height: 100vh; background: var(--navy);
   display: flex; align-items: center;
   position: relative; overflow: hidden; padding-top: 68px;
-}
-.hero::before {
-  content: ''; position: absolute; inset: 0;
-  background-image: url('/images/rope-pattern.jpg');
-  background-size: 400px; opacity: 0.08; pointer-events: none;
-}
-.hero::after {
-  content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse at center, transparent 30%, rgba(13,27,46,0.7) 100%);
-  pointer-events: none;
 }
 .hero-content {
   position: relative; z-index: 2;
@@ -120,11 +110,6 @@ nav {
 
 /* About */
 .about { padding: 120px 0; background: var(--cream); position: relative; overflow: hidden; }
-.about-bg-pattern {
-  position: absolute; inset: 0;
-  background-image: url('/images/coastal-cream.jpg');
-  background-size: 500px; opacity: 0.12; pointer-events: none;
-}
 .about-grid { max-width: 1200px; margin: 0 auto; padding: 0 64px; display: grid; grid-template-columns: 460px 1fr; gap: 80px; align-items: start; position: relative; z-index: 1; }
 .about-image-wrap { position: relative; }
 .about-image-inner { overflow: hidden; position: relative; }
@@ -141,17 +126,10 @@ nav {
 
 /* Services */
 .services { background: var(--navy); padding: 120px 64px; position: relative; overflow: hidden; }
-.services::before {
-  content: ''; position: absolute; inset: 0;
-  background-image: url('/images/nautical-stripe.jpg');
-  background-size: 300px; opacity: 0.06; pointer-events: none;
-}
 .services-header { max-width: 1100px; margin: 0 auto 64px; position: relative; z-index: 1; }
 .services-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; position: relative; z-index: 1; }
 .service-card { position: relative; background: rgba(255,255,255,0.03); border: 1px solid rgba(184,150,62,0.12); padding: 48px 36px; overflow: hidden; transition: background 0.3s, border-color 0.3s; }
 .service-card:hover { background: rgba(184,150,62,0.05); border-color: rgba(184,150,62,0.25); }
-.service-bg-numeral { position: absolute; top: -20px; right: -10px; font-family: var(--font-display); font-size: 120px; color: rgba(184,150,62,0.04); font-weight: 300; line-height: 1; pointer-events: none; user-select: none; }
-.service-numeral { font-family: var(--font-display); font-size: 11px; letter-spacing: 3px; color: var(--gold); margin-bottom: 20px; }
 .service-card h3 { font-size: 22px; color: var(--cream); margin-bottom: 14px; font-weight: 400; }
 .service-tagline { font-family: var(--font-display); font-style: italic; font-size: 15px; color: var(--gold-light); margin-bottom: 18px; line-height: 1.5; }
 .service-desc { font-size: 15px; color: rgba(250,247,242,0.55); line-height: 1.8; font-family: var(--font-body); }
@@ -175,11 +153,6 @@ nav {
 
 /* Testimonials */
 .testimonials { background: var(--navy); padding: 120px 64px; position: relative; overflow: hidden; }
-.testimonials::before {
-  content: ''; position: absolute; inset: 0;
-  background-image: url('/images/coastal-blue.jpg');
-  background-size: 500px; opacity: 0.08; pointer-events: none;
-}
 .testimonials-header { max-width: 900px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; }
 .testimonials-featured { max-width: 800px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; }
 .testimonials-featured blockquote {
