@@ -126,7 +126,7 @@ nav {
 .about::before {
   content: ''; position: absolute; inset: 0;
   background-image: url('/coastal-cream.jpg');
-  background-size: 500px; opacity: 0.15; pointer-events: none;
+  background-size: 500px; opacity: 0.35; pointer-events: none;
 }
 .about-grid { max-width: 1200px; margin: 0 auto; padding: 0 64px; display: grid; grid-template-columns: 460px 1fr; gap: 80px; align-items: start; position: relative; z-index: 1; }
 .about-image-wrap { position: relative; }
@@ -135,7 +135,7 @@ nav {
 .about-caption { background: var(--navy); padding: 18px 24px; }
 .about-caption p { font-family: var(--font-body); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
 .about-caption span { font-family: var(--font-body); font-size: 13px; color: rgba(250,247,242,0.6); }
-.about-text { padding: 40px; background: rgba(250,247,242,0.92); }
+.about-text { padding: 40px; background: rgba(250,247,242,0.95); }
 .about-body { font-size: 17px; line-height: 1.85; color: rgba(13,27,46,0.8); margin-bottom: 24px; font-family: var(--font-body); }
 .about-pull { font-family: var(--font-display); font-size: 22px; font-style: italic; color: var(--navy); border-left: 3px solid var(--gold); padding-left: 24px; margin: 32px 0; line-height: 1.5; }
 .about-credential { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
@@ -163,6 +163,7 @@ nav {
 .portfolio { background: var(--cream); padding: 120px 64px; position: relative; }
 .portfolio::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0.3; }
 .portfolio-header { max-width: 1100px; margin: 0 auto 64px; }
+.portfolio-note { font-family: var(--font-body); font-size: 14px; color: rgba(13,27,46,0.5); font-style: italic; margin-top: -32px; margin-bottom: 48px; }
 .portfolio-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .portfolio-card { background: white; border-top: 3px solid transparent; padding: 40px 36px; cursor: pointer; transition: border-color 0.25s, box-shadow 0.25s; outline: none; }
 .portfolio-card:hover, .portfolio-card:focus { border-top-color: var(--gold); box-shadow: 0 4px 32px rgba(13,27,46,0.08); }
@@ -179,7 +180,7 @@ nav {
 .testimonials::before {
   content: ''; position: absolute; inset: 0;
   background-image: url('/coastal-blue.jpg');
-  background-size: 500px; opacity: 0.08; pointer-events: none;
+  background-size: 500px; opacity: 0.25; pointer-events: none;
 }
 .testimonials-header { max-width: 900px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; }
 .testimonials-featured { max-width: 800px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; padding: 48px; background: rgba(13,27,46,0.85); border: 1px solid rgba(184,150,62,0.15); }
@@ -250,9 +251,9 @@ nav {
 .footer { background: var(--navy); padding: 100px 64px 60px; }
 .footer-content { max-width: 1100px; margin: 0 auto; text-align: center; }
 .footer-brand { margin-bottom: 32px; }
-.footer-tagline { font-family: var(--font-display); font-size: 28px; font-style: italic; color: var(--cream); margin-top: 24px; margin-bottom: 8px; }
+.footer-tagline { font-family: var(--font-display); font-size: 32px; font-style: italic; color: var(--cream); margin-top: 28px; margin-bottom: 12px; }
 .footer-tagline .script-accent { font-size: 1.1em; }
-.footer-brand p { font-family: var(--font-body); font-size: 14px; color: rgba(250,247,242,0.5); margin-top: 8px; }
+.footer-brand p { font-family: var(--font-body); font-size: 16px; color: rgba(250,247,242,0.6); margin-top: 8px; }
 .footer-links { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid rgba(184,150,62,0.15); }
 .footer-links a { font-family: var(--font-body); font-size: 13px; color: rgba(250,247,242,0.6); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--gold); }
