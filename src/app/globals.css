@@ -184,7 +184,7 @@ nav {
   background-image: url('/coastal-blue.jpg');
   background-size: 500px; opacity: 0.5; pointer-events: none;
 }
-.testimonials-header { display: inline-block; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; background: rgba(255,255,255,0.12); padding: 32px 64px; border: 1px solid rgba(255,255,255,0.1); }
+.testimonials-header { display: inline-block; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; background: rgba(13,27,46,0.75); padding: 24px 48px; border: 1px solid rgba(184,150,62,0.2); }
 .testimonials-featured { max-width: 800px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; padding: 48px; background: rgba(13,27,46,0.85); border: 1px solid rgba(184,150,62,0.15); }
 .testimonials-featured blockquote {
   font-family: var(--font-display); font-size: clamp(22px, 3vw, 28px); font-style: italic;
@@ -259,7 +259,7 @@ nav {
 .footer-content { max-width: 1100px; margin: 0 auto; text-align: center; }
 .footer-brand { margin-bottom: 32px; }
 .footer-tagline { font-family: var(--font-display); font-size: 44px; font-style: italic; color: var(--cream); margin-top: 28px; margin-bottom: 12px; }
-.footer-tagline .script-accent { font-size: 1.25em; }
+.footer-tagline .script-accent { font-size: 1.25em; vertical-align: baseline; display: inline; position: relative; top: 0.05em; }
 .footer-brand p { font-family: var(--font-body); font-size: 18px; color: rgba(250,247,242,0.7); margin-top: 8px; }
 .footer-links { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid rgba(184,150,62,0.15); }
 .footer-links a { font-family: var(--font-body); font-size: 13px; color: rgba(250,247,242,0.6); text-decoration: none; transition: color 0.2s; }
