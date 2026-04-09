@@ -1,38 +1,27 @@
 'use client'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useState } from 'react'
 
 const SERVICES = [
   {
     title: 'Wedding & Event Speeches',
-    tagline: "Words that sound like you on your best day. The ones you couldn't quite find.",
-    desc: "Toasts, vows, ceremony scripts, and full wedding writing. Whether you're the best man at midnight or a couple building a ceremony from scratch, I write words that hold the room and hold up over time.",
-    href: '/services/wedding-speeches',
+    tagline: "The perfect words that sound just like you on your best day — the ones you couldn't quite find on your own.",
+    desc: "I've got you when it comes to toasts, vows, ceremony scripts, and full wedding writing. Whether you're the best man, a couple building a ceremony from scratch, or a parent feeling all the feels, we'll work through it together and I'll write words that hold the room and hold up over time.",
   },
   {
     title: 'Keynotes & Public Speaking',
-    tagline: 'From the conference stage to the commencement address. Structured to hold a room.',
-    desc: 'Keynotes, TEDx talks, commencement addresses, professional development sessions, panel prep. I work with founders, educators, and leaders to find the through-line and write the words that make their expertise land.',
-    href: '/services/keynotes',
+    tagline: 'From the conference stage to the commencement address, a talk that holds a room.',
+    desc: "Keynotes, TEDx talks, professional development sessions, panel prep — whatever you need to deliver, I work with founders, educators, and leaders to find the through-line and write the words that make their expertise land.",
   },
   {
     title: 'Educational Content',
     tagline: 'Thoughtful learning deserves thoughtful language.',
-    desc: 'Curriculum, lesson materials, and learning resources grounded in structure, clarity, and respect for learners.',
-    href: '/services/educational-content',
+    desc: 'Curriculum, lesson materials, course development, and learning experience writing grounded in structure, clarity, and respect for learners. From K-12 to professional development to full online course builds.',
   },
   {
-    title: 'Brand & Web Copy',
-    tagline: 'Make someone read it and think: yes, this is exactly who I was looking for.',
-    desc: 'Website copy, about pages, taglines, brand voice guides. Writing that earns the right reader.',
-    href: '/services/brand-copy',
-  },
-  {
-    title: 'Content Strategy',
-    tagline: "A plan you'll actually follow. Because it's built around you.",
-    desc: "Editorial strategy, content audits, and long-form writing for businesses ready to stop guessing and start publishing with purpose.",
-    href: '/services/content-strategy',
+    title: 'Brand & Content Strategy',
+    tagline: "You've built something worth talking about — let's make sure the world knows it.",
+    desc: "I work with small businesses, realtors, creatives, and entrepreneurs to figure out who they are and why they're worth noticing, then build the words, the web copy, the content strategy, and sometimes the website itself to show it. Whether you need a brand voice guide, a full site rewrite, newsletter copy and design, a content plan you'll actually follow, or all of the above, we start with the whole picture and build from there.",
   },
 ]
 
@@ -48,9 +37,9 @@ const PORTFOLIO = {
     {
       type: 'Best Man Toast',
       title: 'The Turn',
-      meta: 'Twenty-Two Years of Friendship',
+      meta: 'Twenty-Four Years of Friendship',
       pull: '"He still can\'t assemble furniture, but he shows up."',
-      excerpt: "I've known Matt for twenty-two years, which means I've seen every version of this man. The kid who ate an entire sleeve of Oreos before a cross-country meet and threw up at the starting line. The guy who once tried to assemble an IKEA bookshelf without the instructions and ended up with something that looked like modern art and held exactly zero books.\n\nHere's the thing about Claire. She knows exactly what she's getting into. And she chose him anyway. Fully informed, eyes wide open. That's not a small thing.\n\nHe still can't assemble furniture, but he shows up. And that's the part that matters.",
+      excerpt: "I've known Matt for twenty-four years, which means I've seen every version of this man. The kid who ate an entire sleeve of Oreos before a cross-country meet and threw up at the starting line. The guy who once tried to assemble an IKEA bookshelf without the instructions and ended up with something that looked like modern art and held exactly zero books.\n\nHere's the thing about Claire. She knows exactly what she's getting into. And she chose him anyway. Fully informed, eyes wide open. That's not a small thing.\n\nHe still can't assemble furniture, but he shows up. And that's the part that matters.",
     },
     {
       type: 'Father of the Bride',
@@ -65,6 +54,13 @@ const PORTFOLIO = {
       meta: 'Autumn Wedding · Prince Edward Island',
       pull: '"I don\'t ever want to come home to a house where this isn\'t happening."',
       excerpt: "I knew I wanted this the night you fell asleep on the couch with both dogs on top of you and the TV still going, and I sat there for a full ten minutes just looking at you, thinking: I don't ever want to come home to a house where this isn't happening.\n\nI'm not going to promise you perfection. I'm going to forget things. I'm going to load the dishwasher wrong. I'm going to need you to tell me what's wrong instead of saying \"I'm fine\" because I will believe you every single time.\n\nBut here's what I can promise: I will always be in your corner. I will always choose us, even when us is hard. I will love you quietly, stubbornly, and without keeping score.",
+    },
+    {
+      type: 'Choral Reading · Wedding Ceremony',
+      title: 'Oh, the Places You\'ll Go',
+      meta: 'Inspired by Dr. Seuss\' Oh, the Places You\'ll Go!',
+      pull: '"Oh, the places you\'ll go, the things you will do, a lifetime of joy is waiting for you."',
+      excerpt: "Congratulations, today is the big day!\nYou've found your partner to help you pave your way.\nThe world is before you, it's open and wide,\nFilled with adventures you'll take in stride.\n\nAs you step into marriage, with love in your hearts,\nKnow there will be challenges, but that's just the start.\nYou'll face the unknown, with strength and with grace,\nThrough twists and through turns, in life's crazy race.\n\nThere'll be highs, there'll be lows,\nbut you've got this down,\nYou're in it together,\nthe best team in town.\n\nSometimes you'll falter, and sometimes you'll fall,\nBut love will be there to help you stand tall.\nFor no matter the place, no matter the time,\nThe two of you together will be just fine.\n\nSo dream and discover, laugh and explore,\nFor this journey ahead will open new doors.\nWith patience, with kindness, and love as your guide,\nYou'll conquer the world, standing side by side.\n\nSo here's to your future, bright as can be,\nThe adventure of love, for all to see.\nOh, the places you'll go, the things you will do,\nA lifetime of joy is waiting for you.",
     },
   ],
   essays: [
@@ -103,7 +99,7 @@ const PORTFOLIO = {
       title: 'For a Minute',
       meta: 'February 2026',
       pull: '"It just looked like she had it all figured out for a minute."',
-      excerpt: "It's funny how quickly you can look at someone and feel like they're doing it better than you.\n\nI ran into a mom from my kids' school at the grocery store yesterday. I hadn't seen her in a while and for a second I almost didn't recognize her. Hair done, nails done, just… put together in a way that felt worlds apart from the last time I'd seen her.",
+      excerpt: "It's funny how quickly you can look at someone and feel like they're doing it better than you.\n\nI ran into a mom from my kids' school at the grocery store yesterday. I hadn't seen her in a while and for a second I almost didn't recognize her. Hair done, nails done, just put together in a way that felt worlds apart from the last time I'd seen her.",
       hasImage: true,
       imagePath: '/portfolio/for-a-minute-quote.png',
     },
@@ -112,7 +108,7 @@ const PORTFOLIO = {
       title: 'Echo Chambers of Insanity',
       meta: 'February 2026',
       pull: '"We\'re living in an echo chamber of insanity, and it\'s officially time that we break free."',
-      excerpt: "Canadian politics have gone straight to hell in a handbasket, and frankly, I'm over it. My partner and I care deeply about our community, local businesses, infrastructure and the well-being of the people around us. But, most importantly, we care about the health, rights, and dignity of others. Honestly these days, it's almost like we care too much—and right now, that feels like a curse.\n\nThe current political landscape? It's pretty darn icky, if you ask me. It's like every conversation has been overtaken by an out-of-control game of telephone, where everyone is yelling at each other from their corners of the internet trying to one-up each other with the latest smear or conspiracy.",
+      excerpt: "Canadian politics have gone straight to hell in a handbasket, and frankly, I'm over it. My partner and I care deeply about our community, local businesses, infrastructure and the well-being of the people around us. But, most importantly, we care about the health, rights, and dignity of others.\n\nThe current political landscape is pretty darn icky. It's like every conversation has been overtaken by an out-of-control game of telephone, where everyone is yelling at each other from their corners of the internet trying to one-up each other with the latest smear or conspiracy.",
     },
   ],
   education: [
@@ -121,28 +117,28 @@ const PORTFOLIO = {
       title: 'Equity in Real Classroom Practice',
       meta: 'Five-Course Learning Series',
       pull: '"Most equity professional development stops at awareness. Teachers leave knowing why equity matters but not what to do when things get hard."',
-      excerpt: "A five-course professional learning series designed to move educators from equity awareness to equity action. Each course targets a specific \"hard moment\" where teachers get stuck—reading participation patterns, teaching controversial issues, interrupting microaggressions, navigating racial conversations, and sustaining the work long-term.\n\nThe approach is framework-driven, script-supported, and practice-based. Not theory. Not principles to remember. Mental models for quick categorization, actual language for difficult moments, and rehearsal that builds muscle memory.",
+      excerpt: "A five-course professional learning series designed to move educators from equity awareness to equity action. Each course targets a specific hard moment where teachers get stuck — reading participation patterns, teaching controversial issues, interrupting microaggressions, navigating racial conversations, and sustaining the work long-term.\n\nThe approach is framework-driven, script-supported, and practice-based. Not theory. Not principles to remember. Mental models for quick categorization, actual language for difficult moments, and rehearsal that builds muscle memory.",
     },
     {
       type: 'Impact Report · Intersectional Justice',
       title: 'Race + Disability Initiative Report',
       meta: 'November 2025',
       pull: '"By naming the interdependence of racial and disability justice, the initiative demonstrates how local collaboration can shape national learning."',
-      excerpt: "A comprehensive report documenting eighteen months of collaborative work advancing racial equity and disability justice in Western Pennsylvania. Written for the FISA Foundation, The Pittsburgh Foundation, and The Heinz Endowments, this report captures the evolution of a regional network committed to inclusive systems change.\n\nAcross four convenings and ongoing partnerships, more than fifty organizations moved from compliance toward transformation—reframing accessibility as a shared value, diversifying leadership, and aligning funding structures with inclusion.",
+      excerpt: "A comprehensive report documenting eighteen months of collaborative work advancing racial equity and disability justice in Western Pennsylvania. Written for the FISA Foundation, The Pittsburgh Foundation, and The Heinz Endowments, this report captures the evolution of a regional network committed to inclusive systems change.\n\nAcross four convenings and ongoing partnerships, more than fifty organizations moved from compliance toward transformation — reframing accessibility as a shared value, diversifying leadership, and aligning funding structures with inclusion.",
     },
     {
       type: 'Youth Workshop · Media Literacy',
       title: 'Social Media Safety Workshop',
       meta: 'Grades 6-8 · Three-Hour Format',
       pull: '"The program is built for depth, not speed. Each hour focuses on one core concept with time built in for real discussion."',
-      excerpt: "A three-hour workshop for grades 6-8 that moves students through a clear learning arc: Learn → Experience → Teach. By the end, students aren't just safer online—they're equipped to help others navigate digital spaces.\n\nBuilt for depth, not speed. Each hour focuses on one core concept with time for real discussion and reflection. Students identify risks (privacy leaks, consent issues, emotional posting), recognize manipulation (peer pressure, exclusion), and develop strategies for safe digital participation.",
+      excerpt: "A three-hour workshop for grades 6-8 that moves students through a clear learning arc: Learn, Experience, Teach. By the end, students aren't just safer online — they're equipped to help others navigate digital spaces.\n\nBuilt for depth, not speed. Each hour focuses on one core concept with time for real discussion and reflection. Students identify risks, recognize manipulation, and develop strategies for safe digital participation.",
     },
     {
       type: 'Alternative Education · Curriculum Framework',
       title: '12 Weeks of Wonder',
       meta: 'Mixed-Age Learning · Ages 8-14',
       pull: '"True inquiry-based learning means following the curiosity and questions of the children in our care."',
-      excerpt: "A 12-week inquiry-based learning journey designed for mixed-age groups (ages 8-14). This curriculum framework follows children's curiosity through thematic units—from mapping and cartography to bread science, garden ecology, and pirate navigation.\n\nEach unit includes multiple entry points so younger learners engage through hands-on exploration while older learners tackle leadership roles, design experiments, and engage with real-world applications. Think of it as a map, not a mandate—we know where we're headed, but the most magical learning happens on the scenic detours.",
+      excerpt: "A 12-week inquiry-based learning journey designed for mixed-age groups (ages 8-14). This curriculum framework follows children's curiosity through thematic units — from mapping and cartography to bread science, garden ecology, and pirate navigation.\n\nEach unit includes multiple entry points so younger learners engage through hands-on exploration while older learners tackle leadership roles, design experiments, and engage with real-world applications.",
     },
   ],
 }
@@ -190,6 +186,39 @@ const TESTIMONIALS = [
     name: 'Vivian C.',
     role: '',
   },
+  {
+    quote: "I was so deep inside my own course content that I needed someone else to come in and do the heavy lifting. Julianna delivered. She was insightful, nailed exactly what I was looking for, and that's no easy feat in a specialized education field.",
+    name: 'Mark J.',
+    role: 'Course Developer',
+  },
+  {
+    quote: "Oh my goodness. I just read the first half. I don't even know what to say. I laughed, I cried. I never expected that someone would just 'get it' on so little detail — but you sure did.",
+    name: 'Trina K.',
+    role: '',
+  },
+]
+
+const HOW_IT_WORKS = [
+  {
+    num: '01',
+    title: 'You reach out.',
+    desc: 'Tell me what you\'re working on. No polished brief required — just tell me where you\'re at.',
+  },
+  {
+    num: '02',
+    title: 'We talk it through.',
+    desc: 'One conversation to figure out what you actually need, how we get there, and what good looks like.',
+  },
+  {
+    num: '03',
+    title: 'I write it.',
+    desc: 'Drafts, revisions, back and forth until it sounds exactly right and feels completely like you.',
+  },
+  {
+    num: '04',
+    title: 'You launch it.',
+    desc: 'Whether you\'re stepping up to the mic, hitting publish, or unveiling something you\'ve worked hard on — you do it knowing everything is exactly right.',
+  },
 ]
 
 export default function Home() {
@@ -223,7 +252,7 @@ export default function Home() {
     <>
       <nav>
         <a href="#" className="logo">
-          <Image src="/logo.png" alt="Anchored Prose" width={200} height={50} style={{ height: 48, width: 'auto' }} priority />
+          <Image src="/logo.png" alt="Anchored Prose" width={240} height={60} style={{ height: 56, width: 'auto' }} priority />
         </a>
         <ul className="nav-links">
           <li><a href="#about">About</a></li>
@@ -252,7 +281,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* UPDATED ABOUT SECTION */}
+      {/* ABOUT */}
       <section className="about" id="about">
         <div className="about-grid">
           <div className="about-image-wrap">
@@ -277,27 +306,19 @@ export default function Home() {
               Writing for the<br /><span className="script-accent">moments that count</span>
             </h2>
             <p className="about-body">
-              Hey there! I&apos;m Julianna — a writer, educator, and the founder of Anchored Prose. I hold a Master of Professional Education, and I&apos;ve spent over a decade helping people find the right words — whether that&apos;s for the moments that count or the message that defines you.
+              Hi! I&apos;m Julianna, a writer, educator, mom, wannabe farmer, and the founder of Anchored Prose. I hold a Master of Professional Education and a few other degrees that cost me a lot of time and money, and I&apos;ve spent over a decade helping people find the right words for the moments that count.
             </p>
             <p className="about-body">
-              I&apos;ve always loved to write. It was an escape, a way to get my feelings out on paper, a way to make myself laugh, remember, relate. It took me a long time to realize it was something I could actually do for a living. My years as a teacher taught me how to make complex systems less confusing, how to advocate for people navigating bureaucracies that weren&apos;t built with them in mind, and how to disrupt the systemic inequities that keep good people quiet. That work shaped how I write now — it honed my capacity to build and develop voice, to help people say what they mean in a way that lands.
+              I&apos;ve always loved to write. It was where I went to make sense of things, to hold onto moments, to make myself laugh, and to feel understood. For a long time, writing felt like mine alone — something personal and quietly important, but not necessarily something I could build a life around. It took years of teaching, advocating, and working alongside people navigating systems that weren&apos;t built with them in mind before I realized that the thing I&apos;d always done for myself was exactly what other people needed too.
             </p>
             <p className="about-body">
-              Now I write brand copy for small businesses who need to sound like themselves. Real estate listings that sell the story, not just the specs. Speeches and keynotes for leaders who want their message to stick. Curriculum and educational content that makes difficult concepts accessible. Grant applications and policy critiques for nonprofits doing the work. Wedding ceremonies, website copy, full content packages — carefully constructed words brought to life with beautiful graphics and intentional design.
+              My years as an educator shaped how I write now. They taught me how to take something complicated and make it clear, how to find the right words for people who couldn&apos;t find their own, and how to build a voice that actually sounds like the person it belongs to. That work lives in everything I do at Anchored Prose, whether that&apos;s a wedding speech, a brand identity, a keynote, or a curriculum guide.
             </p>
-            <p className="about-body">
-              I also build custom websites for writers, small businesses, and creatives who need more than a template — full content strategy, copywriting, and design that works together. Whether you need brand strategy that clarifies who you are and how you show up, content strategy that maps out what to say and when, or a complete creative overhaul, I help you build a presence that sounds and looks like you.
-            </p>
-            <blockquote className="about-pull">
-              &ldquo;Whether it&apos;s a wedding ceremony, a keynote presentation, brand copy that finally captures what you&apos;ve been trying to say, or a website that does the work for you, I write words that persuade, comfort, celebrate, and move people to <em className="script-accent">act</em>.&rdquo;
-            </blockquote>
-            <div className="about-note" style={{ marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid rgba(18, 45, 71, 0.2)', fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--navy)', opacity: 0.85 }}>
-              What&apos;s here is public-facing: ceremonies people remember, essays worth sharing, commentary that cuts through noise. I also write for academic and educational contexts—research, curriculum, training content. Different audience, different purpose. If that&apos;s what you&apos;re after, I can share those samples separately.
-            </div>
           </div>
         </div>
       </section>
 
+      {/* SERVICES */}
       <section className="services" id="services">
         <div className="services-header">
           <div className="section-label" style={{ color: 'var(--gold)' }}>Services</div>
@@ -311,13 +332,12 @@ export default function Home() {
               <h3>{s.title}</h3>
               <p className="service-tagline">{s.tagline}</p>
               <p className="service-desc">{s.desc}</p>
-              <Link href={s.href} className="service-link">Learn More →</Link>
             </div>
           ))}
         </div>
       </section>
 
-      {/* UPDATED PORTFOLIO SECTION - 3 CATEGORIES */}
+      {/* PORTFOLIO */}
       <section className="portfolio" id="portfolio">
         <div className="portfolio-header">
           <div className="section-label">Portfolio</div>
@@ -327,9 +347,8 @@ export default function Home() {
           <p className="portfolio-note">Excerpts from client projects and personal writing. Names changed where noted.</p>
         </div>
 
-        {/* CELEBRATIONS & CEREMONIES */}
-        <div style={{ marginBottom: '4rem' }}>
-          <h3 style={{ textAlign: 'center', fontSize: '0.875rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--navy)', opacity: 0.6, marginBottom: '2rem' }}>CELEBRATIONS & CEREMONIES</h3>
+        <div className="portfolio-category">
+          <h3 className="portfolio-category-title">Weddings &amp; Speeches</h3>
           <div className="portfolio-grid">
             {PORTFOLIO.celebrations.map((p, i) => (
               <div
@@ -358,9 +377,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* ESSAYS & COMMENTARY */}
-        <div style={{ marginBottom: '4rem' }}>
-          <h3 style={{ textAlign: 'center', fontSize: '0.875rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--navy)', opacity: 0.6, marginBottom: '2rem' }}>ESSAYS & COMMENTARY</h3>
+        <div className="portfolio-category">
+          <h3 className="portfolio-category-title">Writing</h3>
           <div className="portfolio-grid">
             {PORTFOLIO.essays.map((p, i) => (
               <div
@@ -375,13 +393,7 @@ export default function Home() {
                 <p className="portfolio-meta">{p.meta}</p>
                 {p.hasImage && (
                   <div style={{ margin: '1.5rem -1rem' }}>
-                    <Image
-                      src={p.imagePath}
-                      alt={p.pull.replace(/"/g, '')}
-                      width={600}
-                      height={600}
-                      style={{ width: '100%', height: 'auto', borderRadius: '4px' }}
-                    />
+                    <Image src={p.imagePath} alt={p.pull.replace(/"/g, '')} width={600} height={600} style={{ width: '100%', height: 'auto', borderRadius: '4px' }} />
                   </div>
                 )}
                 <p className="portfolio-pull">{p.pull}</p>
@@ -400,12 +412,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* EDUCATIONAL CONTENT & CURRICULUM */}
-        <div>
-          <h3 style={{ textAlign: 'center', fontSize: '0.875rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--navy)', opacity: 0.6, marginBottom: '1rem' }}>EDUCATIONAL CONTENT & CURRICULUM</h3>
-          <p style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 2rem', fontSize: '1rem', lineHeight: '1.6', color: 'var(--navy)' }}>
-            I design curriculum, training programs, and educational resources for schools, nonprofits, and organizations working toward equity and systemic change. This work is grounded in research, built for real-world application, and written to make complex systems accessible.
-          </p>
+        <div className="portfolio-category">
+          <h3 className="portfolio-category-title">Educational Content</h3>
           <div className="portfolio-grid">
             {PORTFOLIO.education.map((p, i) => (
               <div
@@ -432,13 +440,10 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <p style={{ textAlign: 'center', maxWidth: '800px', margin: '3rem auto 0', fontSize: '1rem', lineHeight: '1.6', color: 'var(--navy)' }}>
-            Looking for custom curriculum development, training design, or educational content? <a href="mailto:hello@anchoredprose.ca" style={{ color: 'var(--navy)', fontWeight: 600, textDecoration: 'underline' }}>Contact me</a> to discuss your project.
-          </p>
         </div>
       </section>
 
-      {/* UPDATED TESTIMONIALS SECTION */}
+      {/* TESTIMONIALS */}
       <section className="testimonials" id="testimonials">
         <div className="testimonials-header">
           <div className="section-label" style={{ color: 'var(--gold)' }}>Kind Words</div>
@@ -447,9 +452,7 @@ export default function Home() {
           </h2>
         </div>
         <div className="testimonials-featured">
-          <blockquote>
-            &ldquo;{TESTIMONIALS[0].quote}&rdquo;
-          </blockquote>
+          <blockquote>&ldquo;{TESTIMONIALS[0].quote}&rdquo;</blockquote>
           <p className="testimonial-name">{TESTIMONIALS[0].name}</p>
           <p className="testimonial-role">{TESTIMONIALS[0].role}</p>
         </div>
@@ -464,6 +467,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* HOW IT WORKS */}
+      <section className="how-it-works" id="process">
+        <div className="hiw-header">
+          <div className="section-label">The Process</div>
+          <h2 className="section-title">
+            How we <span className="script-accent">work together.</span>
+          </h2>
+        </div>
+        <div className="hiw-steps">
+          {HOW_IT_WORKS.map((step, i) => (
+            <div key={i} className="hiw-step">
+              <div className="hiw-step-num">{step.num}</div>
+              <div className="hiw-step-icon">
+                {i === 0 && <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M4,6 L28,6 L28,20 L16,20 L10,26 L10,20 L4,20 Z" stroke="var(--gold)" strokeWidth="1.2" fill="none" strokeLinejoin="round"/><line x1="10" y1="12" x2="22" y2="12" stroke="var(--gold)" strokeWidth="1" opacity="0.6"/><line x1="10" y1="15.5" x2="17" y2="15.5" stroke="var(--gold)" strokeWidth="1" opacity="0.6"/></svg>}
+                {i === 1 && <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="var(--gold)" strokeWidth="1.2"/><circle cx="16" cy="16" r="2.5" fill="var(--gold)"/><polygon points="16,7 17.5,14.5 16,13.5 14.5,14.5" fill="var(--gold)"/><polygon points="16,25 17.5,17.5 16,18.5 14.5,17.5" fill="var(--gold)" opacity="0.4"/></svg>}
+                {i === 2 && <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M7,25 L11,21 L23,9 L25,11 L13,23 Z" stroke="var(--gold)" strokeWidth="1.2" fill="none" strokeLinejoin="round"/><line x1="21" y1="7" x2="25" y2="11" stroke="var(--gold)" strokeWidth="1.2"/><line x1="7" y1="25" x2="12" y2="25" stroke="var(--gold)" strokeWidth="1.2"/></svg>}
+                {i === 3 && <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16,4 L18.5,12 L27,12.5 L21,17.5 L23,26 L16,21.5 L9,26 L11,17.5 L5,12.5 L13.5,12 Z" stroke="var(--gold)" strokeWidth="1.2" fill="none" strokeLinejoin="round"/></svg>}
+              </div>
+              <h3 className="hiw-step-title">{step.title}</h3>
+              <p className="hiw-step-desc">{step.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p className="hiw-note">
+          Need help with the delivery itself, not just the words? I offer consulting on that too — <a href="#contact">reach out and we&apos;ll figure it out.</a>
+        </p>
+      </section>
+
+      {/* BLOG */}
       <section className="blog" id="blog">
         <div className="blog-header">
           <div className="section-label">Captain&apos;s Log</div>
@@ -478,23 +510,18 @@ export default function Home() {
                 <div className="blog-card-category">{post.category} · {post.date}</div>
                 <h3>{post.title}</h3>
                 <p>{post.excerpt}</p>
-                <Link href="/blog" className="blog-card-link">Read More →</Link>
               </div>
             ))}
           </div>
           <div className="blog-dots">
             {BLOG_POSTS.map((_, i) => (
-              <button
-                key={i}
-                className={`blog-dot ${currentSlide === i ? 'active' : ''}`}
-                onClick={() => setCurrentSlide(i)}
-                aria-label={`Go to slide ${i + 1}`}
-              />
+              <button key={i} className={`blog-dot ${currentSlide === i ? 'active' : ''}`} onClick={() => setCurrentSlide(i)} aria-label={`Go to slide ${i + 1}`} />
             ))}
           </div>
         </div>
       </section>
 
+      {/* CONTACT */}
       <section className="contact" id="contact">
         <div className="contact-grid">
           <div className="contact-info">
@@ -532,11 +559,10 @@ export default function Home() {
                 <label htmlFor="project">What are you working on?</label>
                 <select id="project" name="project">
                   <option value="">Select a service...</option>
-                  <option value="wedding">Wedding & Event Speeches</option>
-                  <option value="keynote">Keynotes & Public Speaking</option>
+                  <option value="wedding">Wedding &amp; Event Speeches</option>
+                  <option value="keynote">Keynotes &amp; Public Speaking</option>
                   <option value="education">Educational Content</option>
-                  <option value="brand">Brand & Web Copy</option>
-                  <option value="strategy">Content Strategy</option>
+                  <option value="brand">Brand &amp; Content Strategy</option>
                   <option value="other">Something else</option>
                 </select>
               </div>
