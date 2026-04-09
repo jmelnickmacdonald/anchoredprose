@@ -159,18 +159,6 @@ export default function Home() {
 
   return (
     <>
-      {/* BANNER — below nav, above hero */}
-      <div className="site-banner">
-        <Image
-          src="/banner.jpg"
-          alt="Anchored Prose — Nova Scotia"
-          fill
-          style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
-          priority
-        />
-        <div className="site-banner-overlay" />
-      </div>
-
       <nav>
         <a href="#" className="logo">
           <Image src="/logo.png" alt="Anchored Prose" width={220} height={55} style={{ height: 52, width: 'auto' }} priority />
@@ -192,10 +180,7 @@ export default function Home() {
           <h1 className="fade-up fade-up-2">
             Every Word,<br /><span className="script-accent">Anchored</span> in Purpose
           </h1>
-          <p className="hero-sub fade-up fade-up-3">
-            Copy that earns the right reader. Content with a reason to exist. Every word should be worth it.
-          </p>
-          <div className="hero-ctas fade-up fade-up-4">
+          <div className="hero-ctas fade-up fade-up-3">
             <a href="#services" className="btn-gold">See What I Do</a>
             <a href="#portfolio" className="btn-ghost">Read My Work</a>
           </div>
@@ -212,7 +197,7 @@ export default function Home() {
                 alt="Julianna Melnick-MacDonald — Anchored Prose"
                 width={500}
                 height={420}
-                style={{ width: '100%', height: 420, objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }}
+                style={{ width: '100%', height: 480, objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }}
               />
             </div>
             <div className="about-gold-bar"></div>
