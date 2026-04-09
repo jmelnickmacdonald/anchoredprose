@@ -140,6 +140,91 @@ const PORTFOLIO = {
       pull: '"True inquiry-based learning means following the curiosity and questions of the children in our care."',
       excerpt: "A 12-week inquiry-based learning journey designed for mixed-age groups (ages 8-14). This curriculum framework follows children's curiosity through thematic units — from mapping and cartography to bread science, garden ecology, and pirate navigation.\n\nEach unit includes multiple entry points so younger learners engage through hands-on exploration while older learners tackle leadership roles, design experiments, and engage with real-world applications.",
     },
+  brandContent: [
+    {
+      type: 'Social Media Content · Willow & Rose',
+      title: 'Homestead Brand Voice',
+      meta: 'Willow & Rose — Product & Lifestyle Content',
+      pull: '"Warm, personal content that sounds like the person behind the brand."',
+      image: '/portfolio/willowandrose-social-1.png',
+    },
+    {
+      type: 'Video Content · Willow & Rose',
+      title: 'Reel Copywriting',
+      meta: 'Willow & Rose — Short Form Video',
+      pull: '"Scroll-stopping hooks written for real audiences."',
+      video: '/portfolio/willowandrose-video-1.mp4',
+    },
+    {
+      type: 'Social Media Content · Raven House Co.',
+      title: 'Small Business Social Copy',
+      meta: 'Raven House Co. — Instagram Content',
+      pull: '"Community-first copy that builds connection, not just followers."',
+      image: '/portfolio/raven-house-social-1.png',
+    },
+    {
+      type: 'Social Media Content · Raven House Co.',
+      title: 'Product & Story Posts',
+      meta: 'Raven House Co. — Instagram Content',
+      pull: '"Copy that lets the product speak without overselling it."',
+      image: '/portfolio/raven-house-social-2.png',
+    },
+    {
+      type: 'Social Media Content · Raven House Co.',
+      title: 'Brand Storytelling',
+      meta: 'Raven House Co. — Instagram Content',
+      pull: '"Every post part of a larger brand narrative."',
+      image: '/portfolio/raven-house-social-3.png',
+    },
+    {
+      type: 'Social Media Content · Raven House Co.',
+      title: 'Engagement Copy',
+      meta: 'Raven House Co. — Instagram Content',
+      pull: '"Written to start conversations, not just collect likes."',
+      image: '/portfolio/raven-house-social-4.png',
+    },
+    {
+      type: 'Real Estate Copy · Mock-Up',
+      title: 'Listing Social Post',
+      meta: 'Real Estate — Social Media Content',
+      pull: '"Copy that sells the feeling of a home, not just the specs."',
+      image: '/portfolio/realestate-social-1.png',
+    },
+    {
+      type: 'Real Estate Copy · Mock-Up',
+      title: 'Realtor Personal Brand Post',
+      meta: 'Real Estate — Social Media Content',
+      pull: '"Positioning a realtor as the trusted guide, not just the salesperson."',
+      image: '/portfolio/realestate-social-2.png',
+    },
+    {
+      type: 'Real Estate Copy · Mock-Up',
+      title: 'Property Listing Flyer',
+      meta: 'Real Estate — Print & Digital',
+      pull: '"This could be the one."',
+      image: '/portfolio/realestate-flyer-1.png',
+    },
+    {
+      type: 'Real Estate Copy · Mock-Up',
+      title: 'Realtor Marketing Flyer',
+      meta: 'Real Estate — Print & Digital',
+      pull: '"Ready for a change? That\'s where I come in."',
+      image: '/portfolio/real-estate-flyer-3.jpg',
+    },
+    {
+      type: 'Video Content · Mock-Up',
+      title: 'Real Estate Reel',
+      meta: 'Real Estate — Short Form Video',
+      pull: '"They weren\'t looking for anything extraordinary..."',
+      video: '/portfolio/realestate-video-3.mp4',
+    },
+    {
+      type: 'Video Content · Mock-Up',
+      title: 'Property Carousel Reel',
+      meta: 'Real Estate — Short Form Video',
+      pull: '"Carousel copy that tells a story slide by slide."',
+      video: '/portfolio/realestate-video-4.mp4',
+    },
   ],
 }
 
@@ -441,6 +526,40 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+        <div className="portfolio-category">
+          <h3 className="portfolio-category-title">Brand &amp; Content</h3>
+          <div className="portfolio-grid">
+            {PORTFOLIO.brandContent.map((p, i) => (
+              <div
+                key={`brand-${i}`}
+                className="portfolio-card"
+                onClick={() => setExpandedPortfolio(expandedPortfolio === `brand-${i}` ? null : `brand-${i}`)}
+                tabIndex={0}
+                onKeyDown={(e) => e.key === 'Enter' && setExpandedPortfolio(expandedPortfolio === `brand-${i}` ? null : `brand-${i}`)}
+              >
+                <div className="portfolio-type">{p.type}</div>
+                <h3>{p.title}</h3>
+                <p className="portfolio-meta">{p.meta}</p>
+                {p.image && (
+                  <div style={{ margin: '1rem 0', borderRadius: '4px', overflow: 'hidden' }}>
+                    <Image src={p.image} alt={p.title} width={600} height={400} style={{ width: '100%', height: '220px', objectFit: 'cover', display: 'block' }} />
+                  </div>
+                )}
+                {p.video && (
+                  <div style={{ margin: '1rem 0', borderRadius: '4px', overflow: 'hidden', position: 'relative', background: '#0D1B2E' }}>
+                    <video src={p.video} style={{ width: '100%', height: '220px', objectFit: 'cover', display: 'block' }} muted playsInline preload="metadata" />
+                    <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '48px', height: '48px', borderRadius: '50%', background: 'rgba(184,150,62,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><polygon points="5,3 14,8 5,13" fill="white"/></svg>
+                    </div>
+                  </div>
+                )}
+                <p className="portfolio-pull">{p.pull}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </section>
 
       {/* TESTIMONIALS */}
