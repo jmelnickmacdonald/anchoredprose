@@ -5,8 +5,8 @@ import { useState } from 'react'
 const SERVICES = [
   {
     title: 'Wedding & Event Speeches',
-    tagline: "The perfect words that sound just like you on your best day — the ones you couldn't quite find on your own.",
-    desc: "I've got you when it comes to toasts, vows, ceremony scripts, and full wedding writing. Whether you're the best man, a couple building a ceremony from scratch, or a parent feeling all the feels, we'll work through it together and I'll write words that hold the room and hold up over time.",
+    tagline: "The right words for the moments that ask the most of you.",
+    desc: "Weddings, eulogies, tributes, retirement sendoffs, milestone celebrations — whatever the occasion, whatever your role, I'll help you say exactly what needs to be said. I've written for the moments that bring people together and the ones that help them say goodbye. We work through it together and I write words that hold the room and hold up over time.",
   },
   {
     title: 'Keynotes & Public Speaking',
