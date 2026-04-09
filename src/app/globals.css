@@ -71,18 +71,20 @@ nav {
 
 /* HERO */
 .hero {
-  min-height: 100vh; background: var(--navy);
+  min-height: 100vh;
   display: flex; align-items: center; justify-content: center;
   position: relative; overflow: hidden; padding-top: 80px;
+  background: var(--navy);
 }
 .hero::before {
   content: ''; position: absolute; inset: 0;
-  background-image: url('/rope-pattern.jpg');
-  background-size: 400px; opacity: 0.08; pointer-events: none;
+  background-image: url('/banner.jpg');
+  background-size: cover; background-position: center 40%;
+  opacity: 0.28; pointer-events: none;
 }
 .hero::after {
   content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse at center, transparent 30%, rgba(13,27,46,0.7) 100%);
+  background: linear-gradient(to bottom, rgba(13,27,46,0.55) 0%, rgba(13,27,46,0.7) 100%);
   pointer-events: none;
 }
 .hero-content {
@@ -128,18 +130,18 @@ nav {
 .section-label::before { content: ''; display: block; width: 36px; height: 1px; background: var(--gold); }
 .section-title { font-size: clamp(36px, 4.5vw, 58px); font-weight: 300; line-height: 1.1; margin-bottom: 48px; text-align: center; }
 
-/* ABOUT — plain cream, no floral */
+/* ABOUT — plain cream */
 .about { padding: 120px 0; background: var(--cream); position: relative; overflow: hidden; }
 .about .section-label { justify-content: flex-start; }
 .about .section-title { text-align: left; }
-.about-grid { max-width: 1200px; margin: 0 auto; padding: 0 64px; display: grid; grid-template-columns: 460px 1fr; gap: 80px; align-items: start; position: relative; z-index: 1; }
+.about-grid { max-width: 1200px; margin: 0 auto; padding: 0 64px; display: grid; grid-template-columns: 420px 1fr; gap: 60px; align-items: start; position: relative; z-index: 1; }
 .about-image-wrap { position: relative; }
 .about-image-inner { overflow: hidden; position: relative; }
 .about-gold-bar { height: 4px; background: linear-gradient(90deg, var(--gold), transparent); }
 .about-caption { background: var(--navy); padding: 18px 24px; }
 .about-caption p { font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
 .about-caption span { font-family: var(--font-body); font-size: 14px; color: rgba(250,247,242,0.6); }
-.about-text { padding: 40px; background: rgba(250,247,242,0.95); }
+.about-text { padding: 40px 48px; background: rgba(250,247,242,0.95); }
 .about-body { font-size: 17px; line-height: 1.85; color: rgba(13,27,46,0.8); margin-bottom: 24px; font-family: var(--font-body); }
 .about-pull { font-family: var(--font-display); font-size: 22px; font-style: italic; color: var(--navy); border-left: 3px solid var(--gold); padding-left: 24px; margin: 32px 0; line-height: 1.5; }
 
@@ -147,8 +149,8 @@ nav {
 .services { background: var(--navy); padding: 120px 64px; position: relative; overflow: hidden; }
 .services::before {
   content: ''; position: absolute; inset: 0;
-  background-image: url('/nautical-stripe.jpg');
-  background-size: 300px; opacity: 0.06; pointer-events: none;
+  background-image: url('/rope-pattern.jpg');
+  background-size: 400px; opacity: 0.07; pointer-events: none;
 }
 .services-header { max-width: 1100px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; }
 .services-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; position: relative; z-index: 1; }
@@ -162,8 +164,8 @@ nav {
 .portfolio { padding: 120px 64px; position: relative; overflow: hidden; }
 .portfolio::before {
   content: ''; position: absolute; inset: 0;
-  background-image: url('/coastal-blue.jpg');
-  background-size: 500px; opacity: 0.18; pointer-events: none;
+  background-image: url('/rope-pattern.jpg');
+  background-size: 400px; opacity: 0.06; pointer-events: none;
 }
 .portfolio-header { max-width: 1100px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; }
 .portfolio-note { font-family: var(--font-body); font-size: 15px; color: rgba(13,27,46,0.5); font-style: italic; margin-top: -32px; margin-bottom: 48px; }
@@ -208,10 +210,15 @@ nav {
 .testimonial-card .testimonial-name { font-size: 14px; }
 .testimonial-card .testimonial-role { font-size: 13px; }
 
-/* HOW IT WORKS — plain cream */
-.how-it-works { background: var(--cream); padding: 120px 64px; position: relative; }
-.hiw-header { max-width: 1100px; margin: 0 auto 64px; text-align: center; }
-.hiw-steps { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; position: relative; }
+/* HOW IT WORKS — blue floral background */
+.how-it-works { background: var(--cream); padding: 120px 64px; position: relative; overflow: hidden; }
+.how-it-works::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url('/coastal-blue.jpg');
+  background-size: 500px; opacity: 0.35; pointer-events: none;
+}
+.hiw-header { max-width: 1100px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; }
+.hiw-steps { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; position: relative; z-index: 1; background: rgba(250,247,242,0.82); padding: 48px 40px; border: 1px solid rgba(184,150,62,0.15); }
 .hiw-steps::before {
   content: ''; position: absolute; top: 52px; left: 10%; right: 10%;
   height: 1px; background: linear-gradient(to right, transparent, rgba(184,150,62,0.3), rgba(184,150,62,0.3), transparent);
@@ -221,7 +228,7 @@ nav {
 .hiw-step-icon { width: 72px; height: 72px; border-radius: 50%; background: white; border: 1px solid rgba(184,150,62,0.3); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
 .hiw-step-title { font-family: var(--font-display); font-size: 20px; font-weight: 400; color: var(--navy); margin-bottom: 12px; }
 .hiw-step-desc { font-family: var(--font-body); font-size: 15px; color: rgba(13,27,46,0.65); line-height: 1.75; }
-.hiw-note { text-align: center; margin-top: 56px; font-family: var(--font-body); font-size: 16px; font-style: italic; color: rgba(13,27,46,0.55); }
+.hiw-note { text-align: center; margin-top: 56px; font-family: var(--font-body); font-size: 16px; font-style: italic; color: rgba(13,27,46,0.7); position: relative; z-index: 1; }
 .hiw-note a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(184,150,62,0.3); }
 
 /* BLOG */
@@ -336,19 +343,7 @@ nav {
   .hiw-steps { grid-template-columns: 1fr; }
 }
 
-/* BANNER */
-.site-banner {
-  position: relative;
-  height: 280px;
-  width: 100%;
-  margin-top: 80px;
-  overflow: hidden;
-}
-.site-banner-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to bottom, rgba(13,27,46,0.15), rgba(13,27,46,0.4));
-  pointer-events: none;
-}
+/* BANNER — removed, image used in hero instead */
 
 /* PORTFOLIO CATEGORY CARDS */
 .portfolio-cats {
