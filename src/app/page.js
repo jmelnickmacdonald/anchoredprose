@@ -30,7 +30,7 @@ const PORTFOLIO_CATEGORIES = [
     title: 'Weddings & Speeches',
     desc: 'Ceremony scripts, toasts, vows, and the words people remember long after the day.',
     href: '/portfolio/weddings-speeches',
-    image: '/portfolio/annapolis-valley-quote.png',
+    image: null,
   },
   {
     title: 'Writing',
@@ -197,7 +197,7 @@ export default function Home() {
                 alt="Julianna Melnick-MacDonald — Anchored Prose"
                 width={500}
                 height={420}
-                style={{ width: '100%', height: 480, objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }}
+                style={{ width: '100%', height: 380, objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }}
               />
             </div>
             <div className="about-gold-bar"></div>
