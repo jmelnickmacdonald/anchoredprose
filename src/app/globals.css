@@ -124,14 +124,14 @@ nav {
   display: flex; align-items: center; justify-content: center; gap: 14px;
 }
 .section-label::before { content: ''; display: block; width: 36px; height: 1px; background: var(--gold); }
-.section-title { font-size: clamp(36px, 4.5vw, 58px); font-weight: 300; line-height: 1.1; margin-bottom: 48px; text-align: center; }
+.section-title { font-size: clamp(36px, 4.5vw, 58px); font-weight: 300; line-height: 1.1; margin-bottom: 28px; text-align: center; }
 
 /* ABOUT — plain cream */
-.about { padding: 120px 0; background: var(--cream); position: relative; overflow: hidden; }
+.about { padding: 80px 0; background: var(--cream); position: relative; overflow: hidden; }
 .about .section-label { justify-content: flex-start; }
 .about .section-title { text-align: left; }
 .about-grid { max-width: 1300px; margin: 0 auto; padding: 0 64px; display: grid; grid-template-columns: 360px 1fr; gap: 64px; align-items: start; position: relative; z-index: 1; }
-.about-image-wrap { position: relative; }
+.about-image-wrap { position: sticky; top: 100px; align-self: start; }
 .about-image-inner { overflow: hidden; position: relative; }
 .about-gold-bar { height: 4px; background: linear-gradient(90deg, var(--gold), transparent); }
 .about-caption { background: var(--navy); padding: 18px 24px; }
@@ -142,13 +142,13 @@ nav {
 .about-pull { font-family: var(--font-display); font-size: 22px; font-style: italic; color: var(--navy); border-left: 3px solid var(--gold); padding-left: 24px; margin: 32px 0; line-height: 1.5; }
 
 /* SERVICES */
-.services { background: var(--navy); padding: 120px 64px; position: relative; overflow: hidden; }
+.services { background: var(--navy); padding: 80px 64px; position: relative; overflow: hidden; }
 .services::before {
   content: ''; position: absolute; inset: 0;
-  background-image: url('/rope-pattern.jpg');
-  background-size: 400px; opacity: 0.07; pointer-events: none;
+  background-image: url('/coastal-blue.jpg');
+  background-size: 500px; opacity: 0.18; pointer-events: none;
 }
-.services-header { max-width: 1100px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; }
+.services-header { max-width: 1100px; margin: 0 auto 48px; text-align: center; position: relative; z-index: 1; background: rgba(13,27,46,0.6); padding: 28px 48px; border: 1px solid rgba(184,150,62,0.2); }
 .services-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; position: relative; z-index: 1; }
 .service-card { position: relative; background: rgba(13,27,46,0.9); border: 1px solid rgba(184,150,62,0.2); padding: 48px 36px; overflow: hidden; transition: background 0.3s, border-color 0.3s; }
 .service-card:hover { background: rgba(13,27,46,0.95); border-color: rgba(184,150,62,0.4); }
@@ -157,11 +157,11 @@ nav {
 .service-desc { font-size: 16px; color: rgba(250,247,242,0.6); line-height: 1.8; font-family: var(--font-body); }
 
 /* PORTFOLIO — floral background */
-.portfolio { padding: 120px 64px; position: relative; overflow: hidden; }
+.portfolio { padding: 80px 64px; position: relative; overflow: hidden; }
 .portfolio::before {
   content: ''; position: absolute; inset: 0;
-  background-image: url('/coastal-blue.jpg');
-  background-size: 500px; opacity: 0.25; pointer-events: none;
+  background-image: url('/rope-pattern.jpg');
+  background-size: 400px; opacity: 0.07; pointer-events: none;
 }
 .portfolio-header { max-width: 1100px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; }
 .portfolio-note { font-family: var(--font-body); font-size: 15px; color: rgba(13,27,46,0.5); font-style: italic; margin-top: -32px; margin-bottom: 48px; }
@@ -367,9 +367,9 @@ nav {
 /* PORTFOLIO section header box — like testimonials */
 .portfolio-header .section-label { color: var(--navy); }
 .portfolio .portfolio-header {
-  max-width: 1100px; margin: 0 auto 48px;
+  max-width: 700px; margin: 0 auto 40px;
   background: rgba(250,247,242,0.92);
-  padding: 32px 48px;
+  padding: 20px 40px 14px;
   border: 1px solid rgba(184,150,62,0.25);
   text-align: center;
   position: relative; z-index: 1;
