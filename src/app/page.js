@@ -140,6 +140,7 @@ const PORTFOLIO = {
       pull: '"True inquiry-based learning means following the curiosity and questions of the children in our care."',
       excerpt: "A 12-week inquiry-based learning journey designed for mixed-age groups (ages 8-14). This curriculum framework follows children's curiosity through thematic units — from mapping and cartography to bread science, garden ecology, and pirate navigation.\n\nEach unit includes multiple entry points so younger learners engage through hands-on exploration while older learners tackle leadership roles, design experiments, and engage with real-world applications.",
     },
+  ],
   brandContent: [
     {
       type: 'Social Media Content · Willow & Rose',
