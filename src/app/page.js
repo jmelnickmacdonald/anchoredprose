@@ -25,209 +25,55 @@ const SERVICES = [
   },
 ]
 
-const PORTFOLIO = {
-  celebrations: [
-    {
-      type: 'Wedding Officiant',
-      title: 'My Sister, Her Perfect Match',
-      meta: 'Destination Wedding · Punta Cana, Dominican Republic',
-      pull: "\"I'm the type B minus to Rebecca's Type A.\"",
-      excerpt: "Welcome, welcome, beach lovers and party enthusiasts! Can we just take a moment to appreciate how beautiful this backdrop is, how stunning our bride and groom look and how clean my children are for a change?\n\nFor those of you who don't know me, I'm Julianna, immensely proud sister of the bride, chronic thorn in her side, and forever accomplice. I spend my days in equal parts chasing kids, cursing at farm animals, and questioning many of my life choices. Meanwhile, Rebecca is off being crowned a world champion fitness competitor, owning and operating an incredible business, being a thoughtful and generous daughter, sister and friend, and looking fabulous doing it all.\n\nNaturally, I set my bar considerably lower. I'm the type B minus to Rebecca's Type A, and I am simply thrilled to be standing here today in a dress and heels instead of my usual muck-covered rubber boots, celebrating my sister and her perfect match.",
-    },
-    {
-      type: 'Best Man Toast',
-      title: 'The Turn',
-      meta: 'Twenty-Four Years of Friendship',
-      pull: '"He still can\'t assemble furniture, but he shows up."',
-      excerpt: "I've known Matt for twenty-four years, which means I've seen every version of this man. The kid who ate an entire sleeve of Oreos before a cross-country meet and threw up at the starting line. The guy who once tried to assemble an IKEA bookshelf without the instructions and ended up with something that looked like modern art and held exactly zero books.\n\nHere's the thing about Claire. She knows exactly what she's getting into. And she chose him anyway. Fully informed, eyes wide open. That's not a small thing.\n\nHe still can't assemble furniture, but he shows up. And that's the part that matters.",
-    },
-    {
-      type: 'Father of the Bride',
-      title: 'Letting Go',
-      meta: 'What Nobody Warns You About',
-      pull: '"The job was never to keep them."',
-      excerpt: "Here's the thing nobody warns you about when you become a parent. You spend years becoming the world's leading expert on one small human: what makes them laugh, what scares them, which breakfast battles aren't worth fighting, the exact pitch of the cry that means something actually hurts versus the one that means her sister looked at her wrong.\n\nAnd then one day, someone else starts learning those things too. And you realize the job was never to keep them. The job was to make sure that when they found their person, they'd know.\n\nShe doesn't need me to give her away. She's not mine to give. But I am so honoured to watch.",
-    },
-    {
-      type: 'Wedding Vows',
-      title: 'The Night I Knew',
-      meta: 'Autumn Wedding · Prince Edward Island',
-      pull: '"I don\'t ever want to come home to a house where this isn\'t happening."',
-      excerpt: "I knew I wanted this the night you fell asleep on the couch with both dogs on top of you and the TV still going, and I sat there for a full ten minutes just looking at you, thinking: I don't ever want to come home to a house where this isn't happening.\n\nI'm not going to promise you perfection. I'm going to forget things. I'm going to load the dishwasher wrong. I'm going to need you to tell me what's wrong instead of saying \"I'm fine\" because I will believe you every single time.\n\nBut here's what I can promise: I will always be in your corner. I will always choose us, even when us is hard. I will love you quietly, stubbornly, and without keeping score.",
-    },
-    {
-      type: 'Choral Reading · Wedding Ceremony',
-      title: 'Oh, the Places You\'ll Go',
-      meta: 'Inspired by Dr. Seuss\' Oh, the Places You\'ll Go!',
-      pull: '"Oh, the places you\'ll go, the things you will do, a lifetime of joy is waiting for you."',
-      excerpt: "Congratulations, today is the big day!\nYou've found your partner to help you pave your way.\nThe world is before you, it's open and wide,\nFilled with adventures you'll take in stride.\n\nAs you step into marriage, with love in your hearts,\nKnow there will be challenges, but that's just the start.\nYou'll face the unknown, with strength and with grace,\nThrough twists and through turns, in life's crazy race.\n\nThere'll be highs, there'll be lows,\nbut you've got this down,\nYou're in it together,\nthe best team in town.\n\nSometimes you'll falter, and sometimes you'll fall,\nBut love will be there to help you stand tall.\nFor no matter the place, no matter the time,\nThe two of you together will be just fine.\n\nSo dream and discover, laugh and explore,\nFor this journey ahead will open new doors.\nWith patience, with kindness, and love as your guide,\nYou'll conquer the world, standing side by side.\n\nSo here's to your future, bright as can be,\nThe adventure of love, for all to see.\nOh, the places you'll go, the things you will do,\nA lifetime of joy is waiting for you.",
-    },
-  ],
-  essays: [
-    {
-      type: 'Satire',
-      title: 'Mothers Encouraged to Optimize Their Time',
-      meta: "Captain's Log · February 2026",
-      pull: '"Time doesn\'t just disappear. It reflects your priorities."',
-      excerpt: "In a statement released Monday, national productivity leaders confirmed that every human being receives the same 24 hours in a day, clarifying that mothers who feel otherwise may need to reevaluate how theirs are being used.\n\n\"If you're unloading the dishwasher, you should be completing a series of squats,\" said performance consultant Caleb Rowe. \"If a child is asking why the sky exists at the same time, that's cognitive engagement layered onto physical activation. There's no reason those functions can't operate simultaneously. Anything less is just lazy.\"\n\nAt press time, mothers across the country were microwaving leftovers, responding to questions about dinosaurs, stepping on unidentified objects, and briefly attempting to determine where, precisely, their identical allotment of time had gone.",
-    },
-    {
-      type: 'Essay',
-      title: 'The Real Damage of Disinformation',
-      meta: 'Opinion · February 2026',
-      pull: '"The collapse of trust rarely looks like anger. More often, it looks like indifference."',
-      excerpt: "We often treat misinformation as though the danger is believing the wrong thing. The deeper risk is the erosion of trust. Democracy does not depend on agreement. It depends on a shared baseline of reality.\n\nWhen my neighbour watched that fake video, she was fooled because it looked real. When she later dismissed a legitimate scandal, she wasn't fooled at all. She was fatigued. And I think that distinction matters more than we realize.\n\nThe collapse of trust rarely looks like anger. More often, it looks like indifference, and indifference corrodes quietly.",
-    },
-    {
-      type: 'Editorial',
-      title: 'A Letter from the Annapolis Valley',
-      meta: 'September 2025',
-      pull: '"The sunlight falls on both. But only one makes it into the picture."',
-      excerpt: "In Nova Scotia's Annapolis Valley, mornings drift in gently and unhurried. Mist settles into the hollows between field and fence. At the end of the driveway, my children wait with backpacks as big as they are.\n\nThis is a place with roots deep in farming tradition, where fertile soil gives rise to orchards, fields, and harvests abundant enough to fill roadside stands. But this quiet rhythm does not tell the whole story of the Valley.",
-      hasImage: true,
-      imagePath: '/portfolio/annapolis-valley-quote.png',
-    },
-    {
-      type: 'Personal Essay · Parenting',
-      title: 'Working From Home, Preschool Edition',
-      meta: 'February 2026',
-      pull: '"Four children in seven years means constant motion and constant need. It is loud, absurd, and occasionally unhinged."',
-      excerpt: "There is a very specific kind of panic that sets in when your naked child comes sprinting toward your office door mid-call.\n\nIn that moment, you move quickly. You turn off your camera, redirect the situation with whatever harmless object is within reach — not in anger, but in strategy — and return to the screen as if nothing happened. The object must be light enough not to cause harm, heavy enough to carry intention, and unlikely to shatter on impact. I have curated a small collection in my top drawer for this purpose. One Jolly Rancher included. Finders keepers.",
-    },
-    {
-      type: 'Personal Essay',
-      title: 'For a Minute',
-      meta: 'February 2026',
-      pull: '"It just looked like she had it all figured out for a minute."',
-      excerpt: "It's funny how quickly you can look at someone and feel like they're doing it better than you.\n\nI ran into a mom from my kids' school at the grocery store yesterday. I hadn't seen her in a while and for a second I almost didn't recognize her. Hair done, nails done, just put together in a way that felt worlds apart from the last time I'd seen her.",
-      hasImage: true,
-      imagePath: '/portfolio/for-a-minute-quote.png',
-    },
-    {
-      type: 'Op-Ed · Politics & Civic Engagement',
-      title: 'Echo Chambers of Insanity',
-      meta: 'February 2026',
-      pull: '"We\'re living in an echo chamber of insanity, and it\'s officially time that we break free."',
-      excerpt: "Canadian politics have gone straight to hell in a handbasket, and frankly, I'm over it. My partner and I care deeply about our community, local businesses, infrastructure and the well-being of the people around us. But, most importantly, we care about the health, rights, and dignity of others.\n\nThe current political landscape is pretty darn icky. It's like every conversation has been overtaken by an out-of-control game of telephone, where everyone is yelling at each other from their corners of the internet trying to one-up each other with the latest smear or conspiracy.",
-    },
-  ],
-  education: [
-    {
-      type: 'Professional Development · Curriculum Design',
-      title: 'Equity in Real Classroom Practice',
-      meta: 'Five-Course Learning Series',
-      pull: '"Most equity professional development stops at awareness. Teachers leave knowing why equity matters but not what to do when things get hard."',
-      excerpt: "A five-course professional learning series designed to move educators from equity awareness to equity action. Each course targets a specific hard moment where teachers get stuck — reading participation patterns, teaching controversial issues, interrupting microaggressions, navigating racial conversations, and sustaining the work long-term.\n\nThe approach is framework-driven, script-supported, and practice-based. Not theory. Not principles to remember. Mental models for quick categorization, actual language for difficult moments, and rehearsal that builds muscle memory.",
-    },
-    {
-      type: 'Impact Report · Intersectional Justice',
-      title: 'Race + Disability Initiative Report',
-      meta: 'November 2025',
-      pull: '"By naming the interdependence of racial and disability justice, the initiative demonstrates how local collaboration can shape national learning."',
-      excerpt: "A comprehensive report documenting eighteen months of collaborative work advancing racial equity and disability justice in Western Pennsylvania. Written for the FISA Foundation, The Pittsburgh Foundation, and The Heinz Endowments, this report captures the evolution of a regional network committed to inclusive systems change.\n\nAcross four convenings and ongoing partnerships, more than fifty organizations moved from compliance toward transformation — reframing accessibility as a shared value, diversifying leadership, and aligning funding structures with inclusion.",
-    },
-    {
-      type: 'Youth Workshop · Media Literacy',
-      title: 'Social Media Safety Workshop',
-      meta: 'Grades 6-8 · Three-Hour Format',
-      pull: '"The program is built for depth, not speed. Each hour focuses on one core concept with time built in for real discussion."',
-      excerpt: "A three-hour workshop for grades 6-8 that moves students through a clear learning arc: Learn, Experience, Teach. By the end, students aren't just safer online — they're equipped to help others navigate digital spaces.\n\nBuilt for depth, not speed. Each hour focuses on one core concept with time for real discussion and reflection. Students identify risks, recognize manipulation, and develop strategies for safe digital participation.",
-    },
-    {
-      type: 'Alternative Education · Curriculum Framework',
-      title: '12 Weeks of Wonder',
-      meta: 'Mixed-Age Learning · Ages 8-14',
-      pull: '"True inquiry-based learning means following the curiosity and questions of the children in our care."',
-      excerpt: "A 12-week inquiry-based learning journey designed for mixed-age groups (ages 8-14). This curriculum framework follows children's curiosity through thematic units — from mapping and cartography to bread science, garden ecology, and pirate navigation.\n\nEach unit includes multiple entry points so younger learners engage through hands-on exploration while older learners tackle leadership roles, design experiments, and engage with real-world applications.",
-    },
-  ],
-  brandContent: [
-    {
-      type: 'Social Media Content · Willow & Rose',
-      title: 'Homestead Brand Voice',
-      meta: 'Willow & Rose — Product & Lifestyle Content',
-      pull: '"Warm, personal content that sounds like the person behind the brand."',
-      image: '/portfolio/willowandrose-social-1.png',
-    },
-    {
-      type: 'Video Content · Willow & Rose',
-      title: 'Reel Copywriting',
-      meta: 'Willow & Rose — Short Form Video',
-      pull: '"Scroll-stopping hooks written for real audiences."',
-      video: '/portfolio/willowandrose-video-1.mp4',
-    },
-    {
-      type: 'Social Media Content · Raven House Co.',
-      title: 'Small Business Social Copy',
-      meta: 'Raven House Co. — Instagram Content',
-      pull: '"Community-first copy that builds connection, not just followers."',
-      image: '/portfolio/raven-house-social-1.png',
-    },
-    {
-      type: 'Social Media Content · Raven House Co.',
-      title: 'Product & Story Posts',
-      meta: 'Raven House Co. — Instagram Content',
-      pull: '"Copy that lets the product speak without overselling it."',
-      image: '/portfolio/raven-house-social-2.png',
-    },
-    {
-      type: 'Social Media Content · Raven House Co.',
-      title: 'Brand Storytelling',
-      meta: 'Raven House Co. — Instagram Content',
-      pull: '"Every post part of a larger brand narrative."',
-      image: '/portfolio/raven-house-social-3.png',
-    },
-    {
-      type: 'Social Media Content · Raven House Co.',
-      title: 'Engagement Copy',
-      meta: 'Raven House Co. — Instagram Content',
-      pull: '"Written to start conversations, not just collect likes."',
-      image: '/portfolio/raven-house-social-4.png',
-    },
-    {
-      type: 'Real Estate Copy · Mock-Up',
-      title: 'Listing Social Post',
-      meta: 'Real Estate — Social Media Content',
-      pull: '"Copy that sells the feeling of a home, not just the specs."',
-      image: '/portfolio/realestate-social-1.png',
-    },
-    {
-      type: 'Real Estate Copy · Mock-Up',
-      title: 'Realtor Personal Brand Post',
-      meta: 'Real Estate — Social Media Content',
-      pull: '"Positioning a realtor as the trusted guide, not just the salesperson."',
-      image: '/portfolio/realestate-social-2.png',
-    },
-    {
-      type: 'Real Estate Copy · Mock-Up',
-      title: 'Property Listing Flyer',
-      meta: 'Real Estate — Print & Digital',
-      pull: '"This could be the one."',
-      image: '/portfolio/realestate-flyer-1.png',
-    },
-    {
-      type: 'Real Estate Copy · Mock-Up',
-      title: 'Realtor Marketing Flyer',
-      meta: 'Real Estate — Print & Digital',
-      pull: '"Ready for a change? That\'s where I come in."',
-      image: '/portfolio/real-estate-flyer-3.jpg',
-    },
-    {
-      type: 'Video Content · Mock-Up',
-      title: 'Real Estate Reel',
-      meta: 'Real Estate — Short Form Video',
-      pull: '"They weren\'t looking for anything extraordinary..."',
-      video: '/portfolio/realestate-video-3.mp4',
-    },
-    {
-      type: 'Video Content · Mock-Up',
-      title: 'Property Carousel Reel',
-      meta: 'Real Estate — Short Form Video',
-      pull: '"Carousel copy that tells a story slide by slide."',
-      video: '/portfolio/realestate-video-4.mp4',
-    },
-  ],
-}
+const PORTFOLIO_CATEGORIES = [
+  {
+    title: 'Weddings & Speeches',
+    desc: 'Ceremony scripts, toasts, vows, and the words people remember long after the day.',
+    href: '/portfolio/weddings-speeches',
+    image: '/portfolio/annapolis-valley-quote.png',
+  },
+  {
+    title: 'Writing',
+    desc: 'Essays, satire, opinion, and personal writing that earns its space on the page.',
+    href: '/portfolio/writing',
+    image: '/portfolio/for-a-minute-quote.png',
+  },
+  {
+    title: 'Educational Content',
+    desc: 'Curriculum, training programs, and learning resources built for real-world application.',
+    href: '/portfolio/educational-content',
+    image: null,
+  },
+  {
+    title: 'Brand & Content',
+    desc: 'Social media, real estate copy, video scripts, and content that sounds like the brand behind it.',
+    href: '/portfolio/brand-content',
+    image: '/portfolio/raven-house-social-2.png',
+  },
+]
+
+const HOW_IT_WORKS = [
+  {
+    num: '01',
+    title: 'You reach out.',
+    desc: "Tell me what you're working on. No polished brief required — just tell me where you're at.",
+  },
+  {
+    num: '02',
+    title: 'We talk it through.',
+    desc: 'One conversation to figure out what you actually need, how we get there, and what good looks like.',
+  },
+  {
+    num: '03',
+    title: 'I write it.',
+    desc: 'Drafts, revisions, back and forth until it sounds exactly right and feels completely like you.',
+  },
+  {
+    num: '04',
+    title: 'You launch it.',
+    desc: "Whether you're stepping up to the mic, hitting publish, or unveiling something you've worked hard on — you do it knowing everything is exactly right.",
+  },
+]
 
 const BLOG_POSTS = [
   {
@@ -284,34 +130,11 @@ const TESTIMONIALS = [
   },
 ]
 
-const HOW_IT_WORKS = [
-  {
-    num: '01',
-    title: 'You reach out.',
-    desc: 'Tell me what you\'re working on. No polished brief required — just tell me where you\'re at.',
-  },
-  {
-    num: '02',
-    title: 'We talk it through.',
-    desc: 'One conversation to figure out what you actually need, how we get there, and what good looks like.',
-  },
-  {
-    num: '03',
-    title: 'I write it.',
-    desc: 'Drafts, revisions, back and forth until it sounds exactly right and feels completely like you.',
-  },
-  {
-    num: '04',
-    title: 'You launch it.',
-    desc: 'Whether you\'re stepping up to the mic, hitting publish, or unveiling something you\'ve worked hard on — you do it knowing everything is exactly right.',
-  },
-]
-
 export default function Home() {
   const [formStatus, setFormStatus] = useState('')
   const [formSubmitting, setFormSubmitting] = useState(false)
-  const [expandedPortfolio, setExpandedPortfolio] = useState(null)
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [lightboxVideo, setLightboxVideo] = useState(null)
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -336,9 +159,21 @@ export default function Home() {
 
   return (
     <>
+      {/* BANNER — below nav, above hero */}
+      <div className="site-banner">
+        <Image
+          src="/banner.jpg"
+          alt="Anchored Prose — Nova Scotia"
+          fill
+          style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
+          priority
+        />
+        <div className="site-banner-overlay" />
+      </div>
+
       <nav>
         <a href="#" className="logo">
-          <Image src="/logo.png" alt="Anchored Prose" width={240} height={60} style={{ height: 56, width: 'auto' }} priority />
+          <Image src="/logo.png" alt="Anchored Prose" width={220} height={55} style={{ height: 52, width: 'auto' }} priority />
         </a>
         <ul className="nav-links">
           <li><a href="#about">About</a></li>
@@ -358,7 +193,7 @@ export default function Home() {
             Every Word,<br /><span className="script-accent">Anchored</span> in Purpose
           </h1>
           <p className="hero-sub fade-up fade-up-3">
-            Speeches that hold a room. Copy that earns the right reader. Content with a reason to exist. Every word should be worth it.
+            Copy that earns the right reader. Content with a reason to exist. Every word should be worth it.
           </p>
           <div className="hero-ctas fade-up fade-up-4">
             <a href="#services" className="btn-gold">See What I Do</a>
@@ -375,9 +210,9 @@ export default function Home() {
               <Image
                 src="/headshot.png"
                 alt="Julianna Melnick-MacDonald — Anchored Prose"
-                width={460}
-                height={300}
-                style={{ width: '100%', height: 300, objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }}
+                width={500}
+                height={420}
+                style={{ width: '100%', height: 420, objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }}
               />
             </div>
             <div className="about-gold-bar"></div>
@@ -423,7 +258,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PORTFOLIO */}
+      {/* PORTFOLIO — category cards */}
       <section className="portfolio" id="portfolio">
         <div className="portfolio-header">
           <div className="section-label">Portfolio</div>
@@ -432,135 +267,32 @@ export default function Home() {
           </h2>
           <p className="portfolio-note">Excerpts from client projects and personal writing. Names changed where noted.</p>
         </div>
-
-        <div className="portfolio-category">
-          <h3 className="portfolio-category-title">Weddings &amp; Speeches</h3>
-          <div className="portfolio-grid">
-            {PORTFOLIO.celebrations.map((p, i) => (
-              <div
-                key={`cel-${i}`}
-                className="portfolio-card"
-                onClick={() => setExpandedPortfolio(expandedPortfolio === `cel-${i}` ? null : `cel-${i}`)}
-                tabIndex={0}
-                onKeyDown={(e) => e.key === 'Enter' && setExpandedPortfolio(expandedPortfolio === `cel-${i}` ? null : `cel-${i}`)}
-              >
-                <div className="portfolio-type">{p.type}</div>
-                <h3>{p.title}</h3>
-                <p className="portfolio-meta">{p.meta}</p>
-                <p className="portfolio-pull">{p.pull}</p>
-                {expandedPortfolio === `cel-${i}` && (
-                  <div className="portfolio-excerpt">
-                    {p.excerpt.split('\n\n').map((para, j) => (
-                      <p key={j}>{para}</p>
-                    ))}
+        <div className="portfolio-cats">
+          {PORTFOLIO_CATEGORIES.map((cat, i) => (
+            <a key={i} href={cat.href} className="portfolio-cat-card">
+              <div className="portfolio-cat-image">
+                {cat.image ? (
+                  <Image src={cat.image} alt={cat.title} fill style={{ objectFit: 'cover', objectPosition: 'top' }} />
+                ) : (
+                  <div className="portfolio-cat-placeholder">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                      <path d="M8,12 L40,12 L40,36 L8,36 Z" stroke="rgba(184,150,62,0.4)" strokeWidth="1" fill="none"/>
+                      <line x1="8" y1="18" x2="40" y2="18" stroke="rgba(184,150,62,0.2)" strokeWidth="1"/>
+                      <line x1="8" y1="24" x2="40" y2="24" stroke="rgba(184,150,62,0.2)" strokeWidth="1"/>
+                      <line x1="8" y1="30" x2="32" y2="30" stroke="rgba(184,150,62,0.2)" strokeWidth="1"/>
+                    </svg>
                   </div>
                 )}
-                <span className="portfolio-link">
-                  {expandedPortfolio === `cel-${i}` ? 'Close' : 'Read excerpt'}
-                </span>
+                <div className="portfolio-cat-overlay" />
               </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="portfolio-category">
-          <h3 className="portfolio-category-title">Writing</h3>
-          <div className="portfolio-grid">
-            {PORTFOLIO.essays.map((p, i) => (
-              <div
-                key={`essay-${i}`}
-                className="portfolio-card"
-                onClick={() => setExpandedPortfolio(expandedPortfolio === `essay-${i}` ? null : `essay-${i}`)}
-                tabIndex={0}
-                onKeyDown={(e) => e.key === 'Enter' && setExpandedPortfolio(expandedPortfolio === `essay-${i}` ? null : `essay-${i}`)}
-              >
-                <div className="portfolio-type">{p.type}</div>
-                <h3>{p.title}</h3>
-                <p className="portfolio-meta">{p.meta}</p>
-                {p.hasImage && (
-                  <div style={{ margin: '1.5rem -1rem' }}>
-                    <Image src={p.imagePath} alt={p.pull.replace(/"/g, '')} width={600} height={600} style={{ width: '100%', height: 'auto', borderRadius: '4px' }} />
-                  </div>
-                )}
-                <p className="portfolio-pull">{p.pull}</p>
-                {expandedPortfolio === `essay-${i}` && (
-                  <div className="portfolio-excerpt">
-                    {p.excerpt.split('\n\n').map((para, j) => (
-                      <p key={j}>{para}</p>
-                    ))}
-                  </div>
-                )}
-                <span className="portfolio-link">
-                  {expandedPortfolio === `essay-${i}` ? 'Close' : 'Read excerpt'}
-                </span>
+              <div className="portfolio-cat-body">
+                <h3>{cat.title}</h3>
+                <p>{cat.desc}</p>
+                <span className="portfolio-cat-link">View Work →</span>
               </div>
-            ))}
-          </div>
+            </a>
+          ))}
         </div>
-
-        <div className="portfolio-category">
-          <h3 className="portfolio-category-title">Educational Content</h3>
-          <div className="portfolio-grid">
-            {PORTFOLIO.education.map((p, i) => (
-              <div
-                key={`edu-${i}`}
-                className="portfolio-card"
-                onClick={() => setExpandedPortfolio(expandedPortfolio === `edu-${i}` ? null : `edu-${i}`)}
-                tabIndex={0}
-                onKeyDown={(e) => e.key === 'Enter' && setExpandedPortfolio(expandedPortfolio === `edu-${i}` ? null : `edu-${i}`)}
-              >
-                <div className="portfolio-type">{p.type}</div>
-                <h3>{p.title}</h3>
-                <p className="portfolio-meta">{p.meta}</p>
-                <p className="portfolio-pull">{p.pull}</p>
-                {expandedPortfolio === `edu-${i}` && (
-                  <div className="portfolio-excerpt">
-                    {p.excerpt.split('\n\n').map((para, j) => (
-                      <p key={j}>{para}</p>
-                    ))}
-                  </div>
-                )}
-                <span className="portfolio-link">
-                  {expandedPortfolio === `edu-${i}` ? 'Close' : 'Read excerpt'}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="portfolio-category">
-          <h3 className="portfolio-category-title">Brand &amp; Content</h3>
-          <div className="portfolio-grid">
-            {PORTFOLIO.brandContent.map((p, i) => (
-              <div
-                key={`brand-${i}`}
-                className="portfolio-card"
-                onClick={() => setExpandedPortfolio(expandedPortfolio === `brand-${i}` ? null : `brand-${i}`)}
-                tabIndex={0}
-                onKeyDown={(e) => e.key === 'Enter' && setExpandedPortfolio(expandedPortfolio === `brand-${i}` ? null : `brand-${i}`)}
-              >
-                <div className="portfolio-type">{p.type}</div>
-                <h3>{p.title}</h3>
-                <p className="portfolio-meta">{p.meta}</p>
-                {p.image && (
-                  <div style={{ margin: '1rem 0', borderRadius: '4px', overflow: 'hidden' }}>
-                    <Image src={p.image} alt={p.title} width={600} height={400} style={{ width: '100%', height: '220px', objectFit: 'cover', display: 'block' }} />
-                  </div>
-                )}
-                {p.video && (
-                  <div style={{ margin: '1rem 0', borderRadius: '4px', overflow: 'hidden', position: 'relative', background: '#0D1B2E' }}>
-                    <video src={p.video} style={{ width: '100%', height: '220px', objectFit: 'cover', display: 'block' }} muted playsInline preload="metadata" />
-                    <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '48px', height: '48px', borderRadius: '50%', background: 'rgba(184,150,62,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><polygon points="5,3 14,8 5,13" fill="white"/></svg>
-                    </div>
-                  </div>
-                )}
-                <p className="portfolio-pull">{p.pull}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
       </section>
 
       {/* TESTIMONIALS */}
