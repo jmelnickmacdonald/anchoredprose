@@ -47,6 +47,12 @@ const PORTFOLIO_CATEGORIES = [
     desc: 'Social media, real estate copy, video scripts, and content that sounds like the brand behind it.',
     href: '/portfolio/brand-content',
   },
+  {
+    title: 'Educational Content',
+    desc: 'Curriculum, training programs, and learning resources built for real-world application.',
+    href: null,
+    comingSoon: true,
+  },
 ]
 
 const HOW_IT_WORKS = [
@@ -74,7 +80,7 @@ const HOW_IT_WORKS = [
 
 const BLOG_POSTS = [
   {
-    category: "Captain's Log",
+    category: "Captain's Log · Satire",
     date: 'February 2026',
     title: 'Mothers Encouraged to Optimize Their Time',
     excerpt: 'A deeply reported investigation into the perpetually imminent arrival of productivity, and the women who have stopped making plans in August.',
@@ -203,8 +209,8 @@ export default function Home() {
           </div>
           <div className="about-text">
             <div className="section-label">About</div>
-            <h2 className="section-title">
-              Writing for the<br /><span className="script-accent">moments that count</span>
+            <h2 className="section-title" style={{ fontSize: 'clamp(24px,3vw,42px)', whiteSpace: 'nowrap' }}>
+              Writing for the <span className="script-accent">moments that count</span>
             </h2>
             <p className="about-body">
               Hi! I&apos;m Julianna, a writer, educator, mom, wannabe farmer, and the founder of Anchored Prose. I hold a Master of Professional Education and a few other degrees that cost me a lot of time and money, and I&apos;ve spent over a decade helping people find the right words for the moments that count.
@@ -228,10 +234,15 @@ export default function Home() {
         </div>
         <div className="services-grid">
           {SERVICES.map((s, i) => (
-            <div key={i} className="service-card">
-              <h3>{s.title}</h3>
-              <p className="service-tagline">{s.tagline}</p>
-              <p className="service-desc">{s.desc}</p>
+            <div key={i} className={activeService === i ? 'service-card open' : 'service-card'} onClick={() => setActiveService(activeService === i ? null : i)}>
+              <div className="service-card-header">
+                <h3>{s.title}</h3>
+                <span className="service-card-toggle">{activeService === i ? '−' : '+'}</span>
+              </div>
+              <div className={activeService === i ? 'service-card-body open' : 'service-card-body'}>
+                <p className="service-tagline">{s.tagline}</p>
+                <p className="service-desc">{s.desc}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -247,13 +258,23 @@ export default function Home() {
         </div>
         <div className="portfolio-cats">
           {PORTFOLIO_CATEGORIES.map((cat, i) => (
-            <a key={i} href={cat.href} className="portfolio-cat-card">
-              <div className="portfolio-cat-body">
-                <h3>{cat.title}</h3>
-                <p>{cat.desc}</p>
-                <span className="portfolio-cat-link">View Work →</span>
+            {cat.comingSoon ? (
+              <div key={i} className="portfolio-cat-card" style={{ cursor: 'default', opacity: 0.75 }}>
+                <div className="portfolio-cat-body">
+                  <h3>{cat.title}</h3>
+                  <p>{cat.desc}</p>
+                  <span className="portfolio-cat-link">Coming soon</span>
+                </div>
               </div>
-            </a>
+            ) : (
+              <a key={i} href={cat.href} className="portfolio-cat-card">
+                <div className="portfolio-cat-body">
+                  <h3>{cat.title}</h3>
+                  <p>{cat.desc}</p>
+                  <span className="portfolio-cat-link">View Work →</span>
+                </div>
+              </a>
+            )}
           ))}
         </div>
       </section>
@@ -293,7 +314,7 @@ export default function Home() {
           <div className="blog-cards" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
             {BLOG_POSTS.map((post, i) => (
               <div key={i} className="blog-card">
-                <div className="blog-card-category">{post.category} · {post.date}</div>
+                <div className="blog-card-category">{post.category} · {post.date}{post.tag ? <span style={{marginLeft:'10px',background:'rgba(155,123,58,0.15)',color:'var(--gold)',padding:'2px 8px',fontSize:'11px',letterSpacing:'1px',textTransform:'uppercase',borderRadius:'2px'}}>{post.tag}</span> : null}</div>
                 <h3>{post.title}</h3>
                 <p>{post.excerpt}</p>
                 <p style={{fontFamily:"'Crimson Pro',Georgia,serif",fontSize:'13px',letterSpacing:'2px',textTransform:'uppercase',color:'var(--gold)',marginTop:'16px'}}>Coming soon to Captain&apos;s Log</p>
@@ -387,6 +408,7 @@ export default function Home() {
             <p>© 2026 Anchored Prose. All rights reserved.</p>
           </div>
         </div>
+      </div>
       </footer>
     </>
   )
