@@ -32,7 +32,7 @@ const SERVICES = [
 
 const PORTFOLIO_CATEGORIES = [
   {
-    title: 'Weddings & Speeches',
+    title: 'Speeches, Ceremonies & Tributes',
     desc: 'Ceremony scripts, toasts, vows, and the words people remember long after the day.',
     href: '/portfolio/weddings-speeches',
   },
@@ -209,7 +209,7 @@ export default function Home() {
           </div>
           <div className="about-text">
             <div className="section-label">About</div>
-            <h2 className="section-title" style={{ fontSize: 'clamp(24px,3vw,42px)', whiteSpace: 'nowrap' }}>
+            <h2 className="section-title" style={{ fontSize: 'clamp(22px,2.6vw,38px)', whiteSpace: 'nowrap', display: 'block', textAlign: 'left' }}>
               Writing for the <span className="script-accent">moments that count</span>
             </h2>
             <p className="about-body">
@@ -258,7 +258,7 @@ export default function Home() {
         </div>
         <div className="portfolio-cats">
           {PORTFOLIO_CATEGORIES.map((cat, i) => (
-            {cat.comingSoon ? (
+            cat.comingSoon ? (
               <div key={i} className="portfolio-cat-card" style={{ cursor: 'default', opacity: 0.75 }}>
                 <div className="portfolio-cat-body">
                   <h3>{cat.title}</h3>
@@ -274,7 +274,7 @@ export default function Home() {
                   <span className="portfolio-cat-link">View Work →</span>
                 </div>
               </a>
-            )}
+            )
           ))}
         </div>
       </section>
