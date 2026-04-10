@@ -72,12 +72,10 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 
 /* SERVICES — blue floral */
 .services { background: var(--navy); padding: 80px 64px; position: relative; overflow: hidden; isolation: isolate; }
-.services-header, .services-grid { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px; position: relative; z-index: 1; }
-.services-header { position: relative; z-index: 2; }
-.services-grid { position: relative; z-index: 2; }
+.services-header, .services-header { position: relative; z-index: 2; }
 .services::before { content: ''; position: absolute; inset: 0; background-image: url('/background4.jpg'); background-size: 1100px; opacity: 0.77; pointer-events: none; z-index: 0; }
+.services-grid { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px; position: relative; z-index: 2; }
 .services-header { max-width: 480px; margin: 0 auto 48px; text-align: center; position: relative; z-index: 1; background: rgba(13,27,46,0.96); padding: 24px 48px; border: 1px solid rgba(155,123,58,0.25); }
-.services-grid { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px; position: relative; z-index: 1; background: rgba(245,240,232,0.08); padding: 24px 32px; border-left: 2px solid rgba(155,123,58,0.25); border-right: 2px solid rgba(155,123,58,0.25); }
 .service-card { background: rgba(13,27,46,0.94); border-left: 3px solid transparent; padding: 20px 28px; transition: border-color 0.2s, background 0.2s; cursor: pointer; }
 .service-card:hover, .service-card.open { border-left-color: var(--gold); background: rgba(13,27,46,0.97); }
 .service-card-header { display: flex; align-items: center; justify-content: space-between; }
@@ -219,8 +217,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
   .hiw-steps { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
@@ -234,8 +231,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
   .about .section-title { text-align: center; }
   .about-image-wrap { position: relative; top: auto; }
   .services { padding: 60px 24px; }
-  .services-grid { grid-template-columns: 1fr; }
-  .portfolio { padding: 60px 24px; }
+    .portfolio { padding: 60px 24px; }
   .portfolio-cats { grid-template-columns: 1fr; }
   .testimonials { padding: 60px 24px; }
   .testimonials-grid { grid-template-columns: 1fr; }
