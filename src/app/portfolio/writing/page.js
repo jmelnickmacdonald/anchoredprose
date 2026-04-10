@@ -54,7 +54,7 @@ const PIECES = [
 export default function WritingPage() {
   const [expanded, setExpanded] = useState(null)
   return (
-    <div className="subpage">
+    <div className="subpage" style={{ backgroundImage: "url('/creamseashellfloral.jpg')", backgroundSize: "600px" }} style={{ backgroundImage: "url('/creamseashellfloral.jpg')", backgroundSize: '500px', backgroundBlendMode: 'normal' }}>
       <nav className="subpage-nav">
         <a href="/" className="logo"><Image src="/logo.png" alt="Anchored Prose" width={200} height={50} style={{ height: 46, width: 'auto' }} /></a>
         <a href="/#portfolio" className="back-link">← Back to Portfolio</a>
