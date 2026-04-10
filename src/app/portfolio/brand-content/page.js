@@ -133,7 +133,7 @@ export default function BrandContentPage() {
         </div>
       </div>
 
-      <div className="subpage-body">
+      <div className="subpage-body" style={{ background: "#F5F0E8", position: "relative", zIndex: 10 }}>
         <div className="subpage-portfolio-grid">
           {SOCIAL_PIECES.map((p, i) => (
             <PieceCard key={i} p={p} onVideoClick={setLightboxVideo} onImageClick={setLightboxImage} />
