@@ -211,7 +211,7 @@ export default function Home() {
           </div>
           <div className="about-text">
             <div className="section-label">About</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px,2.4vw,36px)', fontWeight: 300, lineHeight: 1.1, marginBottom: '28px', whiteSpace: 'nowrap', color: 'var(--navy)' }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,3vw,46px)', fontWeight: 300, lineHeight: 1.1, marginBottom: '28px', whiteSpace: 'nowrap', color: 'var(--navy)' }}>
               Writing for the <span style={{ fontFamily: 'var(--font-script)', fontSize: '1em', color: 'var(--gold)', fontStyle: 'normal', display: 'inline', verticalAlign: 'baseline', position: 'relative', top: '0.1em' }}>moments that count</span>
             </h2>
             <p className="about-body">
