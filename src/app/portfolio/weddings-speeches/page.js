@@ -117,7 +117,8 @@ export default function WeddingsSpeechesPage() {
             <p className="portfolio-meta">{p.meta}</p>
             {p.image && (
               <div style={{ margin: '1rem 0', borderRadius: '4px', overflow: 'hidden' }}>
-                <Image src={p.image} alt={p.title} width={600} height={400} style={{ width: '100%', height: '240px', objectFit: 'cover', objectPosition: 'center', display: 'block' }} />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={p.image} alt={p.title} style={{ width: '100%', height: '240px', objectFit: 'cover', objectPosition: 'top', display: 'block' }} />
               </div>
             )}
             <p className="portfolio-pull">{p.pull}</p>
@@ -138,6 +139,7 @@ export default function WeddingsSpeechesPage() {
       <div className="subpage-cta-bar">
         <p>Like what you see? <a href="/#contact">Let&apos;s work together.</a></p>
       </div>
+    </div>
     </div>
   )
 }
