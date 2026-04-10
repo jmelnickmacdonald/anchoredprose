@@ -70,7 +70,7 @@ export default function WeddingsSpeechesPage() {
         </div>
       </div>
 
-      <div style={{ background: '#aaa3a0', position: 'relative', zIndex: 10 }}>
+      <div style={{ background: '#F5F0E8', position: 'relative', zIndex: 10 }}>
         <div className="subpage-category-label">Speeches &amp; Ceremonies</div>
         <div className="subpage-portfolio-grid">
           {SPEECHES.map((p, i) => (
