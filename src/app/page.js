@@ -249,6 +249,7 @@ export default function Home() {
             </div>
           ))}
         </div>
+        </div>
       </section>
 
       <section className="portfolio" id="portfolio">
