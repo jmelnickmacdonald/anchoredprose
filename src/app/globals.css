@@ -73,10 +73,10 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 /* SERVICES — blue floral */
 .services { background: var(--navy); padding: 80px 64px; position: relative; overflow: hidden; }
 .services::after { content: ''; position: absolute; inset: 0; background: rgba(13,27,46,0.94); pointer-events: none; z-index: 0; }
-.services-header, .services-grid { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px; position: relative; z-index: 1; background: rgba(245,240,232,0.06); padding: 24px 32px; border-left: 2px solid rgba(155,123,58,0.3); border-right: 2px solid rgba(155,123,58,0.3); }
+.services-header, .services-grid { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px; position: relative; z-index: 1; background: rgba(13,27,46,0.4); padding: 24px 32px; border-left: 1px solid rgba(155,123,58,0.2); border-right: 1px solid rgba(155,123,58,0.2); }
 .services-header, .services-grid { position: relative; z-index: 1; }
 .services::before { content: ''; position: absolute; inset: 0; background-image: url('/background4.jpg'); background-size: 1100px; opacity: 0.77; pointer-events: none; }
-.services-header { max-width: 480px; margin: 0 auto 48px; text-align: center; position: relative; z-index: 1; background: rgba(13,27,46,0.88); padding: 24px 48px; border: 1px solid rgba(155,123,58,0.2); }
+.services-header { max-width: 480px; margin: 0 auto 48px; text-align: center; position: relative; z-index: 1; background: rgba(13,27,46,0.96); padding: 24px 48px; border: 1px solid rgba(155,123,58,0.25); }
 .services-grid { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px; position: relative; z-index: 1; background: rgba(245,240,232,0.08); padding: 24px 32px; border-left: 2px solid rgba(155,123,58,0.25); border-right: 2px solid rgba(155,123,58,0.25); }
 .service-card { background: rgba(13,27,46,0.94); border-left: 3px solid transparent; padding: 20px 28px; transition: border-color 0.2s, background 0.2s; cursor: pointer; }
 .service-card:hover, .service-card.open { border-left-color: var(--gold); background: rgba(13,27,46,0.97); }
@@ -113,7 +113,6 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 
 /* TESTIMONIALS — blue floral, dark boxes */
 .testimonials { background: var(--navy); padding: 56px 64px; position: relative; overflow: hidden; text-align: center; }
-.testimonials::after { content: ''; position: absolute; inset: 0; background: rgba(13,27,46,0.94); pointer-events: none; z-index: 0; }
 .testimonials-header, .testimonials-featured, .testimonials-grid { position: relative; z-index: 1; }
 .testimonials::before { content: ''; position: absolute; inset: 0; background-image: url('/background3.jpg'); background-size: 1400px; opacity: 0.95; pointer-events: none; }
 .testimonials-header { display: inline-block; margin: 0 auto 40px; text-align: center; position: relative; z-index: 1; background: rgba(13,27,46,0.75); padding: 20px 40px; border: 1px solid rgba(155,123,58,0.2); }
