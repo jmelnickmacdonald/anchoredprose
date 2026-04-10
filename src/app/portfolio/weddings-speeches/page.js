@@ -5,17 +5,17 @@ import { useState } from 'react'
 const SPEECHES = [
   {
     type: 'Wedding Officiant',
-    title: 'My Sister, Her Perfect Match',
+    title: 'The Type B Minus to Her Type A',
     meta: 'Destination Wedding · Punta Cana, Dominican Republic',
     pull: "\"I'm the type B minus to Rebecca's Type A.\"",
     excerpt: "Welcome, welcome, beach lovers and party enthusiasts! Can we just take a moment to appreciate how beautiful this backdrop is, how stunning our bride and groom look and how clean my children are for a change?\n\nFor those of you who don't know me, I'm Julianna, immensely proud sister of the bride, chronic thorn in her side, and forever accomplice. I spend my days in equal parts chasing kids, cursing at farm animals, and questioning many of my life choices. Meanwhile, Rebecca is off being crowned a world champion fitness competitor, owning and operating an incredible business, being a thoughtful and generous daughter, sister and friend, and looking fabulous doing it all.\n\nNaturally, I set my bar considerably lower. I'm the type B minus to Rebecca's Type A, and I am simply thrilled to be standing here today in a dress and heels instead of my usual muck-covered rubber boots, celebrating my sister and her perfect match.",
   },
   {
     type: 'Best Man Toast',
-    title: 'The Turn',
+    title: 'The One Who Mattered',
     meta: 'Twenty-Four Years of Friendship',
     pull: '"He still can\'t assemble furniture, but he shows up."',
-    excerpt: "I've known Matt for twenty-four years, which means I've seen every version of this man. The kid who ate an entire sleeve of Oreos before a cross-country meet and threw up at the starting line. The guy who once tried to assemble an IKEA bookshelf without the instructions and ended up with something that looked like modern art and held exactly zero books.\n\nHere's the thing about Claire. She knows exactly what she's getting into. And she chose him anyway. Fully informed, eyes wide open. That's not a small thing.\n\nHe still can't assemble furniture, but he shows up. And that's the part that matters.",
+    excerpt: "I've known Matt for twenty-four years. We met when we were nine, playing hockey, which means I've seen just about every version of this man standing here.\n\nThe 9-year-old who decided he was going to be a goalie. That lasted exactly one game — in fact, maybe less? Did you even make it past second period, buddy? Turns out the job involves getting hit with things, and the puck does not care about your confidence. The 13-year-old who ate an entire sleeve of Oreos before a cross-country meet and threw up at the starting line. The 18-year-old, which, for legal reasons, we're just going to refer to as a bold era. Very confident, very charismatic, and very rarely correct. And the 25-year-old, fresh out of grad school Matt, who tried to assemble a Kijiji-purchased IKEA bookshelf without the instructions and ended up with something that looked like modern art and held exactly zero books ever.\n\nMatt had always been the life of the party. If something was going to happen, we knew exactly who was leading the charge. He could walk into a place and somehow know the bouncer, the bartender, the lead singer of the band and half the room before the rest of us had even sipped our first beer.\n\nThat was Matt. Until he met Claire. And then just like that, my leading man met his leading lady and, for once, stopped trying to run the whole show.\n\nBecause for the first time ever, this one mattered.",
   },
   {
     type: 'Father of the Bride',
@@ -24,13 +24,7 @@ const SPEECHES = [
     pull: '"The job was never to keep them."',
     excerpt: "Here's the thing nobody warns you about when you become a parent. You spend years becoming the world's leading expert on one small human: what makes them laugh, what scares them, which breakfast battles aren't worth fighting, the exact pitch of the cry that means something actually hurts versus the one that means her sister looked at her wrong.\n\nAnd then one day, someone else starts learning those things too. And you realize the job was never to keep them. The job was to make sure that when they found their person, they'd know.\n\nShe doesn't need me to give her away. She's not mine to give. But I am so honoured to watch.",
   },
-  {
-    type: 'Wedding Vows',
-    title: 'The Night I Knew',
-    meta: 'Autumn Wedding · Prince Edward Island',
-    pull: '"I don\'t ever want to come home to a house where this isn\'t happening."',
-    excerpt: "I knew I wanted this the night you fell asleep on the couch with both dogs on top of you and the TV still going, and I sat there for a full ten minutes just looking at you, thinking: I don't ever want to come home to a house where this isn't happening.\n\nI'm not going to promise you perfection. I'm going to forget things. I'm going to load the dishwasher wrong. I'm going to need you to tell me what's wrong instead of saying \"I'm fine\" because I will believe you every single time.\n\nBut here's what I can promise: I will always be in your corner. I will always choose us, even when us is hard. I will love you quietly, stubbornly, and without keeping score.",
-  },
+
   {
     type: 'Choral Reading · Wedding Ceremony',
     title: "Oh, the Places You'll Go",
@@ -62,7 +56,7 @@ export default function WeddingsSpeechesPage() {
   const [expanded, setExpanded] = useState(null)
 
   return (
-    <div className="subpage">
+    <div className="subpage" style={{ backgroundImage: "url('/creamseashellfloral.jpg')", backgroundSize: '500px', backgroundBlendMode: 'normal' }}>
       <nav className="subpage-nav">
         <a href="/" className="logo">
           <Image src="/logo.png" alt="Anchored Prose" width={200} height={50} style={{ height: 46, width: 'auto' }} />
@@ -78,6 +72,8 @@ export default function WeddingsSpeechesPage() {
           <h1>Weddings &amp; <span className="script-accent">Speeches</span></h1>
         </div>
       </div>
+
+      <div className="subpage-content">
 
       {/* SPEECHES & CEREMONIES */}
       <div className="subpage-category-label">Speeches &amp; Ceremonies</div>
@@ -136,6 +132,8 @@ export default function WeddingsSpeechesPage() {
             <span className="portfolio-link">{expanded === `tribute-${i}` ? 'Close' : 'Read excerpt'}</span>
           </div>
         ))}
+      </div>
+
       </div>
 
       <div className="subpage-cta-bar">
