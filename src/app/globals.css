@@ -26,7 +26,7 @@ html { scroll-behavior: smooth; }
 body { font-family: var(--font-body); background: var(--cream); color: var(--navy); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
 h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; }
 
-.script-accent { font-family: var(--font-script); font-size: 0.9em; color: var(--gold); font-style: normal; display: inline-block; vertical-align: baseline; line-height: 1; position: relative; top: 0.12em; }
+.script-accent { font-family: var(--font-script); font-size: 1.05em; color: var(--gold); font-style: normal; display: inline-block; vertical-align: baseline; line-height: 1; position: relative; top: 0.08em; }
 
 /* NAV */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--navy); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 80px; border-bottom: 1px solid rgba(184,150,62,0.15); }
