@@ -15,21 +15,21 @@ const SPEECHES = [
     title: 'The One Who Mattered',
     meta: 'Twenty-Four Years of Friendship',
     pull: '"He still can\'t assemble furniture, but he shows up."',
-    excerpt: "I've known Matt for twenty-four years. We met when we were nine, playing hockey, which means I've seen just about every version of this man standing here.\n\nThe 9-year-old who decided he was going to be a goalie. That lasted exactly one game — in fact, maybe less? Did you even make it past second period, buddy? Turns out the job involves getting hit with things, and the puck does not care about your confidence. The 13-year-old who ate an entire sleeve of Oreos before a cross-country meet and threw up at the starting line. The 18-year-old, which, for legal reasons, we're just going to refer to as a bold era. Very confident, very charismatic, and very rarely correct. And the 25-year-old, fresh out of grad school Matt, who tried to assemble a Kijiji-purchased IKEA bookshelf without the instructions and ended up with something that looked like modern art and held exactly zero books ever.\n\nMatt had always been the life of the party. If something was going to happen, we knew exactly who was leading the charge. He could walk into a place and somehow know the bouncer, the bartender, the lead singer of the band and half the room before the rest of us had even sipped our first beer.\n\nThat was Matt. Until he met Claire. And then just like that, my leading man met his leading lady and, for once, stopped trying to run the whole show.\n\nBecause for the first time ever, this one mattered.",
+    excerpt: "I've known Matt for twenty-four years. We met when we were nine, playing hockey which means I've seen just about every version of this man standing here.\n\nThe 9-year-old who decided he was going to be a goalie. That lasted exactly one game — in fact, maybe less? Did you even make it past second period, buddy? Turns out the job involves getting hit with things, and the puck does not care about your confidence. The 13-year-old who ate an entire sleeve of Oreos before a cross-country meet and threw up at the starting line. The 18-year-old, which, for legal reasons, we're just going to refer to as a bold era. Very confident, very charismatic, and very rarely correct. And the 25-year-old, fresh out of grad school Matt, who tried to assemble a Kijiji-purchased IKEA bookshelf without the instructions and ended up with something that looked like modern art and held exactly zero books ever.\n\nFor a long time, that was Matt. A lot of enthusiasm, a lot of confidence… and a track record that didn't always agree.\n\nMatt had always been the life of the party. If something was going to happen, we knew exactly who was leading the charge. He could walk into a place and somehow know the bouncer, the bartender, the lead singer of the band and half the room before the rest of us had even sipped our first beer.\n\nThat was Matt. Until he met Claire. And then just like that… my leading man met his leading lady and, for once, stopped trying to run the whole show.\n\nBecause for the first time ever… this one mattered.",
   },
   {
     type: 'Father of the Bride',
     title: 'Letting Go',
     meta: 'What Nobody Warns You About',
-    pull: '"The job was never to keep them."',
-    excerpt: "Here's the thing nobody warns you about when you become a parent. You spend years becoming the world's leading expert on one tiny human: what makes them laugh, which breakfast battles aren't worth fighting, the exact pitch of the cry that means something actually hurts versus the one that means her sister looked at her wrong, and how to make it better when they're having a hard day.\n\nThen one day, you realize someone else sees her and understands her the way you do. That's when it hits you and gosh, it hits hard.\n\nYour job was never to keep her. It was to raise her well so that when it really mattered, she'd know.\n\nShe doesn't need me to give her away. She's been bossing me around since she was about three so let's be honest about who's really been in charge here. She's not mine to give, but I am so unbelievably proud to be here to watch it.",
+    pull: '"The job was never to keep her."',
+    excerpt: "Here's the thing nobody warns you about when you become a parent. You spend years becoming the world's leading expert on one tiny human: what makes them laugh, which breakfast battles aren't worth fighting, the exact pitch of the cry that means something actually hurts versus the one that means her sister looked at her wrong, and how to make it better when they're having a hard day.\n\nThen one day, you realize your someone else sees her—and understands her—the way you do. That's when it hits you and gosh, it hits hard.\n\nYour job was never to keep her.\n\nIt was to raise her well so that when it really mattered, she'd know.\n\nShe doesn't need me to give her away. She's been bossing me around since she was about three so let's be honest about who's really been in charge here. She's not mine to give, but I am so unbelievably proud to be here to watch it.",
   },
   {
     type: 'Choral Reading · Wedding Ceremony',
-    title: 'Oh, the Places You\'ll Go',
-    meta: 'Inspired by Dr. Seuss\' Oh, the Places You\'ll Go!',
+    title: 'The Journey Ahead',
+    meta: "Inspired by Dr. Seuss' Oh, the Places You'll Go!",
     pull: '"Oh, the places you\'ll go, the things you will do, a lifetime of joy is waiting for you."',
-    excerpt: "Congratulations, today is the big day!\nYou've found your partner to help you pave your way.\nThe world is before you, it's open and wide,\nFilled with adventures you'll take in stride.\n\nAs you step into marriage, with love in your hearts,\nKnow there will be challenges, but that's just the start.\nYou'll face the unknown, with strength and with grace,\nThrough twists and through turns, in life's crazy race.\n\nThere'll be highs, there'll be lows, but you've got this down,\nYou're in it together, the best team in town.\n\nSometimes you'll falter, and sometimes you'll fall,\nBut love will be there to help you stand tall.\nFor no matter the place, no matter the time,\nThe two of you together will be just fine.\n\nSo here's to your future, bright as can be,\nThe adventure of love, for all to see.\nOh, the places you'll go, the things you will do,\nA lifetime of joy is waiting for you.",
+    excerpt: "Congratulations, today is the big day!\nYou've found your partner to help you pave your way.\nThe world is before you, it's open and wide,\nFilled with adventures you'll take in stride.\n\nAs you step into marriage, with love in your hearts,\nKnow there will be challenges, but that's just the start.\nYou'll face the unknown, with strength and with grace,\nThrough twists and through turns, in life's crazy race.\n\nThere'll be highs, there'll be lows, but you've got this down,\nYou're in it together, the best team in town.\n\nSometimes you'll falter, and sometimes you'll fall,\nBut love will be there to help you stand tall.\nFor no matter the place, no matter the time,\nThe two of you together will be just fine.\n\nSo dream and discover, laugh and explore,\nFor this journey ahead will open new doors.\nWith patience, with kindness, and love as your guide,\nYou'll conquer the world, standing side by side.\n\nSo here's to your future, bright as can be,\nThe adventure of love, for all to see.\nOh, the places you'll go, the things you will do,\nA lifetime of joy is waiting for you.",
   },
 ]
 
@@ -39,8 +39,7 @@ const TRIBUTES = [
     title: 'Finley',
     meta: 'Personal Essay · 2024',
     pull: '"He set the tone and carried it his whole life."',
-    image: '/portfolio/finley.jpg',
-    excerpt: "Warning — long post incoming. I've got big feelings today.\n\nToday we said goodbye to Finley, our first baby. He came into our lives long before any of the tiny humans did, and he handled every single one of them with a patience and gentleness that I will never stop being grateful for.\n\nFinley was the dog who taught our kids what it means to be kind to an animal. Who let them dress him up and climb on him and steal his bed. Who never once snapped, never once growled, never made a single child feel anything but safe.\n\nHe set the tone and carried it his whole life.\n\nThirteen years is a long time. Long enough to move through jobs and houses and hard seasons and beautiful ones. Long enough to become so woven into the fabric of your days that you stop noticing he's there until he isn't.\n\nWe noticed today. We will keep noticing for a long time.",
+    excerpt: "Today we said goodbye to Finley, our first baby. He came into our lives long before any of the tiny humans did, and he was the dog we brought every one of those babies home to. In a lot of ways he grew up with us while we were figuring out how to become grown ups ourselves.\n\nFinley had an adventurous almost 13 years. He started out in suburbia, moved with us into rural life, was uprooted with us after the fire, and eventually ended up living the good life as a farm dog. He adapted to every new chapter the same way he handled most things in life - with curiosity, a bit of stubbornness, and the quiet confidence that he belonged wherever his people (and more importantly, his kids) were.\n\nNothing made him happier than his river walks. If there was a trail and water involved, Finley was all in.\n\nOakley was his best friend. Piper was very much his little sister, and he loved her in the most big-brother way possible - including making it very clear when she was being annoying. They were the three stooges, spending their days bouncing between outdoor adventures and couch naps.\n\nFinley also had the important job of teaching the other dogs how to be Melnick-MacDonald dogs. He set the tone and carried it his whole life.\n\nThis morning, after getting rubs and kisses from his kids before they left for school, he passed peacefully in his sleep. In his own quiet way, I think he had made his final decision. I honestly can't think of a more Finley way to close out his chapter.\n\nHe was deeply loved, lived a very full life, and left paw prints all over this family. We're going to miss you so much, Finley.",
   },
   {
     type: 'Obituary',
@@ -72,6 +71,8 @@ export default function WeddingsSpeechesPage() {
       </div>
 
       <div style={{ background: '#F5F0E8', position: 'relative', zIndex: 10 }}>
+        <div style={{ height: '3px', background: 'var(--navy)', width: '100%' }} />
+        <div className="subpage-category-bar"></div>
         <div className="subpage-category-label">Speeches &amp; Ceremonies</div>
         <div className="subpage-portfolio-grid">
           {SPEECHES.map((p, i) => (
@@ -92,6 +93,8 @@ export default function WeddingsSpeechesPage() {
           ))}
         </div>
 
+        <div style={{ height: '3px', background: 'var(--navy)', width: '100%', marginTop: '48px' }} />
+        <div className="subpage-category-bar"></div>
         <div className="subpage-category-label">Tributes &amp; Remembrances</div>
         <div className="subpage-portfolio-grid">
           {TRIBUTES.map((p, i) => (
@@ -100,11 +103,6 @@ export default function WeddingsSpeechesPage() {
               <h3>{p.title}</h3>
               <p className="portfolio-meta">{p.meta}</p>
               <p className="portfolio-pull">{p.pull}</p>
-              {p.image && (
-                <div style={{ margin: '1rem 0', borderRadius: '4px', overflow: 'hidden' }}>
-                  <img src={p.image} alt={p.title} style={{ width: '100%', height: '240px', objectFit: 'cover', objectPosition: 'top', display: 'block' }} />
-                </div>
-              )}
               {expanded === 'tribute-' + i && (
                 <div className="portfolio-excerpt">
                   {p.excerpt.split('\n\n').map((para, j) => (
