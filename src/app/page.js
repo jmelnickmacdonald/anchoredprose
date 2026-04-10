@@ -143,6 +143,8 @@ export default function Home() {
   const [formStatus, setFormStatus] = useState('')
   const [formSubmitting, setFormSubmitting] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [activeService, setActiveService] = useState(null)
+  const [expandedTest, setExpandedTest] = useState(null)
 
   async function handleSubmit(e) {
     e.preventDefault()
