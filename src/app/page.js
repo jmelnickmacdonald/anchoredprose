@@ -211,8 +211,8 @@ export default function Home() {
           </div>
           <div className="about-text">
             <div className="section-label">About</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,3vw,46px)', fontWeight: 300, lineHeight: 1.1, marginBottom: '28px', whiteSpace: 'nowrap', color: 'var(--navy)' }}>
-              Writing for the <span style={{ fontFamily: 'var(--font-script)', fontSize: '1em', color: 'var(--gold)', fontStyle: 'normal', display: 'inline', verticalAlign: 'baseline', position: 'relative', top: '0.1em' }}>moments that count</span>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px,2.5vw,38px)', fontWeight: 300, lineHeight: 1.1, marginBottom: '28px', whiteSpace: 'nowrap', color: 'var(--navy)' }}>
+              Writing for the <span style={{ fontFamily: 'var(--font-script)', fontSize: '1.5em', color: 'var(--gold)', fontStyle: 'normal', display: 'inline', verticalAlign: 'baseline', position: 'relative', top: '0.18em' }}>moments that count</span>
             </h2>
             <p className="about-body">
               Hi! I&apos;m Julianna, a writer, educator, mom, wannabe farmer, and the founder of Anchored Prose. I hold a Master of Professional Education and a few other degrees that cost me a lot of time and money, and I&apos;ve spent over a decade helping people find the right words for the moments that count.
@@ -289,7 +289,11 @@ export default function Home() {
           </h2>
         </div>
         <div className="testimonials-featured" onClick={() => setExpandedTest(expandedTest === 'featured' ? null : 'featured')} style={{ cursor: 'pointer' }}>
-          <blockquote>&ldquo;{expandedTest === 'featured' ? TESTIMONIALS[0].quote : TESTIMONIALS[0].pull}&rdquo;</blockquote>
+          {expandedTest === 'featured' ? (
+            <blockquote>&ldquo;{TESTIMONIALS[0].quote}&rdquo;</blockquote>
+          ) : (
+            <blockquote style={{ fontFamily: 'var(--font-script)', fontSize: 'clamp(24px, 3vw, 38px)', fontStyle: 'normal', lineHeight: 1.4, marginBottom: '20px', color: 'var(--cream)' }}>&ldquo;{TESTIMONIALS[0].pull}&rdquo;</blockquote>
+          )}
           <p className="testimonial-name" style={{ marginTop: '20px' }}>{TESTIMONIALS[0].name}</p>
           <p className="testimonial-role">{TESTIMONIALS[0].role}</p>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(155,123,58,0.7)', marginTop: '12px' }}>{expandedTest === 'featured' ? '— Less' : '+ Read full'}</p>
@@ -304,7 +308,7 @@ export default function Home() {
               )}
               <p className="testimonial-name">{t.name}</p>
               {t.role && <p className="testimonial-role">{t.role}</p>}
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(155,123,58,0.6)', marginTop: '12px' }}>{expandedTest === i ? '— Less' : '+ Read more'}</p>
+              <p className="testimonial-card-readmore" style={{ fontFamily: 'var(--font-body)', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(155,123,58,0.6)' }}>{expandedTest === i ? '— Less' : '+ Read more'}</p>
             </div>
           ))}
         </div>
