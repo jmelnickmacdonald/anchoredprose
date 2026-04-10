@@ -79,16 +79,16 @@ nav {
 .hero::before {
   content: ''; position: absolute; inset: 0;
   background-image: url('/banner2.jpg');
-  background-size: cover; background-position: center 70%;
-  opacity: 0.85; pointer-events: none;
+  background-size: cover; background-position: center 65%;
+  opacity: 1; pointer-events: none;
 }
 .hero-content {
   position: relative; z-index: 2;
-  max-width: 680px; padding: 48px 64px;
+  max-width: 640px; padding: 40px 56px;
   text-align: center;
-  background: rgba(13,27,46,0.5);
-  border: 1px solid rgba(184,150,62,0.25);
-  backdrop-filter: blur(3px);
+  background: rgba(13,27,46,0.42);
+  border: 1px solid rgba(184,150,62,0.3);
+  backdrop-filter: blur(4px);
 }
 .hero-eyebrow {
   font-family: var(--font-body); font-size: 12px; letter-spacing: 3px;
@@ -386,6 +386,13 @@ nav {
   backdrop-filter: blur(2px);
 }
 .subpage-banner-title h1 { font-size: clamp(36px, 5vw, 60px); color: var(--cream); font-weight: 300; line-height: 1.15; }
+.subpage-content {
+  position: relative;
+  background-image: url('/creamseashellfloral.jpg');
+  background-size: 600px;
+  opacity: 0.45;
+  background-repeat: repeat;
+}
 .subpage-portfolio-grid {
   max-width: 1100px; margin: 0 auto; padding: 48px 48px 0;
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
