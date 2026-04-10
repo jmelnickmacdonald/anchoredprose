@@ -6,7 +6,7 @@ const SERVICES = [
   {
     title: 'Brand & Content Strategy',
     tagline: "You've built something worth talking about. Let's make sure the world knows it.",
-    desc: "I work with small businesses, realtors, creatives, and entrepreneurs to figure out who they are and why they're worth noticing, then build the words, the web copy, the content strategy, and sometimes the website itself to show it. Whether you need a brand voice guide, a full site rewrite, newsletter copy and design, or a content plan you'll actually follow, we start with the whole picture and build from there.",
+    desc: "I work with small businesses, realtors, creatives, and entrepreneurs to figure out who they are and why they're worth noticing — then build the words, the web copy, the content strategy, and sometimes the website itself to show it. I write it, design it, and build it: brand voice guides, full site rewrites, newsletter copy and graphics, social content, and content plans you'll actually follow. This isn't one-and-done. I work with clients long-term, showing up as an ongoing creative partner who understands your brand and keeps it consistent.",
   },
   {
     title: 'Wedding & Event Speeches',
@@ -111,31 +111,31 @@ const TESTIMONIALS = [
     pull: "The final document felt thorough, responsible, and reflective of the lived experiences at its core.",
     quote: "Julianna handled our disability justice report with real care. She preserved the complexity of the conversations while shaping them into something clear and cohesive. The final document felt thorough, responsible, and reflective of the lived experiences at its core.",
     name: 'Stacey R.',
-    role: 'Project Lead',
+    role: 'Project Lead · Detroit, Michigan',
   },
   {
     pull: "Delivered work that was seamless and ready to bring straight into the classroom.",
     quote: "Julianna created original stories for our children's literature workshop that fit beautifully within our structure and themes. She understood the framework right away and delivered work that was seamless and ready to bring straight into the classroom.",
     name: 'Tom W.',
-    role: 'Workshop Facilitator',
+    role: 'Workshop Facilitator · Victoria, BC',
   },
   {
     pull: "Impeccable real work. Met all of my wants and beyond.",
     quote: "Julianna was honestly excellent to work with. She got it done, and with impeccable real work. Met all of my wants and beyond.",
     name: 'Vivian C.',
-    role: '',
+    role: 'Policy Analyst · Minneapolis, MN',
   },
   {
     pull: "She was insightful, nailed exactly what I was looking for — and that's no easy feat in a specialized education field.",
     quote: "I was so deep inside my own course content that I needed someone else to come in and do the heavy lifting. Julianna delivered. She was insightful, nailed exactly what I was looking for, and that's no easy feat in a specialized education field.",
     name: 'Mark J.',
-    role: 'Course Developer',
+    role: 'Course Developer · Toronto, ON',
   },
   {
-    pull: "I never expected that someone would just 'get it' on so little detail — but you sure did.",
-    quote: "Oh my goodness. I just read the first half. I don't even know what to say. I laughed, I cried. I never expected that someone would just 'get it' on so little detail — but you sure did.",
+    pull: "I never expected that someone would just 'get it' on so little detail, but you sure did.",
+    quote: "Oh my goodness. I just read the first half. I don't even know what to say. I laughed, I cried. I never expected that someone would just 'get it' on so little detail, but you sure did.",
     name: 'Trina K.',
-    role: '',
+    role: 'Program Developer · Oakville, ON',
   },
 ]
 
@@ -224,7 +224,7 @@ export default function Home() {
               Hi! I&apos;m Julianna, a writer, educator, mom, wannabe farmer, and the founder of Anchored Prose. I hold a Master of Professional Education and a few other degrees that cost me a lot of time and money, and I&apos;ve spent over a decade helping people find the right words for the moments that count.
             </p>
             <p className="about-body">
-              I&apos;ve always loved to write. It was where I went to make sense of things, to hold onto moments, to make myself laugh, and to feel understood. For a long time, writing felt like mine alone — something personal and quietly important, but not necessarily something I could build a life around. It took years of teaching, advocating, and working alongside people navigating systems that weren&apos;t built with them in mind before I realized that the thing I&apos;d always done for myself was exactly what other people needed too.
+              I&apos;ve always loved to write. It was where I went to make sense of things, to hold onto moments, to make myself laugh, and to feel understood. For a long time, writing felt like mine alone... something personal and quietly important, but not necessarily something I could build a life around. It took years of teaching, advocating, and working alongside people navigating systems that weren&apos;t built with them in mind before I realized that the thing I&apos;d always done for myself was exactly what other people needed too.
             </p>
             <p className="about-body">
               My years as an educator shaped how I write now. They taught me how to take something complicated and make it clear, how to find the right words for people who couldn&apos;t find their own, and how to build a voice that actually sounds like the person it belongs to. That work lives in everything I do at Anchored Prose, whether that&apos;s a wedding speech, a brand identity, a keynote, or a curriculum guide.
@@ -247,8 +247,8 @@ export default function Home() {
                 <h3>{s.title}</h3>
                 <span className="service-card-toggle">{activeService === i ? '−' : '+'}</span>
               </div>
+              <p className="service-tagline">{s.tagline}</p>
               <div className={activeService === i ? 'service-card-body open' : 'service-card-body'}>
-                <p className="service-tagline">{s.tagline}</p>
                 <p className="service-desc">{s.desc}</p>
               </div>
             </div>
@@ -296,21 +296,28 @@ export default function Home() {
         </div>
         <div className="testimonials-featured" onClick={() => setExpandedTest(expandedTest === 'featured' ? null : 'featured')} style={{ cursor: 'pointer' }}>
           <blockquote>&ldquo;{expandedTest === 'featured' ? TESTIMONIALS[0].quote : TESTIMONIALS[0].pull}&rdquo;</blockquote>
-          <p className="testimonial-name">{TESTIMONIALS[0].name}</p>
+          <p className="testimonial-name" style={{ marginTop: '20px' }}>{TESTIMONIALS[0].name}</p>
           <p className="testimonial-role">{TESTIMONIALS[0].role}</p>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(155,123,58,0.7)', marginTop: '16px' }}>{expandedTest === 'featured' ? '— Less' : '+ Read more'}</p>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(155,123,58,0.7)', marginTop: '12px' }}>{expandedTest === 'featured' ? '— Less' : '+ Read full'}</p>
         </div>
         <div className="testimonials-grid">
           {TESTIMONIALS.slice(1).map((t, i) => (
-            <div key={i} className="testimonial-card">
-              <blockquote>&ldquo;{t.quote}&rdquo;</blockquote>
+            <div key={i} className="testimonial-card" onClick={() => setExpandedTest(expandedTest === i ? null : i)} style={{ cursor: 'pointer' }}>
+              {expandedTest === i ? (
+                <blockquote style={{ marginBottom: '16px' }}>&ldquo;{t.quote}&rdquo;</blockquote>
+              ) : (
+                <p style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '16px', color: 'var(--cream)', lineHeight: 1.5, marginBottom: '16px' }}>&ldquo;{t.pull}&rdquo;</p>
+              )}
               <p className="testimonial-name">{t.name}</p>
               {t.role && <p className="testimonial-role">{t.role}</p>}
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(155,123,58,0.6)', marginTop: '12px' }}>{expandedTest === i ? '— Less' : '+ Read more'}</p>
             </div>
           ))}
         </div>
       </section>
 
+
+      <div className="section-divider" />
 
       <section className="blog" id="blog">
         <div className="blog-header">
