@@ -1,418 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+'use client'
+import Image from 'next/image'
+import { useState } from 'react'
 
-@font-face {
-  font-family: 'SimpleHandwriting';
-  src: url('/Simple_Handwriting.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+const SOCIAL_PIECES = [
+  { type: 'Social Media Content · Willow & Rose', title: 'Homestead Brand Voice', meta: 'Willow & Rose — Product & Lifestyle Content', pull: '"Warm, personal content that sounds like the person behind the brand."', image: '/portfolio/willowandrose-social-1.png' },
+  { type: 'Video Content · Willow & Rose', title: 'Reel Copywriting', meta: 'Willow & Rose — Short Form Video', pull: '"Scroll-stopping hooks written for real audiences."', video: '/portfolio/willowandrose-video-1.mp4' },
+  { type: 'Social Media Content · Raven House Co.', title: 'Small Business Social Copy', meta: 'Raven House Co. — Instagram Content', pull: '"Community-first copy that builds connection, not just followers."', image: '/portfolio/raven-house-social-2.png' },
+  { type: 'Social Media Content · Raven House Co.', title: 'Product & Story Posts', meta: 'Raven House Co. — Instagram Content', pull: '"Copy that lets the product speak without overselling it."', image: '/portfolio/raven-house-social-3.png' },
+  { type: 'Social Media Content · Raven House Co.', title: 'Brand Storytelling', meta: 'Raven House Co. — Instagram Content', pull: '"Every post part of a larger brand narrative."', image: '/portfolio/raven-house-social-4.png' },
+]
 
-:root {
-  --navy: #0D1B2E;
-  --navy-mid: #152338;
-  --gold: #B8963E;
-  --gold-light: #D4AF6A;
-  --cream: #FAF7F2;
-  --cream-dark: #F0EBE0;
-  --cream-warm: #F5F0E8;
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Crimson Pro', Georgia, serif;
-  --font-script: 'SimpleHandwriting', cursive;
-}
+const REALESTATE_PIECES = [
+  { type: 'Real Estate Copy · Mock-Up', title: 'Listing Social Post', meta: 'Real Estate — Social Media Content', pull: '"Copy that sells the feeling of a home, not just the specs."', image: '/portfolio/realestate-social-1.png' },
+  { type: 'Real Estate Copy · Mock-Up', title: 'Realtor Personal Brand Post', meta: 'Real Estate — Social Media Content', pull: '"Positioning a realtor as the trusted guide, not just the salesperson."', image: '/portfolio/realestate-social-2.png' },
+  { type: 'Real Estate Copy · Mock-Up', title: 'Property Listing Flyer', meta: 'Real Estate — Print & Digital', pull: '"This could be the one."', image: '/portfolio/realestate-flyer-1.png' },
+  { type: 'Real Estate Copy · Mock-Up', title: 'Realtor Marketing Flyer', meta: 'Real Estate — Print & Digital', pull: '"Ready for a change? That\'s where I come in."', image: '/portfolio/real-estate-flyer-3.jpg' },
+  { type: 'Video Content · Mock-Up', title: 'Real Estate Reel', meta: 'Real Estate — Short Form Video', pull: '"They weren\'t looking for anything extraordinary..."', video: '/portfolio/realestate-video-3.mp4' },
+  { type: 'Video Content · Mock-Up', title: 'Property Carousel Reel', meta: 'Real Estate — Short Form Video', pull: '"Carousel copy that tells a story slide by slide."', video: '/portfolio/realestate-video-4.mp4' },
+]
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: var(--font-body);
-  background: var(--cream);
-  color: var(--navy);
-  font-size: 18px;
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-
-h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; }
-
-.script-accent {
-  font-family: var(--font-script);
-  font-size: 1em;
-  color: var(--gold);
-  font-style: normal;
-  display: inline-block;
-  vertical-align: baseline;
-  line-height: 1;
-  position: relative;
-  top: 0.12em;
+function PieceCard({ p, isActive, onToggle, onVideoClick }) {
+  return (
+    <div className="portfolio-card" style={{ cursor: p.video ? 'pointer' : 'default' }} onClick={() => p.video ? onVideoClick(p.video) : onToggle()}>
+      <div className="portfolio-type">{p.type}</div>
+      <h3>{p.title}</h3>
+      <p className="portfolio-meta">{p.meta}</p>
+      {p.image && (
+        <div style={{ margin: '1rem 0', borderRadius: '4px', overflow: 'hidden' }}>
+          <Image src={p.image} alt={p.title} width={600} height={400} style={{ width: '100%', height: '220px', objectFit: 'cover', objectPosition: 'top', display: 'block' }} />
+        </div>
+      )}
+      {p.video && (
+        <div style={{ margin: '1rem 0', borderRadius: '4px', overflow: 'hidden', position: 'relative', background: '#0D1B2E' }}>
+          <video src={p.video} style={{ width: '100%', height: '220px', objectFit: 'cover', display: 'block' }} muted playsInline preload="metadata" />
+          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '56px', height: '56px', borderRadius: '50%', background: 'rgba(184,150,62,0.92)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><polygon points="5,3 16,9 5,15" fill="white"/></svg>
+          </div>
+        </div>
+      )}
+      <p className="portfolio-pull">{p.pull}</p>
+    </div>
+  )
 }
 
-/* NAV */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: var(--navy);
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 48px; height: 80px;
-  border-bottom: 1px solid rgba(184,150,62,0.15);
-}
-.logo { display: flex; align-items: center; text-decoration: none; }
-.nav-links { display: flex; list-style: none; gap: 36px; }
-.nav-links a {
-  font-family: var(--font-body); font-size: 12px; letter-spacing: 2.5px;
-  text-transform: uppercase; color: rgba(250,247,242,0.7);
-  text-decoration: none; transition: color 0.2s;
-}
-.nav-links a:hover { color: var(--gold); }
-.hire-btn {
-  font-family: var(--font-body); font-size: 12px; letter-spacing: 2px;
-  text-transform: uppercase; color: var(--navy); background: var(--gold);
-  padding: 10px 24px; text-decoration: none; transition: background 0.2s;
-}
-.hire-btn:hover { background: var(--gold-light); }
+export default function BrandContentPage() {
+  const [lightbox, setLightbox] = useState(null)
 
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex; align-items: center; justify-content: center;
-  position: relative; overflow: hidden; padding-top: 80px;
-  background: var(--navy);
-}
-.hero::before {
-  content: ''; position: absolute; inset: 0;
-  background-image: url('/banner2.jpg');
-  background-size: cover; background-position: center 70%;
-  opacity: 0.85; pointer-events: none;
-}
-.hero-content {
-  position: relative; z-index: 2;
-  max-width: 680px; padding: 48px 64px;
-  text-align: center;
-  background: rgba(13,27,46,0.5);
-  border: 1px solid rgba(184,150,62,0.25);
-  backdrop-filter: blur(3px);
-}
-.hero-eyebrow {
-  font-family: var(--font-body); font-size: 12px; letter-spacing: 3px;
-  text-transform: uppercase; color: var(--gold); margin-bottom: 32px;
-  display: flex; align-items: center; justify-content: center; gap: 16px;
-}
-.hero-eyebrow::before, .hero-eyebrow::after {
-  content: ''; display: block; width: 48px; height: 1px; background: var(--gold);
-}
-.hero h1 { font-size: clamp(44px, 6vw, 72px); color: var(--cream); margin-bottom: 40px; font-weight: 300; }
-.hero-ctas { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
-.btn-gold {
-  font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
-  background: var(--gold); color: var(--navy); padding: 14px 32px; text-decoration: none;
-  font-weight: 600; transition: background 0.2s;
-}
-.btn-gold:hover { background: var(--gold-light); }
-.btn-ghost {
-  font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
-  background: transparent; color: var(--cream); padding: 14px 32px; text-decoration: none;
-  border: 1px solid rgba(250,247,242,0.3); transition: border-color 0.2s, color 0.2s;
-}
-.btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+  return (
+    <div className="subpage">
+      <nav className="subpage-nav">
+        <a href="/" className="logo"><Image src="/logo.png" alt="Anchored Prose" width={200} height={50} style={{ height: 46, width: 'auto' }} /></a>
+        <a href="/#portfolio" className="back-link">← Back to Portfolio</a>
+      </nav>
 
-/* SECTION LABELS */
-.section-label {
-  font-family: var(--font-body); font-size: 13px; letter-spacing: 3.5px;
-  text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
-  display: flex; align-items: center; justify-content: center; gap: 14px;
-}
-.section-label::before { content: ''; display: block; width: 36px; height: 1px; background: var(--gold); }
-.section-title { font-size: clamp(36px, 4.5vw, 58px); font-weight: 300; line-height: 1.1; margin-bottom: 28px; text-align: center; }
+      <div className="subpage-banner">
+        <Image src="/banner2.jpg" alt="" fill style={{ objectFit: 'cover', objectPosition: 'center 70%' }} />
+        <div className="subpage-banner-overlay" />
+        <div className="subpage-banner-title">
+          <div className="section-label" style={{ color: 'var(--gold)', justifyContent: 'center' }}>Portfolio</div>
+          <h1>Brand &amp; <span className="script-accent">Content</span></h1>
+        </div>
+      </div>
 
-/* ABOUT — warm cream */
-.about { padding: 80px 0; background: var(--cream-warm); position: relative; overflow: hidden; }
-.about .section-label { justify-content: flex-start; }
-.about .section-title { text-align: left; }
-.about-grid {
-  max-width: 1400px; margin: 0 auto; padding: 0 64px;
-  display: grid; grid-template-columns: 320px 1fr; gap: 56px;
-  align-items: start; position: relative; z-index: 1;
-  width: 100%;
-}
-.about-image-inner img { max-width: 320px; width: 100%; }
-.about-image-wrap { position: sticky; top: 100px; align-self: start; }
-.about-image-inner { overflow: hidden; position: relative; }
-.about-gold-bar { height: 4px; background: linear-gradient(90deg, var(--gold), transparent); }
-.about-caption { background: var(--navy); padding: 18px 24px; }
-.about-caption p { font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
-.about-caption span { font-family: var(--font-body); font-size: 14px; color: rgba(250,247,242,0.6); }
-.about-text { padding: 40px 48px; background: rgba(245,240,232,0.97); }
-.about-body { font-size: 17px; line-height: 1.85; color: rgba(13,27,46,0.8); margin-bottom: 24px; font-family: var(--font-body); }
+      <div className="subpage-portfolio-grid">
+        {SOCIAL_PIECES.map((p, i) => (
+          <PieceCard key={i} p={p} onVideoClick={setLightbox} />
+        ))}
+      </div>
 
-/* SERVICES — blue floral */
-.services { background: var(--navy); padding: 80px 64px; position: relative; overflow: hidden; }
-.services::before {
-  content: ''; position: absolute; inset: 0;
-  background-image: url('/coastal-blue.jpg');
-  background-size: 500px; opacity: 0.18; pointer-events: none;
-}
-.services-header {
-  max-width: 480px; margin: 0 auto 48px; text-align: center;
-  position: relative; z-index: 1;
-  background: rgba(13,27,46,0.6); padding: 20px 40px 14px;
-  border: 1px solid rgba(184,150,62,0.2);
-}
-.services-grid {
-  max-width: 1100px; margin: 0 auto;
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
-  position: relative; z-index: 1;
-}
-.service-card {
-  background: rgba(13,27,46,0.9); border: 1px solid rgba(184,150,62,0.2);
-  padding: 48px 36px; transition: border-color 0.3s;
-}
-.service-card:hover { border-color: rgba(184,150,62,0.4); }
-.service-card h3 { font-size: 22px; color: var(--cream); margin-bottom: 14px; font-weight: 400; }
-.service-tagline { font-family: var(--font-display); font-style: italic; font-size: 16px; color: var(--gold-light); margin-bottom: 18px; line-height: 1.5; }
-.service-desc { font-size: 16px; color: rgba(250,247,242,0.6); line-height: 1.8; font-family: var(--font-body); }
+      <div style={{ maxWidth: '1100px', margin: '32px auto 0', padding: '0 48px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', fontFamily: "'Crimson Pro', Georgia, serif", fontSize: '13px', letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(13,27,46,0.4)' }}>
+          <div style={{ flex: 1, height: '1px', background: 'rgba(13,27,46,0.12)', maxWidth: '120px' }} />
+          Real Estate — mock-ups created for demonstration
+          <div style={{ flex: 1, height: '1px', background: 'rgba(13,27,46,0.12)', maxWidth: '120px' }} />
+        </div>
+      </div>
 
-/* PORTFOLIO — rope pattern */
-.portfolio { padding: 80px 64px; position: relative; overflow: hidden; background: var(--cream-warm); }
-.portfolio-header {
-  max-width: 700px; margin: 0 auto 40px;
-  background: rgba(245,240,232,0.95);
-  padding: 20px 40px 14px;
-  border: 1px solid rgba(184,150,62,0.25);
-  text-align: center; position: relative; z-index: 1;
-}
-.portfolio-note { font-family: var(--font-body); font-size: 15px; color: rgba(13,27,46,0.5); font-style: italic; margin-top: 8px; }
-.portfolio-cats {
-  max-width: 1100px; margin: 0 auto;
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
-  position: relative; z-index: 1;
-}
-.portfolio-cat-card {
-  display: block; text-decoration: none;
-  background: rgba(245,240,232,0.95);
-  border-top: 3px solid transparent;
-  transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
-}
-.portfolio-cat-card:hover { border-top-color: var(--gold); box-shadow: 0 4px 32px rgba(13,27,46,0.1); background: white; }
-.portfolio-cat-body { padding: 40px; }
-.portfolio-cat-body h3 { font-size: 26px; color: var(--navy); margin-bottom: 10px; font-weight: 400; }
-.portfolio-cat-body p { font-family: var(--font-body); font-size: 16px; color: rgba(13,27,46,0.65); line-height: 1.7; margin-bottom: 16px; }
-.portfolio-cat-link { font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+      <div className="subpage-portfolio-grid">
+        {REALESTATE_PIECES.map((p, i) => (
+          <PieceCard key={i} p={p} onVideoClick={setLightbox} />
+        ))}
+      </div>
 
-/* Portfolio card styles (used on subpages) */
-.portfolio-card { background: white; border-top: 3px solid transparent; padding: 40px 36px; cursor: pointer; transition: border-color 0.25s, box-shadow 0.25s; outline: none; }
-.portfolio-card:hover, .portfolio-card:focus { border-top-color: var(--gold); box-shadow: 0 4px 32px rgba(13,27,46,0.08); }
-.portfolio-type { font-family: var(--font-body); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
-.portfolio-card h3 { font-size: 24px; color: var(--navy); margin-bottom: 8px; font-weight: 400; }
-.portfolio-meta { font-size: 14px; color: rgba(13,27,46,0.45); margin-bottom: 20px; font-family: var(--font-body); }
-.portfolio-pull { font-family: var(--font-display); font-style: italic; font-size: 17px; color: var(--navy); border-left: 2px solid var(--gold); padding-left: 16px; margin-bottom: 24px; line-height: 1.5; }
-.portfolio-excerpt { margin-bottom: 24px; }
-.portfolio-excerpt p { font-size: 16px; line-height: 1.85; color: rgba(13,27,46,0.7); margin-bottom: 16px; font-family: var(--font-body); }
-.portfolio-link { font-family: var(--font-body); font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); }
+      {lightbox && (
+        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.92)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }} onClick={() => setLightbox(null)}>
+          <button onClick={() => setLightbox(null)} style={{ position: 'absolute', top: '24px', right: '32px', background: 'none', border: 'none', color: 'white', fontSize: '32px', cursor: 'pointer', lineHeight: 1 }}>×</button>
+          <video src={lightbox} controls autoPlay style={{ maxWidth: '90vw', maxHeight: '80vh', borderRadius: '4px' }} onClick={(e) => e.stopPropagation()} />
+        </div>
+      )}
 
-/* TESTIMONIALS — blue floral */
-.testimonials { background: var(--navy); padding: 80px 64px; position: relative; overflow: hidden; text-align: center; }
-.testimonials::before {
-  content: ''; position: absolute; inset: 0;
-  background-image: url('/coastal-blue.jpg');
-  background-size: 500px; opacity: 0.5; pointer-events: none;
-}
-.testimonials-header {
-  display: inline-block; margin: 0 auto 64px; text-align: center;
-  position: relative; z-index: 1;
-  background: rgba(13,27,46,0.75); padding: 24px 48px;
-  border: 1px solid rgba(184,150,62,0.2);
-}
-.testimonials-featured {
-  max-width: 800px; margin: 0 auto 64px; text-align: center;
-  position: relative; z-index: 1; padding: 48px;
-  background: rgba(13,27,46,0.85); border: 1px solid rgba(184,150,62,0.15);
-}
-.testimonials-featured blockquote {
-  font-family: var(--font-display); font-size: clamp(22px, 3vw, 28px); font-style: italic;
-  color: var(--cream); line-height: 1.6; margin-bottom: 32px;
-}
-.testimonial-name { font-family: var(--font-body); font-size: 16px; color: var(--gold); font-weight: 600; margin-bottom: 4px; }
-.testimonial-role { font-family: var(--font-body); font-size: 15px; color: rgba(250,247,242,0.5); font-style: italic; }
-.testimonials-grid {
-  max-width: 1100px; margin: 0 auto;
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-  position: relative; z-index: 1; text-align: left;
-}
-.testimonial-card { background: rgba(13,27,46,0.85); border: 1px solid rgba(184,150,62,0.15); padding: 32px; }
-.testimonial-card blockquote { font-family: var(--font-body); font-size: 15px; font-style: italic; color: rgba(250,247,242,0.85); line-height: 1.7; margin-bottom: 20px; }
-.testimonial-card .testimonial-name { font-size: 14px; }
-.testimonial-card .testimonial-role { font-size: 13px; }
-
-/* HOW IT WORKS — dark navy with rope */
-.how-it-works { background: var(--navy); padding: 80px 64px; position: relative; overflow: hidden; }
-.how-it-works::before {
-  content: ''; position: absolute; inset: 0;
-  background-image: url('/rope-pattern.jpg');
-  background-size: 400px; opacity: 0.08; pointer-events: none;
-}
-.hiw-header { max-width: 1100px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; }
-.hiw-steps {
-  max-width: 1100px; margin: 0 auto;
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;
-  position: relative; z-index: 1;
-  background: rgba(13,27,46,0.6); padding: 48px 40px;
-  border: 1px solid rgba(184,150,62,0.2);
-}
-.hiw-steps::before {
-  content: ''; position: absolute; top: 52px; left: 10%; right: 10%;
-  height: 1px; background: linear-gradient(to right, transparent, rgba(184,150,62,0.3), rgba(184,150,62,0.3), transparent);
-}
-.hiw-step { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1; }
-.hiw-step-num { font-family: var(--font-body); font-size: 11px; letter-spacing: 2px; color: var(--gold); margin-bottom: 8px; }
-.hiw-step-icon {
-  width: 72px; height: 72px; border-radius: 50%;
-  background: rgba(13,27,46,0.5); border: 1px solid rgba(184,150,62,0.4);
-  display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
-}
-.hiw-step-title { font-family: var(--font-display); font-size: 20px; font-weight: 400; color: var(--cream); margin-bottom: 12px; }
-.hiw-step-desc { font-family: var(--font-body); font-size: 15px; color: rgba(250,247,242,0.65); line-height: 1.75; }
-.hiw-note { text-align: center; margin-top: 56px; font-family: var(--font-body); font-size: 16px; font-style: italic; color: rgba(250,247,242,0.55); position: relative; z-index: 1; }
-.hiw-note a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(184,150,62,0.3); }
-
-/* BLOG */
-.blog { background: var(--cream-dark); padding: 80px 64px; position: relative; overflow: hidden; }
-.blog-header { max-width: 1100px; margin: 0 auto 56px; text-align: center; }
-.blog-carousel { max-width: 1100px; margin: 0 auto; position: relative; overflow: hidden; }
-.blog-cards { display: flex; transition: transform 0.5s ease; }
-.blog-card { flex: 0 0 100%; padding: 48px; background: white; border-top: 3px solid var(--gold); }
-.blog-card-category { font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
-.blog-card h3 { font-family: var(--font-display); font-size: 28px; color: var(--navy); margin-bottom: 16px; font-weight: 400; }
-.blog-card p { font-size: 17px; color: rgba(13,27,46,0.7); line-height: 1.8; margin-bottom: 24px; }
-.blog-dots { display: flex; justify-content: center; gap: 12px; margin-top: 32px; }
-.blog-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(13,27,46,0.2); border: none; cursor: pointer; transition: background 0.3s; }
-.blog-dot.active { background: var(--gold); }
-
-/* CONTACT — cream floral */
-.contact { background: var(--cream-dark); padding: 80px 64px; position: relative; overflow: hidden; }
-.contact-grid {
-  max-width: 1100px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
-  align-items: stretch; position: relative; z-index: 1;
-}
-.contact-info { background: rgba(245,240,232,0.95); padding: 48px; display: flex; flex-direction: column; }
-.contact-title { font-size: clamp(32px, 3.5vw, 46px); color: var(--navy); font-weight: 300; margin-bottom: 20px; line-height: 1.15; }
-.contact-intro { font-size: 16px; color: rgba(13,27,46,0.65); line-height: 1.85; margin-bottom: 36px; font-family: var(--font-body); }
-.contact-detail { border-top: 1px solid rgba(13,27,46,0.1); padding: 16px 0; }
-.contact-detail-label { font-family: var(--font-body); font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
-.contact-detail-value { font-family: var(--font-body); font-size: 16px; color: var(--navy); text-decoration: none; }
-.contact-detail-value:hover { color: var(--gold); }
-.contact-form { background: rgba(245,240,232,0.95); padding: 48px; border-top: 4px solid var(--gold); display: flex; flex-direction: column; }
-.form-group { margin-bottom: 24px; }
-.form-group label { display: block; font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--navy); margin-bottom: 10px; }
-.form-group input, .form-group select, .form-group textarea {
-  width: 100%; padding: 14px 16px; font-family: var(--font-body); font-size: 16px;
-  border: 1px solid rgba(13,27,46,0.15); background: white; color: var(--navy); transition: border-color 0.2s;
-}
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--gold); }
-.form-submit {
-  width: 100%; padding: 16px; font-family: var(--font-body); font-size: 13px;
-  letter-spacing: 2px; text-transform: uppercase; background: var(--gold);
-  color: var(--navy); border: none; cursor: pointer; font-weight: 600; transition: background 0.2s; margin-top: auto;
-}
-.form-submit:hover { background: var(--gold-light); }
-.form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
-.form-status { margin-top: 16px; font-size: 15px; color: var(--gold); text-align: center; }
-
-/* FOOTER */
-.footer { background: var(--navy); padding: 100px 64px 60px; }
-.footer-content { max-width: 1100px; margin: 0 auto; text-align: center; }
-.footer-brand { margin-bottom: 32px; }
-.footer-tagline { font-family: var(--font-display); font-size: 44px; font-style: italic; color: var(--cream); margin-top: 28px; margin-bottom: 12px; }
-.footer-tagline .script-accent { font-size: 1.25em; display: inline-block; vertical-align: baseline; position: relative; top: 0.12em; }
-.footer-brand p { font-family: var(--font-body); font-size: 18px; color: rgba(250,247,242,0.7); margin-top: 8px; }
-.footer-links { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid rgba(184,150,62,0.15); }
-.footer-links a { font-family: var(--font-body); font-size: 14px; color: rgba(250,247,242,0.6); text-decoration: none; transition: color 0.2s; }
-.footer-links a:hover { color: var(--gold); }
-.footer-bottom p { font-family: var(--font-body); font-size: 13px; color: rgba(250,247,242,0.35); }
-
-/* ANIMATIONS */
-.fade-up { opacity: 0; transform: translateY(24px); animation: fadeUp 0.8s ease forwards; }
-.fade-up-1 { animation-delay: 0.1s; }
-.fade-up-2 { animation-delay: 0.2s; }
-.fade-up-3 { animation-delay: 0.3s; }
-@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-
-/* SUBPAGE */
-.subpage { min-height: 100vh; background: var(--cream-warm); position: relative; }
-.subpage-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: var(--navy); display: flex; align-items: center; justify-content: space-between;
-  padding: 0 48px; height: 80px; border-bottom: 1px solid rgba(184,150,62,0.15);
-}
-.back-link { font-family: var(--font-body); font-size: 13px; color: var(--gold); text-decoration: none; }
-.back-link:hover { opacity: 0.7; }
-.subpage-banner {
-  position: relative; height: 300px; margin-top: 80px;
-  display: flex; align-items: center; justify-content: center; overflow: hidden;
-}
-.subpage-banner-overlay { position: absolute; inset: 0; background: rgba(13,27,46,0.3); }
-.subpage-banner-title {
-  position: relative; z-index: 2; text-align: center;
-  background: rgba(13,27,46,0.45); padding: 24px 56px;
-  border: 1px solid rgba(184,150,62,0.2);
-  backdrop-filter: blur(2px);
-}
-.subpage-banner-title h1 { font-size: clamp(36px, 5vw, 60px); color: var(--cream); font-weight: 300; line-height: 1.15; }
-.subpage-portfolio-grid {
-  max-width: 1100px; margin: 0 auto; padding: 48px 48px 0;
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
-  position: relative; z-index: 1;
-}
-.subpage-category-label {
-  max-width: 1100px; margin: 48px auto 24px; padding: 0 48px;
-  font-family: var(--font-body); font-size: 13px; letter-spacing: 3px;
-  text-transform: uppercase; color: var(--navy); opacity: 0.45;
-  display: flex; align-items: center; gap: 16px;
-  position: relative; z-index: 1;
-}
-.subpage-category-label::before, .subpage-category-label::after {
-  content: ''; flex: 1; height: 1px; background: rgba(13,27,46,0.15); max-width: 120px;
-}
-.subpage-cta-bar { background: var(--navy); padding: 48px; text-align: center; margin-top: 64px; }
-.subpage-cta-bar p { font-family: var(--font-body); font-size: 18px; color: rgba(250,247,242,0.8); font-style: italic; }
-.subpage-cta-bar a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(184,150,62,0.4); }
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
-  .hiw-steps { grid-template-columns: repeat(2, 1fr); }
-  .hiw-steps::before { display: none; }
-}
-@media (max-width: 768px) {
-  .about-grid { grid-template-columns: 1fr; gap: 48px; }
-  .about .section-label { justify-content: center; }
-  .about .section-title { text-align: center; }
-  .about-image-wrap { position: relative; top: auto; }
-  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
-  .nav-links { display: none; }
-}
-@media (max-width: 768px) {
-  nav { padding: 0 24px; height: 70px; }
-  .hero { padding-top: 70px; }
-  .nav-links { display: none; }
-  .hero-content { padding: 40px 24px; margin: 20px; }
-  .services { padding: 60px 24px; }
-  .services-grid { grid-template-columns: 1fr; }
-  .portfolio { padding: 60px 24px; }
-  .portfolio-cats { grid-template-columns: 1fr; }
-  .testimonials { padding: 60px 24px; }
-  .testimonials-grid { grid-template-columns: 1fr; }
-  .testimonials-featured { padding: 32px 24px; }
-  .how-it-works { padding: 60px 24px; }
-  .hiw-steps { grid-template-columns: 1fr 1fr; gap: 32px; padding: 32px 24px; }
-  .blog { padding: 60px 24px; }
-  .contact { padding: 60px 24px; }
-  .footer { padding: 60px 24px 32px; }
-  .about { padding: 60px 0; }
-  .about-grid { padding: 0 24px; }
-  .subpage-nav { padding: 0 24px; }
-  .subpage-portfolio-grid { grid-template-columns: 1fr; padding: 32px 24px 0; }
-  .subpage-banner { height: 200px; }
-}
-@media (max-width: 480px) {
-  .hiw-steps { grid-template-columns: 1fr; }
+      <div className="subpage-cta-bar">
+        <p>Like what you see? <a href="/#contact">Let&apos;s work together.</a></p>
+      </div>
+    </div>
+  )
 }
