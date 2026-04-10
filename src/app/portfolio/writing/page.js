@@ -67,6 +67,7 @@ export default function WritingPage() {
           <h1><span className="script-accent">Writing</span></h1>
         </div>
       </div>
+      <div style={{ background: "#F5F0E8", position: "relative", zIndex: 10 }}>
       <div className="subpage-portfolio-grid">
         {PIECES.map((p, i) => (
           <div key={i} className="portfolio-card" onClick={() => setExpanded(expanded === i ? null : i)} tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && setExpanded(expanded === i ? null : i)}>
@@ -84,10 +85,11 @@ export default function WritingPage() {
           </div>
         ))}
       </div>
+      </div>
+      </div>
       <div className="subpage-cta-bar">
         <p>Like what you see? <a href="/#contact">Let&apos;s work together.</a></p>
       </div>
-    </div>
     </div>
   )
 }
