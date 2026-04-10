@@ -147,7 +147,7 @@ nav {
 .services::before {
   content: ''; position: absolute; inset: 0;
   background-image: url('/coastal-blue.jpg');
-  background-size: 500px; opacity: 0.18; pointer-events: none;
+  background-size: 500px; opacity: 0.5; pointer-events: none;
 }
 .services-header {
   max-width: 480px; margin: 0 auto 48px; text-align: center;
@@ -241,13 +241,8 @@ nav {
 .testimonial-card .testimonial-name { font-size: 14px; }
 .testimonial-card .testimonial-role { font-size: 13px; }
 
-/* HOW IT WORKS — cream with rope texture */
+/* HOW IT WORKS — solid cream */
 .how-it-works { background: var(--cream-warm); padding: 80px 64px; position: relative; overflow: hidden; }
-.how-it-works::before {
-  content: ''; position: absolute; inset: 0;
-  background-image: url('/rope-pattern.jpg');
-  background-size: 400px; opacity: 0.06; pointer-events: none;
-}
 .hiw-header { max-width: 1100px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; }
 .hiw-steps {
   max-width: 1100px; margin: 0 auto;
@@ -300,11 +295,6 @@ nav {
   margin: 0;
 }
 .contact { background: var(--cream-dark); padding: 80px 64px; position: relative; overflow: hidden; }
-.contact::before {
-  content: ''; position: absolute; inset: 0;
-  background-image: url('/coastal-cream.jpg');
-  background-size: 500px; opacity: 0.35; pointer-events: none;
-}
 .contact-grid {
   max-width: 1100px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
