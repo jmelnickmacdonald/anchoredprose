@@ -135,8 +135,6 @@ export default function WeddingsSpeechesPage() {
 
       </div>
 
-      </div>
-
       <div className="subpage-cta-bar">
         <p>Like what you see? <a href="/#contact">Let&apos;s work together.</a></p>
       </div>
