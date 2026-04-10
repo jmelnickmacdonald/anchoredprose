@@ -152,7 +152,7 @@ nav {
 .services-header {
   max-width: 480px; margin: 0 auto 48px; text-align: center;
   position: relative; z-index: 1;
-  background: rgba(13,27,46,0.6); padding: 20px 40px 14px;
+  background: rgba(13,27,46,0.75); padding: 24px 48px;
   border: 1px solid rgba(184,150,62,0.2);
 }
 .services-grid {
@@ -172,7 +172,7 @@ nav {
 /* PORTFOLIO — rope pattern */
 .portfolio { padding: 80px 64px; position: relative; overflow: hidden; background: var(--cream-warm); }
 .portfolio-header {
-  max-width: 700px; margin: 0 auto 40px;
+  max-width: 600px; margin: 0 auto 40px;
   background: rgba(245,240,232,0.95);
   padding: 20px 40px 14px;
   border: 1px solid rgba(184,150,62,0.25);
@@ -186,14 +186,20 @@ nav {
 }
 .portfolio-cat-card {
   display: block; text-decoration: none;
-  background: rgba(245,240,232,0.95);
-  border-top: 3px solid transparent;
-  transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+  background: rgba(13,27,46,0.82);
+  border-top: 3px solid rgba(184,150,62,0.4);
+  position: relative; overflow: hidden;
+  transition: border-color 0.25s, background 0.25s;
 }
-.portfolio-cat-card:hover { border-top-color: var(--gold); box-shadow: 0 4px 32px rgba(13,27,46,0.1); background: white; }
-.portfolio-cat-body { padding: 40px; }
-.portfolio-cat-body h3 { font-size: 26px; color: var(--navy); margin-bottom: 10px; font-weight: 400; }
-.portfolio-cat-body p { font-family: var(--font-body); font-size: 16px; color: rgba(13,27,46,0.65); line-height: 1.7; margin-bottom: 16px; }
+.portfolio-cat-card::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url('/rope-pattern.jpg');
+  background-size: 300px; opacity: 0.06; pointer-events: none;
+}
+.portfolio-cat-card:hover { border-top-color: var(--gold); background: rgba(13,27,46,0.92); }
+.portfolio-cat-body { padding: 40px; position: relative; z-index: 1; }
+.portfolio-cat-body h3 { font-size: 26px; color: var(--cream); margin-bottom: 10px; font-weight: 400; }
+.portfolio-cat-body p { font-family: var(--font-body); font-size: 16px; color: rgba(250,247,242,0.65); line-height: 1.7; margin-bottom: 16px; }
 .portfolio-cat-link { font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
 
 /* Portfolio card styles (used on subpages) */
@@ -212,7 +218,7 @@ nav {
 .testimonials::before {
   content: ''; position: absolute; inset: 0;
   background-image: url('/coastal-blue.jpg');
-  background-size: 500px; opacity: 0.18; pointer-events: none;
+  background-size: 500px; opacity: 0.5; pointer-events: none;
 }
 .testimonials-header {
   display: inline-block; margin: 0 auto 64px; text-align: center;
@@ -241,13 +247,18 @@ nav {
 .testimonial-card .testimonial-name { font-size: 14px; }
 .testimonial-card .testimonial-role { font-size: 13px; }
 
-/* HOW IT WORKS — solid cream */
-.how-it-works { background: var(--cream-warm); padding: 80px 64px; position: relative; overflow: hidden; }
-.hiw-header { max-width: 1100px; margin: 0 auto 64px; text-align: center; position: relative; z-index: 1; }
+/* HOW IT WORKS — blue floral like services */
+.how-it-works { background: var(--navy); padding: 80px 64px; position: relative; overflow: hidden; }
+.how-it-works::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url('/coastal-blue.jpg');
+  background-size: 500px; opacity: 0.5; pointer-events: none;
+}
+.hiw-header { max-width: 480px; margin: 0 auto 48px; text-align: center; position: relative; z-index: 1; background: rgba(13,27,46,0.75); padding: 24px 48px; border: 1px solid rgba(184,150,62,0.2); }
 .hiw-steps {
   max-width: 1100px; margin: 0 auto;
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
-  position: relative; z-index: 1;
+  position: relative; z-index: 2;
 }
 
 .hiw-step {
@@ -265,17 +276,19 @@ nav {
 }
 .hiw-step-title { font-family: var(--font-display); font-size: 20px; font-weight: 400; color: var(--navy); margin-bottom: 12px; }
 .hiw-step-desc { font-family: var(--font-body); font-size: 15px; color: rgba(13,27,46,0.65); line-height: 1.75; }
-.hiw-note { text-align: center; margin-top: 40px; font-family: var(--font-body); font-size: 16px; font-style: italic; color: rgba(13,27,46,0.55); position: relative; z-index: 1; }
-.hiw-note a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(184,150,62,0.3); }
+.hiw-note { text-align: center; margin-top: 40px; font-family: var(--font-body); font-size: 16px; font-style: italic; color: rgba(250,247,242,0.6); position: relative; z-index: 1; }
+.hiw-note a { color: var(--gold-light); text-decoration: none; border-bottom: 1px solid rgba(184,150,62,0.3); }
 
 /* BLOG */
 .blog { background: var(--cream-dark); padding: 80px 64px; position: relative; overflow: hidden; }
 .blog::before {
   content: ''; position: absolute; inset: 0;
   background-image: url('/coastal-blue.jpg');
-  background-size: 500px; opacity: 0.18; pointer-events: none;
+  background-size: 500px; opacity: 0.5; pointer-events: none;
 }
 .blog-header { position: relative; z-index: 1; }
+.blog .section-label { color: var(--gold); }
+.blog .section-title { color: var(--cream); }
 .blog-carousel { position: relative; z-index: 1; }
 .blog-header { max-width: 1100px; margin: 0 auto 56px; text-align: center; }
 .blog-carousel { max-width: 1100px; margin: 0 auto; position: relative; overflow: hidden; }
@@ -345,6 +358,14 @@ nav {
 
 /* SUBPAGE */
 .subpage { min-height: 100vh; background: var(--cream-warm); position: relative; }
+.subpage-portfolio-section {
+  position: relative;
+}
+.subpage-portfolio-section::before {
+  content: ''; position: fixed; inset: 0;
+  background-image: url('/coastal-cream.jpg');
+  background-size: 500px; opacity: 0.35; pointer-events: none; z-index: 0;
+}
 .subpage-nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   background: var(--navy); display: flex; align-items: center; justify-content: space-between;
@@ -367,7 +388,7 @@ nav {
 .subpage-portfolio-grid {
   max-width: 1100px; margin: 0 auto; padding: 48px 48px 0;
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
-  position: relative; z-index: 1;
+  position: relative; z-index: 2;
 }
 .subpage-category-label {
   max-width: 1100px; margin: 48px auto 24px; padding: 0 48px;
