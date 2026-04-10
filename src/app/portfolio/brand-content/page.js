@@ -17,6 +17,7 @@ const REALESTATE_PIECES = [
   { type: 'Real Estate · Mock-Up', title: 'Realtor Marketing Flyer', image: '/portfolio/real-estate-flyer-3.jpg' },
   { type: 'Video · Mock-Up', title: 'Real Estate Reel', video: '/portfolio/realestate-video-3.mp4' },
   { type: 'Video · Mock-Up', title: 'Real Estate Reel 2', video: '/portfolio/realestate-reel-4.mp4' },
+  { type: 'Video · Mock-Up', title: 'Real Estate Reel 3', video: '/portfolio/realestate-reel-5.mp4' },
 ]
 
 function GalleryTile({ p, onVideoClick, onImageClick }) {
