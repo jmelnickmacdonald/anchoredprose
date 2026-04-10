@@ -130,7 +130,9 @@ nav {
   max-width: 1400px; margin: 0 auto; padding: 0 64px;
   display: grid; grid-template-columns: 320px 1fr; gap: 56px;
   align-items: start; position: relative; z-index: 1;
+  width: 100%;
 }
+.about-image-inner img { max-width: 320px; width: 100%; }
 .about-image-wrap { position: sticky; top: 100px; align-self: start; }
 .about-image-inner { overflow: hidden; position: relative; }
 .about-gold-bar { height: 4px; background: linear-gradient(90deg, var(--gold), transparent); }
@@ -148,7 +150,7 @@ nav {
   background-size: 500px; opacity: 0.18; pointer-events: none;
 }
 .services-header {
-  max-width: 700px; margin: 0 auto 48px; text-align: center;
+  max-width: 480px; margin: 0 auto 48px; text-align: center;
   position: relative; z-index: 1;
   background: rgba(13,27,46,0.6); padding: 20px 40px 14px;
   border: 1px solid rgba(184,150,62,0.2);
@@ -344,7 +346,12 @@ nav {
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
 /* SUBPAGE */
-.subpage { min-height: 100vh; background: var(--cream-warm); }
+.subpage { min-height: 100vh; background: var(--cream-warm); position: relative; }
+.subpage::before {
+  content: ''; position: fixed; inset: 0;
+  background-image: url('/coastal-blue.jpg');
+  background-size: 500px; opacity: 0.08; pointer-events: none; z-index: 0;
+}
 .subpage-nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   background: var(--navy); display: flex; align-items: center; justify-content: space-between;
@@ -353,21 +360,28 @@ nav {
 .back-link { font-family: var(--font-body); font-size: 13px; color: var(--gold); text-decoration: none; }
 .back-link:hover { opacity: 0.7; }
 .subpage-banner {
-  position: relative; height: 260px; margin-top: 80px;
+  position: relative; height: 300px; margin-top: 80px;
   display: flex; align-items: center; justify-content: center; overflow: hidden;
 }
-.subpage-banner-overlay { position: absolute; inset: 0; background: rgba(13,27,46,0.55); }
-.subpage-banner-title { position: relative; z-index: 2; text-align: center; }
+.subpage-banner-overlay { position: absolute; inset: 0; background: rgba(13,27,46,0.3); }
+.subpage-banner-title {
+  position: relative; z-index: 2; text-align: center;
+  background: rgba(13,27,46,0.45); padding: 24px 56px;
+  border: 1px solid rgba(184,150,62,0.2);
+  backdrop-filter: blur(2px);
+}
 .subpage-banner-title h1 { font-size: clamp(36px, 5vw, 60px); color: var(--cream); font-weight: 300; line-height: 1.15; }
 .subpage-portfolio-grid {
   max-width: 1100px; margin: 0 auto; padding: 48px 48px 0;
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+  position: relative; z-index: 1;
 }
 .subpage-category-label {
   max-width: 1100px; margin: 48px auto 24px; padding: 0 48px;
   font-family: var(--font-body); font-size: 13px; letter-spacing: 3px;
   text-transform: uppercase; color: var(--navy); opacity: 0.45;
   display: flex; align-items: center; gap: 16px;
+  position: relative; z-index: 1;
 }
 .subpage-category-label::before, .subpage-category-label::after {
   content: ''; flex: 1; height: 1px; background: rgba(13,27,46,0.15); max-width: 120px;
@@ -383,7 +397,7 @@ nav {
   .hiw-steps { grid-template-columns: repeat(2, 1fr); }
   .hiw-steps::before { display: none; }
 }
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
   .about .section-label { justify-content: center; }
   .about .section-title { text-align: center; }
@@ -394,6 +408,7 @@ nav {
 @media (max-width: 768px) {
   nav { padding: 0 24px; height: 70px; }
   .hero { padding-top: 70px; }
+  .nav-links { display: none; }
   .hero-content { padding: 40px 24px; margin: 20px; }
   .services { padding: 60px 24px; }
   .services-grid { grid-template-columns: 1fr; }
