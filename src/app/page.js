@@ -108,12 +108,6 @@ const TESTIMONIALS = [
     featured: true,
   },
   {
-    pull: "The final document felt thorough, responsible, and reflective of the lived experiences at its core.",
-    quote: "Julianna handled our disability justice report with real care. She preserved the complexity of the conversations while shaping them into something clear and cohesive. The final document felt thorough, responsible, and reflective of the lived experiences at its core.",
-    name: 'Stacey R.',
-    role: 'Project Lead · Detroit, Michigan',
-  },
-  {
     pull: "Delivered work that was seamless and ready to bring straight into the classroom.",
     quote: "Julianna created original stories for our children's literature workshop that fit beautifully within our structure and themes. She understood the framework right away and delivered work that was seamless and ready to bring straight into the classroom.",
     name: 'Tom W.',
