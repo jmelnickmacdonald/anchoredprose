@@ -2,53 +2,60 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-const PIECES = [
-  {
-    type: 'Satire',
-    title: 'Mothers Encouraged to Optimize Their Time',
-    meta: "Captain's Log · February 2026",
-    pull: '"Time doesn\'t just disappear. It reflects your priorities."',
-    excerpt: "In a statement released Monday, national productivity leaders confirmed that every human being receives the same 24 hours in a day, clarifying that mothers who feel otherwise may need to reevaluate how theirs are being used.\n\n\"If you're unloading the dishwasher, you should be completing a series of squats,\" said performance consultant Caleb Rowe. \"If a child is asking why the sky exists at the same time, that's cognitive engagement layered onto physical activation. There's no reason those functions can't operate simultaneously. Anything less is just lazy.\"\n\nRowe acknowledged that some mothers cited sleep deprivation, food preparation for multiple humans with conflicting preferences, and the management of seventeen concurrent emotional crises as potential barriers to optimization. He recommended a planner.\n\nIn related news, a survey of 4,000 mothers found that 94 percent had, at some point in the last week, eaten something cold that was meant to be hot, forgotten what they walked into a room for, and answered a question that was not directed at them. Researchers noted this was simply a Tuesday.\n\nAt press time, mothers across the country were microwaving leftovers, responding to questions about dinosaurs, stepping on unidentified objects, and briefly attempting to determine where, precisely, their identical allotment of time had gone.",
-  },
-  {
-    type: 'Essay',
-    title: 'The Real Damage of Disinformation',
-    meta: "Captain's Log · March 2026",
-    pull: '"The collapse of trust rarely looks like anger. More often, it looks like indifference."',
-    excerpt: "We often treat misinformation as though the danger is believing the wrong thing. That's a real risk. But I've started to think the deeper and more corrosive risk is something else: the erosion of trust itself. Not trust in one institution or one politician, but trust in the entire project of shared reality.\n\nDemocracy does not depend on agreement. It never has. What it depends on is a shared baseline — the idea that facts exist, that evidence matters, that we can disagree about what to do while still agreeing on what is true.\n\nMy neighbour watched a fake video last spring. A politician, apparently confessing to something damning. She was shaken. She sent it to me. I looked it up, found it was fabricated, sent her the fact-check. She was relieved. That time.\n\nSix months later, I sent her a link to a legitimate investigative piece about the same politician — real reporting, real sources. She shrugged it off. \"You can't really know anymore, can you,\" she said.\n\nShe wasn't fooled the second time. She was fatigued. And I think that distinction matters more than we realize. The collapse of trust rarely looks like anger. More often, it looks like indifference, and indifference corrodes quietly. It doesn't march in the streets. It just stops showing up.",
-  },
-  {
-    type: 'Essay',
-    title: 'A Letter from the Annapolis Valley',
-    meta: "Captain's Log · January 2026",
-    pull: '"There are people in this Valley who work two jobs and still can\'t keep the heat on."',
-    excerpt: "In Nova Scotia's Annapolis Valley, mornings drift in gently and unhurried. Mist settles into the hollows between field and fence. At the end of the driveway, my children wait with backpacks as big as they are, and somewhere down the road someone is already pulling into the farm stand, the one with the handwritten sign and the honour-system cash box.\n\nThis is a place with roots deep in farming tradition — fertile soil, abundant harvests, orchards older than anyone living can remember. It is easy to fall in love with the Valley's particular beauty. Easy to photograph. Easy to write about in the soft-focus way that makes people want to move here.\n\nBut this quiet rhythm does not tell the whole story.\n\nThe same roads that carry the farm-to-table crowd carry families who have farmed them for generations and are no longer sure they can afford to stay. The same soil that produces award-winning wines also produces the kind of exhaustion that doesn't make it into the tourism brochures. There are people in this Valley who work two jobs and still can't keep the heat on. There are kids who go to school hungry. There are communities that feel, increasingly, like they are being photographed rather than seen.\n\nThe sunlight falls on both. But only one makes it into the picture.",
-  },
-  {
-    type: 'Humour',
-    title: 'Working From Home, Preschool Edition',
-    meta: "Captain's Log · December 2025",
-    pull: '"I have curated a small collection in my top drawer for this purpose. One Jolly Rancher included."',
-    excerpt: "There is a very specific kind of panic that sets in when your naked child comes sprinting toward your office door mid-call.\n\nIn that moment, you move quickly. You turn off your camera, redirect the situation with whatever harmless object is within reach — not in anger, but in strategy — and return to the screen as if nothing happened. The object must be light enough not to cause harm, heavy enough to carry intention, and unlikely to shatter on impact. I have curated a small collection in my top drawer for this purpose. One Jolly Rancher included. Finders keepers.\n\nFour children in seven years means our household operates at a volume and pace that resists optimization. There is always someone who needs something, always a snack that has been eaten by the wrong person, always a sock that has vanished in a way that suggests it left of its own accord.\n\nI have learned to work in the margins. In the twenty minutes before anyone else is awake. In the car while someone is at swimming. In the bathroom, which locks, and which I have come to regard as a satellite office. You find the cracks and you pour yourself into them. And somehow, improbably, things get done.\n\nThe days are loud and absurd and occasionally unhinged. I wouldn't trade them.",
-  },
-  {
-    type: 'Personal Essay',
-    title: 'For a Minute',
-    meta: "Captain's Log · November 2025",
-    pull: '"It just looked like she had it all figured out for a minute."',
-    excerpt: "It's funny how quickly you can look at someone and feel like they're doing it better than you.\n\nI ran into a mom from my kids' school at the grocery store yesterday. I hadn't seen her in a while and for a second I almost didn't recognize her. Hair done, nails done, just put together in a way that felt worlds apart from the last time I'd seen her — at pickup, both of us looking like we'd survived something.\n\nWe talked for a few minutes. She seemed good. She seemed, honestly, great. And I drove home feeling that particular kind of small that you feel when someone else appears to be managing something you can't quite get a handle on.\n\nLater that night she texted me. She'd seen me at the store too, she said. She'd almost said something about how I always seem so calm, so sorted. How did I manage it all, she wanted to know.\n\nI stared at my phone for a long time.\n\nI had been standing in that aisle in yesterday's clothes, mentally tallying whether we had enough pasta to avoid a second trip, three days post-shower, holding a coupon I'd forgotten to use. She thought I looked calm. I thought she looked like she had it together.\n\nNeither of us was seeing clearly. We were both just catching each other in a moment, and making a story out of it. It just looked like she had it all figured out for a minute. I imagine it looked the same from where she was standing.",
-  },
-  {
-    type: 'Opinion',
-    title: 'Echo Chambers of Insanity',
-    meta: "Captain's Log · October 2025",
-    pull: '"Nobody is actually talking to each other. Everyone is performing for an audience that already agrees with them."',
-    excerpt: "Canadian politics have gone straight to hell in a handbasket, and frankly, I'm over it.\n\nMy partner and I care deeply about our community, local businesses, infrastructure and the well-being of the people around us. But most importantly, we care about the health, rights, and dignity of others. These days, it feels like we care too much — and right now, that feels like a curse.\n\nThe current political landscape is pretty darn icky. It's like every conversation has been overtaken by an out-of-control game of telephone, where everyone is yelling at each other from their corners of the internet, trying to one-up each other with the latest smear or conspiracy. Nobody is actually talking to each other. Everyone is performing for an audience that already agrees with them.\n\nI've started to notice the moment a conversation shifts from exchange to spectacle. There's a particular quality to it — the way someone stops listening and starts loading. The way a question gets answered with a talking point. The way nuance gets treated like weakness.\n\nWe're living in an echo chamber of insanity, and it's officially time that we break free. Not by getting louder. By getting curious.",
-  },
+const SOCIAL_PIECES = [
+  { type: 'Social Media · Willow & Rose', title: 'Small Business Brand Voice', image: '/portfolio/willowandrose-social-1.png' },
+  { type: 'Video · Willow & Rose', title: 'Reel Copywriting', video: '/portfolio/willowandrose-video-1.mp4' },
+  { type: 'Social Media · Raven House Co.', title: 'Small Business Brand Voice', image: '/portfolio/raven-house-social-1.png' },
+  { type: 'Social Media · Raven House Co.', title: 'Lifestyle Post', image: '/portfolio/raven-house-social-3.png' },
+  { type: 'Social Media · Raven House Co.', title: 'Lifestyle Post', image: '/portfolio/raven-house-social-2.png' },
 ]
 
-export default function WritingPage() {
-  const [expanded, setExpanded] = useState(null)
+const REALESTATE_PIECES = [
+  { type: 'Real Estate · Mock-Up', title: 'Listing Social Post', image: '/portfolio/realestate-social-1.png' },
+  { type: 'Real Estate · Mock-Up', title: 'Realtor Personal Brand Post', image: '/portfolio/realestate-social-2.png' },
+  { type: 'Real Estate · Mock-Up', title: 'Property Listing Flyer', image: '/portfolio/realestate-flyer-1.png' },
+  { type: 'Real Estate · Mock-Up', title: 'Realtor Marketing Flyer', image: '/portfolio/real-estate-flyer-3.jpg' },
+  { type: 'Video · Mock-Up', title: 'Real Estate Reel', video: '/portfolio/realestate-reel-4.mp4' },
+]
+
+function GalleryTile({ p, onVideoClick, onImageClick }) {
+  return (
+    <div
+      onClick={() => { if (p.video) onVideoClick(p.video); else if (p.image) onImageClick(p.image); }}
+      style={{ cursor: 'pointer', display: 'flex', flexDirection: 'column' }}
+    >
+      <div style={{ position: 'relative', overflow: 'hidden', background: '#e8e4dd', borderRadius: '2px' }}>
+        {p.image && (
+          <img
+            src={p.image}
+            alt={p.title}
+            style={{ width: '100%', height: '260px', objectFit: 'contain', objectPosition: 'center', display: 'block', transition: 'transform 0.3s ease' }}
+            onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.02)'}
+            onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+          />
+        )}
+        {p.video && (
+          <div style={{ position: 'relative' }}>
+            <video src={p.video} style={{ width: '100%', height: '260px', objectFit: 'cover', display: 'block' }} muted playsInline preload="metadata" />
+            <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(13,27,46,0.15)' }}>
+              <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: 'rgba(155,123,58,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><polygon points="4,2 14,8 4,14" fill="white"/></svg>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+      <div style={{ padding: '12px 4px 0' }}>
+        <p style={{ fontFamily: "'Crimson Pro',Georgia,serif", fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(155,123,58,0.8)', marginBottom: '4px' }}>{p.type}</p>
+        <p style={{ fontFamily: "'Cormorant Garamond',Georgia,serif", fontSize: '17px', color: 'var(--navy)', fontWeight: 400 }}>{p.title}</p>
+      </div>
+    </div>
+  )
+}
+
+export default function BrandContentPage() {
+  const [lightboxVideo, setLightboxVideo] = useState(null)
+  const [lightboxImage, setLightboxImage] = useState(null)
 
   return (
     <div className="subpage">
@@ -63,33 +70,48 @@ export default function WritingPage() {
         <div className="subpage-banner-overlay" />
         <div className="subpage-banner-title">
           <div className="section-label" style={{ color: 'var(--gold)', justifyContent: 'center', marginBottom: '12px' }}>Portfolio</div>
-          <h1><span className="script-accent">Writing</span></h1>
+          <h1 style={{ color: 'white' }}>Brand &amp; <span className="script-accent">Content</span></h1>
         </div>
       </div>
 
-      <div style={{ background: '#F5F0E8', position: 'relative', zIndex: 10 }}>
-        <div className="subpage-portfolio-grid">
-          {PIECES.map((p, i) => (
-            <div key={i} className="portfolio-card" onClick={() => setExpanded(expanded === i ? null : i)}>
-              <div className="portfolio-type">{p.type}</div>
-              <h3>{p.title}</h3>
-              <p className="portfolio-meta">{p.meta}</p>
-              <p className="portfolio-pull">{p.pull}</p>
-              {expanded === i && (
-                <div className="portfolio-excerpt">
-                  {p.excerpt.split('\n\n').map((para, j) => (
-                    <p key={j}>{para}</p>
-                  ))}
-                </div>
-              )}
-              <span className="portfolio-link">{expanded === i ? 'Close' : 'Read excerpt'}</span>
-            </div>
+      <div style={{ background: '#F5F0E8', position: 'relative', zIndex: 10, padding: '56px 64px 72px' }}>
+
+        <div style={{ maxWidth: '1100px', margin: '0 auto 48px', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px' }}>
+          {SOCIAL_PIECES.map((p, i) => (
+            <GalleryTile key={i} p={p} onVideoClick={setLightboxVideo} onImageClick={setLightboxImage} />
           ))}
         </div>
 
-        <div className="subpage-cta-bar">
-          <p>Like what you see? <a href="/#contact">Let&apos;s work together.</a></p>
+        <div style={{ maxWidth: '1100px', margin: '0 auto 32px', display: 'flex', alignItems: 'center', gap: '20px' }}>
+          <div style={{ flex: 1, height: '1px', background: 'rgba(13,27,46,0.1)' }} />
+          <p style={{ fontFamily: "'Crimson Pro',Georgia,serif", fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(13,27,46,0.35)', whiteSpace: 'nowrap' }}>Real Estate — mock-ups for demonstration</p>
+          <div style={{ flex: 1, height: '1px', background: 'rgba(13,27,46,0.1)' }} />
         </div>
+
+        <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px' }}>
+          {REALESTATE_PIECES.map((p, i) => (
+            <GalleryTile key={i} p={p} onVideoClick={setLightboxVideo} onImageClick={setLightboxImage} />
+          ))}
+        </div>
+
+      </div>
+
+      {lightboxVideo && (
+        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.92)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }} onClick={() => setLightboxVideo(null)}>
+          <button onClick={() => setLightboxVideo(null)} style={{ position: 'absolute', top: '24px', right: '32px', background: 'none', border: 'none', color: 'white', fontSize: '32px', cursor: 'pointer' }}>×</button>
+          <video src={lightboxVideo} controls autoPlay style={{ maxWidth: '90vw', maxHeight: '85vh', borderRadius: '4px' }} onClick={e => e.stopPropagation()} />
+        </div>
+      )}
+
+      {lightboxImage && (
+        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.92)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }} onClick={() => setLightboxImage(null)}>
+          <button onClick={() => setLightboxImage(null)} style={{ position: 'absolute', top: '24px', right: '32px', background: 'none', border: 'none', color: 'white', fontSize: '32px', cursor: 'pointer' }}>×</button>
+          <img src={lightboxImage} alt="" style={{ maxWidth: '92vw', maxHeight: '90vh', objectFit: 'contain', borderRadius: '4px' }} onClick={e => e.stopPropagation()} />
+        </div>
+      )}
+
+      <div className="subpage-cta-bar">
+        <p>Like what you see? <a href="/#contact">Let&apos;s work together.</a></p>
       </div>
     </div>
   )
