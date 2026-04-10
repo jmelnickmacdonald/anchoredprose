@@ -3,11 +3,11 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 const SOCIAL_PIECES = [
-  { type: 'Social Media · Willow & Rose', title: 'Homestead Brand Voice', image: '/portfolio/willowandrose-social-1.png' },
+  { type: 'Social Media · Willow & Rose', title: 'Small Business Brand Voice', image: '/portfolio/willowandrose-social-1.png' },
   { type: 'Video · Willow & Rose', title: 'Reel Copywriting', video: '/portfolio/willowandrose-video-1.mp4' },
-  { type: 'Social Media · Raven House Co.', title: 'Farmstand & Community Post', image: '/portfolio/raven-house-social-1.png' },
-  { type: 'Social Media · Raven House Co.', title: 'Lifestyle Social Copy', image: '/portfolio/raven-house-social-3.png' },
-  { type: 'Social Media · Raven House Co.', title: 'Small Business Social Copy', image: '/portfolio/raven-house-social-2.png' },
+  { type: 'Social Media · Raven House Co.', title: 'Small Business Brand Voice', image: '/portfolio/raven-house-social-1.png' },
+  { type: 'Social Media · Raven House Co.', title: 'Lifestyle Post', image: '/portfolio/raven-house-social-3.png' },
+  { type: 'Social Media · Raven House Co.', title: 'Lifestyle Post', image: '/portfolio/raven-house-social-2.png' },
 ]
 
 const REALESTATE_PIECES = [
@@ -15,9 +15,7 @@ const REALESTATE_PIECES = [
   { type: 'Real Estate · Mock-Up', title: 'Realtor Personal Brand Post', image: '/portfolio/realestate-social-2.png' },
   { type: 'Real Estate · Mock-Up', title: 'Property Listing Flyer', image: '/portfolio/realestate-flyer-1.png' },
   { type: 'Real Estate · Mock-Up', title: 'Realtor Marketing Flyer', image: '/portfolio/real-estate-flyer-3.jpg' },
-  { type: 'Video · Mock-Up', title: 'Real Estate Reel', video: '/portfolio/realestate-video-3.mp4' },
-  { type: 'Video · Mock-Up', title: 'Property Carousel Reel', video: '/portfolio/realestate-video-4.mp4' },
-  { type: 'Video · Mock-Up', title: 'Real Estate Social Reel', video: '/portfolio/realestate-social-4.mp4' },
+  { type: 'Video · Mock-Up', title: 'Real Estate Reel', video: '/portfolio/realestate-reel-4.mp4' },
 ]
 
 function GalleryTile({ p, onVideoClick, onImageClick }) {
@@ -72,10 +70,9 @@ export default function BrandContentPage() {
         <div className="subpage-banner-overlay" />
         <div className="subpage-banner-title">
           <div className="section-label" style={{ color: 'var(--gold)', justifyContent: 'center', marginBottom: '12px' }}>Portfolio</div>
-          <h1>Brand &amp; <span className="script-accent">Content</span></h1>
+          <h1 style={{ color: 'white' }}>Brand &amp; <span className="script-accent">Content</span></h1>
         </div>
       </div>
-      <div style={{ height: '3px', background: '#0D1B2E', width: '100%' }} />
 
       <div style={{ background: '#F5F0E8', position: 'relative', zIndex: 10, padding: '56px 64px 72px' }}>
 
