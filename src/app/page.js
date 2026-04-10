@@ -415,7 +415,6 @@ export default function Home() {
             <p>© 2026 Anchored Prose. All rights reserved.</p>
           </div>
         </div>
-      </div>
       </footer>
     </>
   )
