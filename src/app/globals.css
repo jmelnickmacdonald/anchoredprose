@@ -26,7 +26,7 @@ html { scroll-behavior: smooth; }
 body { font-family: var(--font-body); background: var(--cream); color: var(--navy); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
 h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; }
 
-.script-accent { font-family: var(--font-script); font-size: 1.2em; color: var(--gold); font-style: normal; display: inline-block; vertical-align: baseline; line-height: 1; position: relative; top: 0.08em; }
+.script-accent { font-family: var(--font-script); font-size: 0.95em; font-weight: 400; color: var(--gold); font-style: normal; display: inline-block; vertical-align: baseline; line-height: 1; position: relative; top: 0.08em; }
 
 /* NAV */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--navy); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 80px; border-bottom: 1px solid rgba(184,150,62,0.15); }
@@ -72,13 +72,12 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 
 /* SERVICES — blue floral */
 .services { background: var(--navy); padding: 80px 64px; position: relative; overflow: hidden; }
-.services::after { content: ''; position: absolute; inset: 0; background: rgba(13,27,46,0.72); pointer-events: none; z-index: 0; }
 .services-header, .services-grid { position: relative; z-index: 1; }
 .services::before { content: ''; position: absolute; inset: 0; background-image: url('/background4.jpg'); background-size: 1100px; opacity: 0.77; pointer-events: none; }
-.services-header { max-width: 480px; margin: 0 auto 48px; text-align: center; position: relative; z-index: 1; background: rgba(13,27,46,0.75); padding: 24px 48px; border: 1px solid rgba(155,123,58,0.2); }
+.services-header { max-width: 480px; margin: 0 auto 48px; text-align: center; position: relative; z-index: 1; background: rgba(13,27,46,0.88); padding: 24px 48px; border: 1px solid rgba(155,123,58,0.2); }
 .services-grid { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px; position: relative; z-index: 1; }
-.service-card { background: rgba(13,27,46,0.82); border-left: 3px solid transparent; padding: 20px 28px; transition: border-color 0.2s, background 0.2s; cursor: pointer; }
-.service-card:hover, .service-card.open { border-left-color: var(--gold); background: rgba(13,27,46,0.95); }
+.service-card { background: rgba(13,27,46,0.90); border-left: 3px solid transparent; padding: 20px 28px; transition: border-color 0.2s, background 0.2s; cursor: pointer; }
+.service-card:hover, .service-card.open { border-left-color: var(--gold); background: rgba(13,27,46,0.97); }
 .service-card-header { display: flex; align-items: center; justify-content: space-between; }
 .service-card h3 { font-size: 19px; color: var(--cream); font-weight: 400; margin: 0; }
 .service-card-toggle { color: var(--gold); font-size: 22px; line-height: 1; font-weight: 300; }
@@ -149,7 +148,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 .blog .section-title { color: var(--navy); font-size: clamp(28px, 3.5vw, 48px); }
 .blog-carousel { max-width: 1100px; margin: 0 auto; position: relative; overflow: hidden; z-index: 2; }
 .blog-cards { display: flex; transition: transform 0.5s ease; }
-.blog-card { flex: 0 0 100%; padding: 48px; background: rgba(250,247,242,0.95); border-top: 3px solid var(--gold); position: relative; z-index: 2; }
+.blog-card { flex: 0 0 100%; padding: 48px; background: #1a2d47; border-top: 3px solid var(--gold); position: relative; z-index: 2; }
 .blog-card-category { font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; position: relative; z-index: 1; }
 .blog-card h3 { font-family: var(--font-display); font-size: 28px; color: var(--cream); margin-bottom: 16px; font-weight: 400; position: relative; z-index: 1; }
 .blog-card p { font-size: 17px; color: rgba(250,247,242,0.7); line-height: 1.8; margin-bottom: 24px; }
@@ -185,8 +184,8 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 .footer { background: var(--navy); padding: 56px 64px 40px; }
 .footer-content { max-width: 1100px; margin: 0 auto; text-align: center; }
 .footer-brand { margin-bottom: 32px; }
-.footer-tagline { font-family: var(--font-display); font-size: clamp(40px, 5vw, 72px); font-style: italic; color: var(--cream); margin-top: 28px; margin-bottom: 12px; white-space: nowrap; }
-.footer-tagline .script-accent { font-size: 1.25em; display: inline-block; vertical-align: baseline; position: relative; top: 0.12em; }
+.footer-tagline { font-family: var(--font-display); font-size: clamp(56px, 8vw, 120px); font-style: italic; color: var(--cream); margin-top: 28px; margin-bottom: 16px; white-space: nowrap; line-height: 1.1; }
+.footer-tagline .script-accent { font-size: 1.5em; display: inline-block; vertical-align: baseline; position: relative; top: -0.05em; }
 .footer-brand p { font-family: var(--font-body); font-size: 18px; color: rgba(250,247,242,0.7); margin-top: 8px; }
 .footer-links { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid rgba(184,150,62,0.15); }
 .footer-links a { font-family: var(--font-body); font-size: 18px; letter-spacing: 2px; text-transform: uppercase; color: rgba(250,247,242,0.6); text-decoration: none; transition: color 0.2s; }
@@ -207,8 +206,8 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 .back-link:hover { opacity: 0.7; }
 .subpage-banner { position: relative; min-height: 220px; margin-top: 80px; display: flex; align-items: center; justify-content: center; overflow: hidden; background-image: url('/creamseashellfloral.jpg'); background-size: 550px; background-attachment: scroll; }
 .subpage-banner-overlay { position: absolute; inset: 0; background: rgba(250,247,242,0.35); pointer-events: none; }
-.subpage-banner-title { position: relative; z-index: 2; text-align: center; background: rgba(245,240,232,0.88); padding: 28px 64px; border: 1px solid rgba(184,150,62,0.25); }
-.subpage-banner-title h1 { font-size: clamp(32px, 5vw, 54px); color: var(--navy); font-weight: 300; line-height: 1.15; }
+.subpage-banner-title { position: relative; z-index: 2; text-align: center; background: rgba(13,27,46,0.80); padding: 28px 64px; border: 1px solid rgba(155,123,58,0.25); }
+.subpage-banner-title h1 { font-size: clamp(32px, 5vw, 54px); color: var(--cream); font-weight: 300; line-height: 1.15; }
 .subpage-portfolio-grid { max-width: 1100px; margin: 0 auto; padding: 48px 48px 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .subpage-body { background: var(--cream-warm); position: relative; z-index: 1; padding-bottom: 64px; isolation: isolate; }
 .subpage-category-label { max-width: 100%; margin: 0; padding: 24px 48px; font-family: var(--font-body); font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--cream); display: flex; align-items: center; gap: 16px; position: relative; z-index: 1; background: var(--navy); }
