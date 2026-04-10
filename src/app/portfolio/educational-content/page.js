@@ -36,7 +36,7 @@ const PIECES = [
 export default function EducationalContentPage() {
   const [expanded, setExpanded] = useState(null)
   return (
-    <div className="subpage" style={{ backgroundImage: "url('/creamseashellfloral.jpg')", backgroundSize: "600px" }} style={{ backgroundImage: "url('/creamseashellfloral.jpg')", backgroundSize: '500px', backgroundBlendMode: 'normal' }}>
+    <div className="subpage" style={{ backgroundImage: "url('/creamseashellfloral.jpg')", backgroundSize: '500px', backgroundBlendMode: 'normal' }}>
       <nav className="subpage-nav">
         <a href="/" className="logo"><Image src="/logo.png" alt="Anchored Prose" width={200} height={50} style={{ height: 46, width: 'auto' }} /></a>
         <a href="/#portfolio" className="back-link">← Back to Portfolio</a>
@@ -45,7 +45,7 @@ export default function EducationalContentPage() {
         <Image src="/banner.jpg" alt="" fill style={{ objectFit: 'cover', objectPosition: 'center 40%' }} />
         <div className="subpage-banner-overlay" />
         <div className="subpage-banner-title">
-          <div className="section-label" style={{ color: 'var(--gold)', justifyContent: 'center' }}>Portfolio</div>
+          <div className="section-label" style={{ color: 'var(--gold)', justifyContent: 'center', marginBottom: '12px' }}>Portfolio</div>
           <h1>Educational <span className="script-accent">Content</span></h1>
         </div>
       </div>
