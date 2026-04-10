@@ -72,6 +72,7 @@ export default function WeddingsSpeechesPage() {
         </div>
       </div>
 
+      <div style={{ background: "#F5F0E8", position: "relative", zIndex: 10 }}>
       <div className="subpage-content">
 
       {/* SPEECHES & CEREMONIES */}
@@ -81,22 +82,22 @@ export default function WeddingsSpeechesPage() {
           <div
             key={`speech-${i}`}
             className="portfolio-card"
-            onClick={() => setExpanded(expanded === `speech-${i}` ? null : `speech-${i}`)}
+            onClick={() => setExpanded(expanded === 'speech-' + i ? null : `speech-${i}`)}
             tabIndex={0}
-            onKeyDown={(e) => e.key === 'Enter' && setExpanded(expanded === `speech-${i}` ? null : `speech-${i}`)}
+            onKeyDown={(e) => e.key === 'Enter' && setExpanded(expanded === 'speech-' + i ? null : `speech-${i}`)}
           >
             <div className="portfolio-type">{p.type}</div>
             <h3>{p.title}</h3>
             <p className="portfolio-meta">{p.meta}</p>
             <p className="portfolio-pull">{p.pull}</p>
-            {expanded === `speech-${i}` && (
+            {expanded === 'speech-' + i && (
               <div className="portfolio-excerpt">
                 {p.excerpt.split('\n\n').map((para, j) => (
                   <p key={j} style={{ whiteSpace: 'pre-line' }}>{para}</p>
                 ))}
               </div>
             )}
-            <span className="portfolio-link">{expanded === `speech-${i}` ? 'Close' : 'Read excerpt'}</span>
+            <span className="portfolio-link">{expanded === 'speech-' + i ? 'Close' : 'Read excerpt'}</span>
           </div>
         ))}
       </div>
@@ -108,9 +109,9 @@ export default function WeddingsSpeechesPage() {
           <div
             key={`tribute-${i}`}
             className="portfolio-card"
-            onClick={() => setExpanded(expanded === `tribute-${i}` ? null : `tribute-${i}`)}
+            onClick={() => setExpanded(expanded === 'tribute-' + i ? null : `tribute-${i}`)}
             tabIndex={0}
-            onKeyDown={(e) => e.key === 'Enter' && setExpanded(expanded === `tribute-${i}` ? null : `tribute-${i}`)}
+            onKeyDown={(e) => e.key === 'Enter' && setExpanded(expanded === 'tribute-' + i ? null : `tribute-${i}`)}
           >
             <div className="portfolio-type">{p.type}</div>
             <h3>{p.title}</h3>
@@ -122,16 +123,18 @@ export default function WeddingsSpeechesPage() {
               </div>
             )}
             <p className="portfolio-pull">{p.pull}</p>
-            {expanded === `tribute-${i}` && (
+            {expanded === 'tribute-' + i && (
               <div className="portfolio-excerpt">
                 {p.excerpt.split('\n\n').map((para, j) => (
                   <p key={j}>{para}</p>
                 ))}
               </div>
             )}
-            <span className="portfolio-link">{expanded === `tribute-${i}` ? 'Close' : 'Read excerpt'}</span>
+            <span className="portfolio-link">{expanded === 'tribute-' + i ? 'Close' : 'Read excerpt'}</span>
           </div>
         ))}
+      </div>
+
       </div>
 
       </div>
