@@ -234,8 +234,7 @@ export default function Home() {
             What I <span className="script-accent">Offer</span>
           </h2>
         </div>
-        <div style={{ padding: "24px", background: "#FAF7F2", maxWidth: "924px", margin: "0 auto" }}>
-        <div className="services-grid" style={{ padding: "0", border: "none", background: "none", maxWidth: "100%" }}>
+        <div className="services-grid">
           {SERVICES.map((s, i) => (
             <div key={i} className={activeService === i ? 'service-card open' : 'service-card'} onClick={() => setActiveService(activeService === i ? null : i)}>
               <div className="service-card-header">
@@ -248,7 +247,6 @@ export default function Home() {
               </div>
             </div>
           ))}
-        </div>
         </div>
       </section>
 
