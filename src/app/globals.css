@@ -203,7 +203,7 @@ nav {
 .portfolio-cat-link { font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
 
 /* Portfolio card styles (used on subpages) */
-.portfolio-card { background: rgba(13,27,46,0.88); border-top: 3px solid rgba(184,150,62,0.4); padding: 40px 36px; cursor: pointer; transition: border-color 0.25s; outline: none; position: relative; overflow: hidden; }
+.portfolio-card { background: #1a2d47; border-top: 3px solid rgba(184,150,62,0.4); padding: 40px 36px; cursor: pointer; transition: border-color 0.25s; outline: none; position: relative; overflow: hidden; }
 .portfolio-card::before { content: ''; position: absolute; inset: 0; background-image: url('/rope-pattern.jpg'); background-size: 300px; opacity: 0.05; pointer-events: none; }
 .portfolio-card:hover, .portfolio-card:focus { border-top-color: var(--gold); }
 .portfolio-type { font-family: var(--font-body); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; position: relative; z-index: 1; }
@@ -305,6 +305,11 @@ nav {
   margin: 0;
 }
 .contact { background: var(--cream-dark); padding: 80px 64px; position: relative; overflow: hidden; }
+.contact::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url('/creamseashellfloral.jpg');
+  background-size: 550px; opacity: 0.3; pointer-events: none;
+}
 .contact-grid {
   max-width: 1100px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
@@ -354,7 +359,7 @@ nav {
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
 /* SUBPAGE */
-.subpage { min-height: 100vh; background: var(--cream-warm); position: relative; }
+.subpage { min-height: 100vh; background: var(--cream-warm); }
 .subpage-nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   background: var(--navy); display: flex; align-items: center; justify-content: space-between;
@@ -367,8 +372,9 @@ nav {
   display: flex; align-items: center; justify-content: center; overflow: hidden;
   background-image: url('/creamseashellfloral.jpg');
   background-size: 550px;
+  background-attachment: scroll;
 }
-.subpage-banner-overlay { position: absolute; inset: 0; background: rgba(245,240,232,0.45); }
+.subpage-banner-overlay { position: absolute; inset: 0; background: rgba(250,247,242,0.35); pointer-events: none; }
 .subpage-banner-title {
   position: relative; z-index: 2; text-align: center;
   background: rgba(245,240,232,0.88); padding: 28px 64px;
