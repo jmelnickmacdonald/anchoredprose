@@ -65,10 +65,9 @@ export default function WeddingsSpeechesPage() {
       </nav>
 
       <div className="subpage-banner">
-        <Image src="/banner2.jpg" alt="" fill style={{ objectFit: 'cover', objectPosition: 'center 70%' }} />
         <div className="subpage-banner-overlay" />
         <div className="subpage-banner-title">
-          <div className="section-label" style={{ color: 'var(--gold)', justifyContent: 'center' }}>Portfolio</div>
+          <div className="section-label" style={{ color: 'var(--gold)', justifyContent: 'center', marginBottom: '12px' }}>Portfolio</div>
           <h1>Weddings &amp; <span className="script-accent">Speeches</span></h1>
         </div>
       </div>
