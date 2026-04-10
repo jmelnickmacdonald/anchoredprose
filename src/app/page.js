@@ -311,8 +311,6 @@ export default function Home() {
       </section>
 
 
-      <div className="section-divider" />
-
       <section className="blog" id="blog">
         <div className="blog-header">
           <div className="section-label">Captain&apos;s Log</div>
@@ -338,8 +336,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <div className="section-divider" />
 
       <section className="contact" id="contact">
         <div className="contact-grid">
