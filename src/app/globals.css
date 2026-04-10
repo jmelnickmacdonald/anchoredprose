@@ -120,7 +120,7 @@ nav {
   display: flex; align-items: center; justify-content: center; gap: 14px;
 }
 .section-label::before { content: ''; display: block; width: 36px; height: 1px; background: var(--gold); }
-.section-title { font-size: clamp(36px, 4.5vw, 58px); font-weight: 300; line-height: 1.1; margin-bottom: 28px; text-align: center; }
+.section-title { font-size: clamp(32px, 3.8vw, 52px); font-weight: 300; line-height: 1.1; margin-bottom: 28px; text-align: center; }
 
 /* ABOUT — warm cream */
 .about { padding: 80px 0; background: var(--cream-warm); position: relative; overflow: hidden; }
@@ -173,9 +173,6 @@ nav {
 .portfolio { padding: 80px 64px; position: relative; overflow: hidden; background: var(--cream-warm); }
 .portfolio-header {
   max-width: 600px; margin: 0 auto 40px;
-  background: rgba(245,240,232,0.95);
-  padding: 20px 40px 14px;
-  border: 1px solid rgba(184,150,62,0.25);
   text-align: center; position: relative; z-index: 1;
 }
 .portfolio-note { font-family: var(--font-body); font-size: 15px; color: rgba(13,27,46,0.5); font-style: italic; margin-top: 8px; }
@@ -224,33 +221,33 @@ nav {
 .testimonials-header {
   display: inline-block; margin: 0 auto 64px; text-align: center;
   position: relative; z-index: 1;
-  background: rgba(13,27,46,0.75); padding: 24px 48px;
-  border: 1px solid rgba(184,150,62,0.2);
+  background: rgba(245,240,232,0.92); padding: 24px 48px;
+  border: 1px solid rgba(184,150,62,0.25);
 }
 .testimonials-featured {
   max-width: 800px; margin: 0 auto 64px; text-align: center;
   position: relative; z-index: 1; padding: 48px;
-  background: rgba(13,27,46,0.85); border: 1px solid rgba(184,150,62,0.15);
+  background: rgba(245,240,232,0.92); border: 1px solid rgba(184,150,62,0.25);
 }
 .testimonials-featured blockquote {
   font-family: var(--font-display); font-size: clamp(22px, 3vw, 28px); font-style: italic;
-  color: var(--cream); line-height: 1.6; margin-bottom: 32px;
+  color: var(--navy); line-height: 1.6; margin-bottom: 32px;
 }
 .testimonial-name { font-family: var(--font-body); font-size: 16px; color: var(--gold); font-weight: 600; margin-bottom: 4px; }
-.testimonial-role { font-family: var(--font-body); font-size: 15px; color: rgba(250,247,242,0.5); font-style: italic; }
+.testimonial-role { font-family: var(--font-body); font-size: 15px; color: rgba(13,27,46,0.5); font-style: italic; }
 .testimonials-grid {
   max-width: 1100px; margin: 0 auto;
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
   position: relative; z-index: 1; text-align: left;
 }
-.testimonial-card { background: rgba(13,27,46,0.85); border: 1px solid rgba(184,150,62,0.15); padding: 32px; }
-.testimonial-card blockquote { font-family: var(--font-body); font-size: 15px; font-style: italic; color: rgba(250,247,242,0.85); line-height: 1.7; margin-bottom: 20px; }
-.testimonial-card .testimonial-name { font-size: 14px; }
-.testimonial-card .testimonial-role { font-size: 13px; }
+.testimonial-card { background: rgba(245,240,232,0.92); border: 1px solid rgba(184,150,62,0.25); padding: 32px; }
+.testimonial-card blockquote { font-family: var(--font-body); font-size: 15px; font-style: italic; color: rgba(13,27,46,0.8); line-height: 1.7; margin-bottom: 20px; }
+.testimonial-card .testimonial-name { font-size: 14px; color: var(--gold); }
+.testimonial-card .testimonial-role { font-size: 13px; color: rgba(13,27,46,0.5); }
 
 /* HOW IT WORKS — plain cream */
 .how-it-works { background: var(--cream-warm); padding: 80px 64px; position: relative; overflow: hidden; }
-.hiw-header { max-width: 480px; margin: 0 auto 48px; text-align: center; position: relative; z-index: 1; }
+.hiw-header { max-width: 1100px; margin: 0 auto 48px; text-align: center; position: relative; z-index: 1; }
 .hiw-steps {
   max-width: 1100px; margin: 0 auto;
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
@@ -304,25 +301,25 @@ nav {
   background: linear-gradient(to right, transparent, rgba(184,150,62,0.4), transparent);
   margin: 0;
 }
-.contact { background: var(--cream-dark); padding: 80px 64px; position: relative; overflow: hidden; }
+.contact { background: var(--navy); padding: 80px 64px; position: relative; overflow: hidden; }
 .contact::before {
   content: ''; position: absolute; inset: 0;
-  background-image: url('/creamseashellfloral.jpg');
-  background-size: 550px; opacity: 0.3; pointer-events: none;
+  background-image: url('/coastal-blue.jpg');
+  background-size: 500px; opacity: 0.5; pointer-events: none;
 }
 .contact-grid {
   max-width: 1100px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
   align-items: stretch; position: relative; z-index: 1;
 }
-.contact-info { background: rgba(245,240,232,0.95); padding: 48px; display: flex; flex-direction: column; }
+.contact-info { background: rgba(245,240,232,0.92); padding: 48px; display: flex; flex-direction: column; }
 .contact-title { font-size: clamp(32px, 3.5vw, 46px); color: var(--navy); font-weight: 300; margin-bottom: 20px; line-height: 1.15; }
 .contact-intro { font-size: 16px; color: rgba(13,27,46,0.65); line-height: 1.85; margin-bottom: 36px; font-family: var(--font-body); }
 .contact-detail { border-top: 1px solid rgba(13,27,46,0.1); padding: 16px 0; }
 .contact-detail-label { font-family: var(--font-body); font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
 .contact-detail-value { font-family: var(--font-body); font-size: 16px; color: var(--navy); text-decoration: none; }
 .contact-detail-value:hover { color: var(--gold); }
-.contact-form { background: rgba(245,240,232,0.95); padding: 48px; border-top: 4px solid var(--gold); display: flex; flex-direction: column; }
+.contact-form { background: rgba(245,240,232,0.92); padding: 48px; border-top: 4px solid var(--gold); display: flex; flex-direction: column; }
 .form-group { margin-bottom: 24px; }
 .form-group label { display: block; font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--navy); margin-bottom: 10px; }
 .form-group input, .form-group select, .form-group textarea {
