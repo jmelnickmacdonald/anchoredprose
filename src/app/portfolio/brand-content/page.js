@@ -30,7 +30,7 @@ const SOCIAL_PIECES = [
 
   {
     type: 'Social Media Content · Raven House Co.',
-    title: 'Lifestyle Content',
+    title: 'Lifestyle Social Copy',
     meta: 'Raven House Co. — Instagram Content',
     image: '/portfolio/raven-house-social-3.png',
   },
@@ -104,7 +104,7 @@ function PieceCard({ p, onVideoClick, onImageClick }) {
             alt={p.title}
             width={600}
             height={420}
-            style={{ width: '100%', height: '420px', objectFit: 'contain', objectPosition: 'center', display: 'block' }}
+            style={{ width: '100%', height: '460px', objectFit: 'contain', objectPosition: 'center', display: 'block' }}
           />
         </div>
       )}
