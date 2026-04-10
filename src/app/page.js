@@ -144,7 +144,7 @@ export default function Home() {
     e.preventDefault()
     setFormSubmitting(true)
     try {
-      const res = await fetch('https://formspree.io/f/xqeyalvn', {
+      const res = await fetch('https://formspree.io/f/xnjoeaqk', {
         method: 'POST',
         body: new FormData(e.target),
         headers: { Accept: 'application/json' },
