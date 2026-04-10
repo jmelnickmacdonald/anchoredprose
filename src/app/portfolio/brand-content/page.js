@@ -77,7 +77,7 @@ export default function BrandContentPage() {
         </div>
       </div>
 
-      <div style={{ background: '#aaa3a0', position: 'relative', zIndex: 10, padding: '56px 64px 72px' }}>
+      <div style={{ background: '#F5F0E8', position: 'relative', zIndex: 10, padding: '56px 64px 72px' }}>
 
         <div style={{ maxWidth: '1100px', margin: '0 auto 48px', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px' }}>
           {SOCIAL_PIECES.map((p, i) => (
