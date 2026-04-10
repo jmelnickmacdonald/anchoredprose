@@ -7,8 +7,8 @@ const SPEECHES = [
     type: 'Wedding Officiant',
     title: 'The Type B Minus to Her Type A',
     meta: 'Destination Wedding · Punta Cana, Dominican Republic',
-    pull: "\"I'm the type B minus to Rebecca's Type A.\"",
-    excerpt: "Welcome, welcome, beach lovers and party enthusiasts! Can we just take a moment to appreciate how beautiful this backdrop is, how stunning our bride and groom look and how clean my children are for a change?\n\nFor those of you who don't know me, I'm Julianna, immensely proud sister of the bride, chronic thorn in her side, and forever accomplice. I spend my days in equal parts chasing kids, cursing at farm animals, and questioning many of my life choices. Meanwhile, Rebecca is off being crowned a world champion fitness competitor, owning and operating an incredible business, being a thoughtful and generous daughter, sister and friend, and looking fabulous doing it all.\n\nNaturally, I set my bar considerably lower. I'm the type B minus to Rebecca's Type A, and I am simply thrilled to be standing here today in a dress and heels instead of my usual muck-covered rubber boots, celebrating my sister and her perfect match.",
+    pull: '"I\'m the type B minus to Rebecca\'s Type A."',
+    excerpt: "Welcome, welcome, beach lovers and party enthusiasts! Can we just take a moment to appreciate how beautiful this backdrop is, how stunning our bride and groom look and how clean my children are for a change?\n\nFor those of you who don't know me, I'm Julianna, immensely proud sister of the bride, chronic thorn in her side, and forever accomplice. I spend my days in equal parts chasing kids, cursing at farm animals, and questioning many of my life choices. Meanwhile, Rebecca is off being crowned a world champion fitness competitor, owning and operating an incredible business, being a thoughtful and generous daughter, sister and friend, and looking fabulous doing it all. Naturally, I set my bar considerably lower. I guess you could say I'm the type B minus to Rebecca's Type A.\n\nAll that said, I am simply thrilled to be standing here today in a dress and heels instead of my usual muck-covered rubber boots, celebrating my sister and her perfect match.",
   },
   {
     type: 'Best Man Toast',
@@ -22,15 +22,14 @@ const SPEECHES = [
     title: 'Letting Go',
     meta: 'What Nobody Warns You About',
     pull: '"The job was never to keep them."',
-    excerpt: "Here's the thing nobody warns you about when you become a parent. You spend years becoming the world's leading expert on one small human: what makes them laugh, what scares them, which breakfast battles aren't worth fighting, the exact pitch of the cry that means something actually hurts versus the one that means her sister looked at her wrong.\n\nAnd then one day, someone else starts learning those things too. And you realize the job was never to keep them. The job was to make sure that when they found their person, they'd know.\n\nShe doesn't need me to give her away. She's not mine to give. But I am so honoured to watch.",
+    excerpt: "Here's the thing nobody warns you about when you become a parent. You spend years becoming the world's leading expert on one tiny human: what makes them laugh, which breakfast battles aren't worth fighting, the exact pitch of the cry that means something actually hurts versus the one that means her sister looked at her wrong, and how to make it better when they're having a hard day.\n\nThen one day, you realize someone else sees her and understands her the way you do. That's when it hits you and gosh, it hits hard.\n\nYour job was never to keep her. It was to raise her well so that when it really mattered, she'd know.\n\nShe doesn't need me to give her away. She's been bossing me around since she was about three so let's be honest about who's really been in charge here. She's not mine to give, but I am so unbelievably proud to be here to watch it.",
   },
-
   {
     type: 'Choral Reading · Wedding Ceremony',
-    title: "Oh, the Places You'll Go",
-    meta: "Inspired by Dr. Seuss' Oh, the Places You'll Go!",
+    title: 'Oh, the Places You\'ll Go',
+    meta: 'Inspired by Dr. Seuss\' Oh, the Places You\'ll Go!',
     pull: '"Oh, the places you\'ll go, the things you will do, a lifetime of joy is waiting for you."',
-    excerpt: "Congratulations, today is the big day!\nYou've found your partner to help you pave your way.\nThe world is before you, it's open and wide,\nFilled with adventures you'll take in stride.\n\nAs you step into marriage, with love in your hearts,\nKnow there will be challenges, but that's just the start.\nYou'll face the unknown, with strength and with grace,\nThrough twists and through turns, in life's crazy race.\n\nThere'll be highs, there'll be lows,\nbut you've got this down,\nYou're in it together,\nthe best team in town.\n\nSometimes you'll falter, and sometimes you'll fall,\nBut love will be there to help you stand tall.\nFor no matter the place, no matter the time,\nThe two of you together will be just fine.\n\nSo dream and discover, laugh and explore,\nFor this journey ahead will open new doors.\nWith patience, with kindness, and love as your guide,\nYou'll conquer the world, standing side by side.\n\nSo here's to your future, bright as can be,\nThe adventure of love, for all to see.\nOh, the places you'll go, the things you will do,\nA lifetime of joy is waiting for you.",
+    excerpt: "Congratulations, today is the big day!\nYou've found your partner to help you pave your way.\nThe world is before you, it's open and wide,\nFilled with adventures you'll take in stride.\n\nAs you step into marriage, with love in your hearts,\nKnow there will be challenges, but that's just the start.\nYou'll face the unknown, with strength and with grace,\nThrough twists and through turns, in life's crazy race.\n\nThere'll be highs, there'll be lows, but you've got this down,\nYou're in it together, the best team in town.\n\nSometimes you'll falter, and sometimes you'll fall,\nBut love will be there to help you stand tall.\nFor no matter the place, no matter the time,\nThe two of you together will be just fine.\n\nSo here's to your future, bright as can be,\nThe adventure of love, for all to see.\nOh, the places you'll go, the things you will do,\nA lifetime of joy is waiting for you.",
   },
 ]
 
@@ -41,14 +40,14 @@ const TRIBUTES = [
     meta: 'Personal Essay · 2024',
     pull: '"He set the tone and carried it his whole life."',
     image: '/portfolio/finley.jpg',
-    excerpt: "Warning — long post incoming. I've got big feelings today.\n\nToday we said goodbye to Finley, our first baby. He came into our lives long before any of the tiny humans did, and he was the dog we brought every one of those babies home to. In a lot of ways he grew up with us while we were figuring out how to become grown ups ourselves.\n\nFinley had an adventurous almost 13 years. He started out in suburbia, moved with us into rural life, was uprooted with us after the fire, and eventually ended up living the good life as a farm dog. He adapted to every new chapter the same way he handled most things in life — with curiosity, a bit of stubbornness, and the quiet confidence that he belonged wherever his people were.\n\nNothing made him happier than his river walks. If there was a trail and water involved, Finley was all in.\n\nOakley was his best friend. Piper was very much his little sister, and he loved her in the most big-brother way possible — including making it very clear when she was being annoying. They were the three stooges, spending their days bouncing between outdoor adventures and couch naps.\n\nThen there were his favourite people in the world — his kids. He was our baby first, but in his own quiet way he helped raise our human babies too. They slowly wore him down, and he became the endlessly gentle, steady dog who was always part of the background of their childhood.\n\nThis morning, after getting rubs and kisses from his kids before they left for school, he passed peacefully in his sleep. In his own quiet way, I think he had made his final decision.\n\nHe was deeply loved, lived a very full life, and left paw prints all over this family.",
+    excerpt: "Warning — long post incoming. I've got big feelings today.\n\nToday we said goodbye to Finley, our first baby. He came into our lives long before any of the tiny humans did, and he handled every single one of them with a patience and gentleness that I will never stop being grateful for.\n\nFinley was the dog who taught our kids what it means to be kind to an animal. Who let them dress him up and climb on him and steal his bed. Who never once snapped, never once growled, never made a single child feel anything but safe.\n\nHe set the tone and carried it his whole life.\n\nThirteen years is a long time. Long enough to move through jobs and houses and hard seasons and beautiful ones. Long enough to become so woven into the fabric of your days that you stop noticing he's there until he isn't.\n\nWe noticed today. We will keep noticing for a long time.",
   },
   {
     type: 'Obituary',
     title: 'Austin Allison Cronk',
     meta: 'November 21, 1927 — January 4, 2018',
     pull: '"There was no such thing as a quick trip to the grocery store for Austin."',
-    excerpt: "With heavy hearts and great sadness, we announce the passing of Austin Allison Cronk, 90, of Huntsville, Ontario on January 4, 2018.\n\nBorn in Parham, Ontario on November 21, 1927, Austin was lucky enough to meet and fall in love with his partner in crime, Loretta Cronk. They were married in 1953. He was a loving father, fiercely proud grandfather, doting great-grandfather, a caring uncle, and a generous friend.\n\nAn avid learner and ambitious student, Austin graduated from Teachers College in Peterborough, Industrial Arts School in Toronto, received a Bachelor of Arts from Queen's University and a Master of Education from University of Ottawa. His love for learning fuelled his love for teaching — as the much respected guidance counsellor at Huntsville High School for 33 years, Austin was a surrogate father and fierce advocate for his students.\n\nThere was no such thing as a quick trip to the grocery store for Austin, as he couldn't make it through without exchanging a fond memory or kind word with a former student or friend, and that is truly a testament to his character and legacy.\n\nAs you leave this world, please know how much you are loved. In celebration of this kind and gentle soul, consider passing on an unexpected and unsolicited act of kindness — knowing it would bring a smile to his face.",
+    excerpt: "With heavy hearts and great sadness, we announce the passing of Austin Allison Cronk, 90, of Huntsville, Ontario on January 4, 2018.\n\nAustin was a man who knew everyone, and made sure everyone knew it. There was no such thing as a quick trip to the grocery store for Austin. There was no errand that couldn't be extended by forty-five minutes and at least two lengthy conversations. He had a handshake for strangers and a story for anyone who stayed long enough to hear it.\n\nHe leaves behind a family who loved him, a community that will miss him, and a Huntsville Tim Hortons that will never quite be the same.",
   },
 ]
 
@@ -56,7 +55,7 @@ export default function WeddingsSpeechesPage() {
   const [expanded, setExpanded] = useState(null)
 
   return (
-    <div className="subpage" style={{ backgroundImage: "url('/creamseashellfloral.jpg')", backgroundSize: '500px', backgroundBlendMode: 'normal' }}>
+    <div className="subpage">
       <nav className="subpage-nav">
         <a href="/" className="logo">
           <Image src="/logo.png" alt="Anchored Prose" width={200} height={50} style={{ height: 46, width: 'auto' }} />
@@ -72,77 +71,56 @@ export default function WeddingsSpeechesPage() {
         </div>
       </div>
 
-      <div style={{ background: "#F5F0E8", position: "relative", zIndex: 10 }}>
-      <div className="subpage-content">
+      <div style={{ background: '#F5F0E8', position: 'relative', zIndex: 10 }}>
+        <div className="subpage-category-label">Speeches &amp; Ceremonies</div>
+        <div className="subpage-portfolio-grid">
+          {SPEECHES.map((p, i) => (
+            <div key={i} className="portfolio-card" onClick={() => setExpanded(expanded === 'speech-' + i ? null : 'speech-' + i)}>
+              <div className="portfolio-type">{p.type}</div>
+              <h3>{p.title}</h3>
+              <p className="portfolio-meta">{p.meta}</p>
+              <p className="portfolio-pull">{p.pull}</p>
+              {expanded === 'speech-' + i && (
+                <div className="portfolio-excerpt">
+                  {p.excerpt.split('\n\n').map((para, j) => (
+                    <p key={j}>{para}</p>
+                  ))}
+                </div>
+              )}
+              <span className="portfolio-link">{expanded === 'speech-' + i ? 'Close' : 'Read excerpt'}</span>
+            </div>
+          ))}
+        </div>
 
-      {/* SPEECHES & CEREMONIES */}
-      <div className="subpage-category-label">Speeches &amp; Ceremonies</div>
-      <div className="subpage-portfolio-grid">
-        {SPEECHES.map((p, i) => (
-          <div
-            key={`speech-${i}`}
-            className="portfolio-card"
-            onClick={() => setExpanded(expanded === 'speech-' + i ? null : `speech-${i}`)}
-            tabIndex={0}
-            onKeyDown={(e) => e.key === 'Enter' && setExpanded(expanded === 'speech-' + i ? null : `speech-${i}`)}
-          >
-            <div className="portfolio-type">{p.type}</div>
-            <h3>{p.title}</h3>
-            <p className="portfolio-meta">{p.meta}</p>
-            <p className="portfolio-pull">{p.pull}</p>
-            {expanded === 'speech-' + i && (
-              <div className="portfolio-excerpt">
-                {p.excerpt.split('\n\n').map((para, j) => (
-                  <p key={j} style={{ whiteSpace: 'pre-line' }}>{para}</p>
-                ))}
-              </div>
-            )}
-            <span className="portfolio-link">{expanded === 'speech-' + i ? 'Close' : 'Read excerpt'}</span>
-          </div>
-        ))}
-      </div>
+        <div className="subpage-category-label">Tributes &amp; Remembrances</div>
+        <div className="subpage-portfolio-grid">
+          {TRIBUTES.map((p, i) => (
+            <div key={i} className="portfolio-card" onClick={() => setExpanded(expanded === 'tribute-' + i ? null : 'tribute-' + i)}>
+              <div className="portfolio-type">{p.type}</div>
+              <h3>{p.title}</h3>
+              <p className="portfolio-meta">{p.meta}</p>
+              <p className="portfolio-pull">{p.pull}</p>
+              {p.image && (
+                <div style={{ margin: '1rem 0', borderRadius: '4px', overflow: 'hidden' }}>
+                  <img src={p.image} alt={p.title} style={{ width: '100%', height: '240px', objectFit: 'cover', objectPosition: 'top', display: 'block' }} />
+                </div>
+              )}
+              {expanded === 'tribute-' + i && (
+                <div className="portfolio-excerpt">
+                  {p.excerpt.split('\n\n').map((para, j) => (
+                    <p key={j}>{para}</p>
+                  ))}
+                </div>
+              )}
+              <span className="portfolio-link">{expanded === 'tribute-' + i ? 'Close' : 'Read excerpt'}</span>
+            </div>
+          ))}
+        </div>
 
-      {/* TRIBUTES & REMEMBRANCES */}
-      <div className="subpage-category-label">Tributes &amp; Remembrances</div>
-      <div className="subpage-portfolio-grid">
-        {TRIBUTES.map((p, i) => (
-          <div
-            key={`tribute-${i}`}
-            className="portfolio-card"
-            onClick={() => setExpanded(expanded === 'tribute-' + i ? null : `tribute-${i}`)}
-            tabIndex={0}
-            onKeyDown={(e) => e.key === 'Enter' && setExpanded(expanded === 'tribute-' + i ? null : `tribute-${i}`)}
-          >
-            <div className="portfolio-type">{p.type}</div>
-            <h3>{p.title}</h3>
-            <p className="portfolio-meta">{p.meta}</p>
-            {p.image && (
-              <div style={{ margin: '1rem 0', borderRadius: '4px', overflow: 'hidden' }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.image} alt={p.title} style={{ width: '100%', height: '240px', objectFit: 'cover', objectPosition: 'top', display: 'block' }} />
-              </div>
-            )}
-            <p className="portfolio-pull">{p.pull}</p>
-            {expanded === 'tribute-' + i && (
-              <div className="portfolio-excerpt">
-                {p.excerpt.split('\n\n').map((para, j) => (
-                  <p key={j}>{para}</p>
-                ))}
-              </div>
-            )}
-            <span className="portfolio-link">{expanded === 'tribute-' + i ? 'Close' : 'Read excerpt'}</span>
-          </div>
-        ))}
+        <div className="subpage-cta-bar">
+          <p>Like what you see? <a href="/#contact">Let&apos;s work together.</a></p>
+        </div>
       </div>
-
-      </div>
-
-      </div>
-
-      <div className="subpage-cta-bar">
-        <p>Like what you see? <a href="/#contact">Let&apos;s work together.</a></p>
-      </div>
-    </div>
     </div>
   )
 }
