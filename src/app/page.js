@@ -101,32 +101,38 @@ const BLOG_POSTS = [
 
 const TESTIMONIALS = [
   {
+    pull: "She took his messy, scribbled notes and made magic happen.",
     quote: "Julianna did an incredible job working with my father to build his speech. He was so overwhelmed and she walked him through it with care, compassion and an amazing sense of humour. She took his messy, scribbled notes and made magic happen. Thank you!",
     name: 'Sarah M.',
     role: 'Bride, Annapolis Valley',
     featured: true,
   },
   {
+    pull: "The final document felt thorough, responsible, and reflective of the lived experiences at its core.",
     quote: "Julianna handled our disability justice report with real care. She preserved the complexity of the conversations while shaping them into something clear and cohesive. The final document felt thorough, responsible, and reflective of the lived experiences at its core.",
     name: 'Stacey R.',
     role: 'Project Lead',
   },
   {
+    pull: "Delivered work that was seamless and ready to bring straight into the classroom.",
     quote: "Julianna created original stories for our children's literature workshop that fit beautifully within our structure and themes. She understood the framework right away and delivered work that was seamless and ready to bring straight into the classroom.",
     name: 'Tom W.',
     role: 'Workshop Facilitator',
   },
   {
+    pull: "Impeccable real work. Met all of my wants and beyond.",
     quote: "Julianna was honestly excellent to work with. She got it done, and with impeccable real work. Met all of my wants and beyond.",
     name: 'Vivian C.',
     role: '',
   },
   {
+    pull: "She was insightful, nailed exactly what I was looking for — and that's no easy feat in a specialized education field.",
     quote: "I was so deep inside my own course content that I needed someone else to come in and do the heavy lifting. Julianna delivered. She was insightful, nailed exactly what I was looking for, and that's no easy feat in a specialized education field.",
     name: 'Mark J.',
     role: 'Course Developer',
   },
   {
+    pull: "I never expected that someone would just 'get it' on so little detail — but you sure did.",
     quote: "Oh my goodness. I just read the first half. I don't even know what to say. I laughed, I cried. I never expected that someone would just 'get it' on so little detail — but you sure did.",
     name: 'Trina K.',
     role: '',
@@ -209,8 +215,8 @@ export default function Home() {
           </div>
           <div className="about-text">
             <div className="section-label">About</div>
-            <h2 className="section-title" style={{ fontSize: 'clamp(22px,2.6vw,38px)', whiteSpace: 'nowrap', display: 'block', textAlign: 'left' }}>
-              Writing for the <span className="script-accent">moments that count</span>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px,2.4vw,36px)', fontWeight: 300, lineHeight: 1.1, marginBottom: '28px', whiteSpace: 'nowrap', color: 'var(--navy)' }}>
+              Writing for the <span style={{ fontFamily: 'var(--font-script)', fontSize: '1em', color: 'var(--gold)', fontStyle: 'normal', display: 'inline', verticalAlign: 'baseline', position: 'relative', top: '0.1em' }}>moments that count</span>
             </h2>
             <p className="about-body">
               Hi! I&apos;m Julianna, a writer, educator, mom, wannabe farmer, and the founder of Anchored Prose. I hold a Master of Professional Education and a few other degrees that cost me a lot of time and money, and I&apos;ve spent over a decade helping people find the right words for the moments that count.
@@ -286,10 +292,11 @@ export default function Home() {
             What Clients <span className="script-accent">Say</span>
           </h2>
         </div>
-        <div className="testimonials-featured">
-          <blockquote>&ldquo;{TESTIMONIALS[0].quote}&rdquo;</blockquote>
+        <div className="testimonials-featured" onClick={() => setExpandedTest(expandedTest === 'featured' ? null : 'featured')} style={{ cursor: 'pointer' }}>
+          <blockquote>&ldquo;{expandedTest === 'featured' ? TESTIMONIALS[0].quote : TESTIMONIALS[0].pull}&rdquo;</blockquote>
           <p className="testimonial-name">{TESTIMONIALS[0].name}</p>
           <p className="testimonial-role">{TESTIMONIALS[0].role}</p>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(155,123,58,0.7)', marginTop: '16px' }}>{expandedTest === 'featured' ? '— Less' : '+ Read more'}</p>
         </div>
         <div className="testimonials-grid">
           {TESTIMONIALS.slice(1).map((t, i) => (
