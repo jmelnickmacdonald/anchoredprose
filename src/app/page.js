@@ -337,6 +337,8 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="section-divider" />
+
       <section className="contact" id="contact">
         <div className="contact-grid">
           <div className="contact-info">
