@@ -1,250 +1,424 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+'use client'
+import Image from 'next/image'
+import { useState } from 'react'
 
-@font-face {
-  font-family: 'SimpleHandwriting';
-  src: url('/Simple_Handwriting.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+const SERVICES = [
+  {
+    title: 'Brand & Content Strategy',
+    tagline: "You've built something worth talking about. Let's make sure the world knows it.",
+    desc: "I work with small businesses, realtors, creatives, and entrepreneurs to figure out who they are and why they're worth noticing — then build the words, the web copy, the content strategy, and sometimes the website itself to show it. I write it, design it, and build it: brand voice guides, full site rewrites, newsletter copy and graphics, social content, and content plans you'll actually follow. This isn't one-and-done. I work with clients long-term, showing up as an ongoing creative partner who understands your brand and keeps it consistent.",
+  },
+  {
+    title: 'Wedding & Event Speeches',
+    tagline: 'The perfect words crafted to sound just like you.',
+    desc: "Toasts, vows, ceremony scripts, and full wedding writing. Whether you're the best man, a couple building a ceremony from scratch, a parent feeling all the feels, or anyone else standing up to speak on a day that matters, we work through it together and I write words that hold the room and hold up over time.",
+  },
+  {
+    title: 'Memorials & Tributes',
+    tagline: 'The hardest words to find are often the most important ones.',
+    desc: "Eulogies, tributes, memorial services, and celebrations of life. I'll help you say what needs to be said with care, honesty, and the kind of warmth that honours a life fully lived. You don't have to find the words alone.",
+  },
+  {
+    title: 'Keynotes & Public Speaking',
+    tagline: 'From the conference stage to the commencement address, a talk that holds a room.',
+    desc: "Whether it's a keynote, a TEDx, a professional development session, or panel prep, I work with founders, educators, and leaders to find the through-line and write the words that make their expertise land.",
+  },
+  {
+    title: 'Educational Content',
+    tagline: 'Thoughtful learning deserves thoughtful language.',
+    desc: "Curriculum, lesson materials, course development, and learning experience writing grounded in structure, clarity, and respect for learners, whether that's a K-12 curriculum, a professional development series, or a full online course build.",
+  },
+]
 
-:root {
-  --navy: #0D1B2E;
-  --navy-mid: #152338;
-  --gold: #9B7B3A;
-  --gold-light: #BF9B5A;
-  --cream: #FAF7F2;
-  --cream-dark: #F0EBE0;
-  --cream-warm: #F5F0E8;
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Crimson Pro', Georgia, serif;
-  --font-script: 'SimpleHandwriting', cursive;
-}
+const PORTFOLIO_CATEGORIES = [
+  {
+    title: 'Speeches, Ceremonies & Tributes',
+    desc: 'Ceremony scripts, toasts, vows, and the words people remember long after the day.',
+    href: '/portfolio/weddings-speeches',
+  },
+  {
+    title: 'Writing',
+    desc: 'Essays, satire, opinion, and personal writing that earns its space on the page.',
+    href: '/portfolio/writing',
+  },
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: var(--font-body); background: var(--cream); color: var(--navy); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
-h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; }
+  {
+    title: 'Brand & Content',
+    desc: 'Social media, real estate copy, video scripts, and content that sounds like the brand behind it.',
+    href: '/portfolio/brand-content',
+  },
+  {
+    title: 'Educational Content',
+    desc: 'Curriculum, training programs, and learning resources built for real-world application.',
+    href: null,
+    comingSoon: true,
+  },
+]
 
-.script-accent { font-family: var(--font-script); font-size: 1.2em; color: var(--gold); font-style: normal; display: inline-block; vertical-align: baseline; line-height: 1; position: relative; top: 0.08em; }
+const HOW_IT_WORKS = [
+  {
+    num: '01',
+    title: 'You reach out.',
+    desc: "Tell me what you're working on. No polished brief required — just tell me where you're at.",
+  },
+  {
+    num: '02',
+    title: 'We talk it through.',
+    desc: 'One conversation to figure out what you actually need, how we get there, and what good looks like.',
+  },
+  {
+    num: '03',
+    title: 'I write it.',
+    desc: 'Drafts, revisions, back and forth until it sounds exactly right and feels completely like you.',
+  },
+  {
+    num: '04',
+    title: 'You launch it.',
+    desc: "Whether you're stepping up to the mic, hitting publish, or unveiling something you've worked hard on, you do it knowing everything is exactly right.",
+  },
+]
 
-/* NAV */
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--navy); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 80px; border-bottom: 1px solid rgba(184,150,62,0.15); }
-.logo { display: flex; align-items: center; text-decoration: none; }
-.nav-links { display: flex; list-style: none; gap: 36px; }
-.nav-links a { font-family: var(--font-body); font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(250,247,242,0.7); text-decoration: none; transition: color 0.2s; }
-.nav-links a:hover { color: var(--gold); }
-.hire-btn { font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--navy); background: var(--gold); padding: 10px 24px; text-decoration: none; transition: background 0.2s; }
-.hire-btn:hover { background: var(--gold-light); }
+const BLOG_POSTS = [
+  {
+    category: "Captain's Log · Satire",
+    date: 'February 2026',
+    title: 'Mothers Encouraged to Optimize Their Time',
+    excerpt: 'A deeply reported investigation into the perpetually imminent arrival of productivity, and the women who have stopped making plans in August.',
+  },
+  {
+    category: 'Essay',
+    date: 'February 2026',
+    title: 'The Real Damage of Disinformation',
+    excerpt: "When my neighbour watched that fake video, she was fooled because it looked real. When she later dismissed a legitimate scandal, she wasn't fooled at all. She was fatigued.",
+  },
+  {
+    category: 'Editorial',
+    date: 'September 2025',
+    title: 'A Letter from the Annapolis Valley',
+    excerpt: "In Nova Scotia's Annapolis Valley, mornings drift in gently and unhurried. But for families living at the edge, there is nothing slow about survival.",
+  },
+]
 
-/* HERO */
-.hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding-top: 80px; background: var(--navy); }
-.hero::before { content: ''; position: absolute; inset: 0; background-image: url('/mainimage.jpg'); background-size: cover; background-position: center 60%; opacity:  0.80; pointer-events: none; }
-.hero-content { position: relative; z-index: 2; max-width: 640px; padding: 40px 56px; text-align: center; background: rgba(13,27,46,0.42); border: 1px solid rgba(184,150,62,0.3); backdrop-filter: blur(4px); }
-.hero-eyebrow { font-family: var(--font-body); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: white; margin-bottom: 32px; display: flex; align-items: center; justify-content: center; gap: 16px; }
-.hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; width: 48px; height: 1px; background: white; }
-.hero h1 { font-size: clamp(44px, 6vw, 72px); color: var(--cream); margin-bottom: 40px; font-weight: 300; }
-.hero-ctas { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
-.btn-gold { font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; background: var(--gold); color: var(--navy); padding: 14px 32px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
-.btn-gold:hover { background: var(--gold-light); }
-.btn-ghost { font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; background: transparent; color: var(--cream); padding: 14px 32px; text-decoration: none; border: 1px solid rgba(250,247,242,0.3); transition: border-color 0.2s, color 0.2s; }
-.btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+const TESTIMONIALS = [
+  {
+    pull: "She took his messy, scribbled notes and made magic happen.",
+    quote: "Julianna did an incredible job working with my father to build his speech. He was so overwhelmed and she walked him through it with care, compassion and an amazing sense of humour. She took his messy, scribbled notes and made magic happen. Thank you!",
+    name: 'Sarah M.',
+    role: 'Bride, Annapolis Valley',
+    featured: true,
+  },
+  {
+    pull: "Delivered work that was seamless and ready to bring straight into the classroom.",
+    quote: "Julianna created original stories for our children's literature workshop that fit beautifully within our structure and themes. She understood the framework right away and delivered work that was seamless and ready to bring straight into the classroom.",
+    name: 'Tom W.',
+    role: 'Workshop Facilitator · Victoria, BC',
+  },
+  {
+    pull: "Impeccable real work. Met all of my wants and beyond.",
+    quote: "Julianna was honestly excellent to work with. She got it done, and with impeccable real work. Met all of my wants and beyond.",
+    name: 'Vivian C.',
+    role: 'Policy Analyst · Minneapolis, MN',
+  },
+  {
+    pull: "She was insightful, nailed exactly what I was looking for — and that's no easy feat in a specialized education field.",
+    quote: "I was so deep inside my own course content that I needed someone else to come in and do the heavy lifting. Julianna delivered. She was insightful, nailed exactly what I was looking for, and that's no easy feat in a specialized education field.",
+    name: 'Mark J.',
+    role: 'Course Developer · Toronto, ON',
+  },
+  {
+    pull: "I never expected that someone would just 'get it' on so little detail, but you sure did.",
+    quote: "Oh my goodness. I just read the first half. I don't even know what to say. I laughed, I cried. I never expected that someone would just 'get it' on so little detail, but you sure did.",
+    name: 'Trina K.',
+    role: 'Program Developer · Oakville, ON',
+  },
+]
 
-/* SECTION LABELS */
-.section-label { font-family: var(--font-body); font-size: 13px; letter-spacing: 3.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: flex; align-items: center; justify-content: center; gap: 14px; }
-.section-label::before { content: ''; display: block; width: 36px; height: 1px; background: var(--gold); }
-.section-title { font-size: clamp(32px, 3.8vw, 52px); font-weight: 300; line-height: 1.1; margin-bottom: 28px; text-align: center; }
+export default function Home() {
+  const [formStatus, setFormStatus] = useState('')
+  const [formSubmitting, setFormSubmitting] = useState(false)
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [activeService, setActiveService] = useState(null)
+  const [expandedTest, setExpandedTest] = useState(null)
 
-/* ABOUT */
-.about { padding: 48px 0 80px; background: var(--cream-warm); position: relative; overflow: hidden; }
-.about .section-label { justify-content: flex-start; }
-.about .section-title { text-align: left; }
-.about-grid { max-width: 1400px; margin: 0 auto; padding: 0 64px; display: grid; grid-template-columns: 320px 1fr; gap: 56px; align-items: start; position: relative; z-index: 1; width: 100%; }
-.about-image-wrap { position: sticky; top: 100px; align-self: start; }
-.about-image-inner { overflow: hidden; position: relative; }
-.about-gold-bar { height: 4px; background: linear-gradient(90deg, var(--gold), transparent); }
-.about-caption { background: var(--navy); padding: 18px 24px; }
-.about-caption p { font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
-.about-caption span { font-family: var(--font-body); font-size: 14px; color: rgba(250,247,242,0.6); }
-.about-text { padding: 40px 48px; background: rgba(245,240,232,0.97); }
-.about-text .section-title { font-size: clamp(28px, 3vw, 42px); white-space: nowrap; }
-.about-body { font-size: 17px; line-height: 1.85; color: rgba(13,27,46,0.8); margin-bottom: 24px; font-family: var(--font-body); }
+  async function handleSubmit(e) {
+    e.preventDefault()
+    setFormSubmitting(true)
+    try {
+      const res = await fetch('https://formspree.io/f/xqeyalvn', {
+        method: 'POST',
+        body: new FormData(e.target),
+        headers: { Accept: 'application/json' },
+      })
+      if (res.ok) {
+        e.target.reset()
+        setFormStatus("Your message is on its way. I'll be in touch soon.")
+      } else {
+        setFormStatus('Something went wrong. Please email hello@anchoredprose.ca directly.')
+      }
+    } catch {
+      setFormStatus('Something went wrong. Please email hello@anchoredprose.ca directly.')
+    }
+    setFormSubmitting(false)
+  }
 
-/* SERVICES — blue floral */
-.services { background: var(--cream-warm); padding: 80px 64px; position: relative; overflow: hidden; }
-.services::before { content: ''; position: absolute; inset: 0; background-image: url('/background4.jpg'); background-size: 1050px; opacity: 0.85; pointer-events: none; }
-.services-header { max-width: 480px; margin: 0 auto 48px; text-align: center; position: relative; z-index: 1; background: rgba(13,27,46,0.75); padding: 24px 48px; border: 1px solid rgba(155,123,58,0.2); }
-.services-grid { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px; position: relative; z-index: 1; }
-.service-card { background: rgba(13,27,46,0.82); border-left: 3px solid transparent; padding: 20px 28px; transition: border-color 0.2s, background 0.2s; cursor: pointer; }
-.service-card:hover, .service-card.open { border-left-color: var(--gold); background: rgba(13,27,46,0.95); }
-.service-card-header { display: flex; align-items: center; justify-content: space-between; }
-.service-card h3 { font-size: 19px; color: var(--cream); font-weight: 400; margin: 0; }
-.service-card-toggle { color: var(--gold); font-size: 22px; line-height: 1; font-weight: 300; }
-.service-card-body { overflow: hidden; max-height: 0; transition: max-height 0.35s ease; }
-.service-card-body.open { max-height: 300px; }
-.service-tagline { font-family: var(--font-display); font-style: italic; font-size: 15px; color: var(--gold-light); line-height: 1.4; margin: 10px 0 0; display: block; }
-.service-desc { font-size: 15px; color: rgba(250,247,242,0.65); line-height: 1.8; font-family: var(--font-body); }
+  return (
+    <>
+      <nav>
+        <a href="#" className="logo">
+          <Image src="/logo.png" alt="Anchored Prose" width={220} height={55} style={{ height: 52, width: 'auto' }} priority />
+        </a>
+        <ul className="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">Kind Words</a></li>
+          <li><a href="#blog">Captain&apos;s Log</a></li>
+          <li><a href="#contact">Get in Touch</a></li>
+        </ul>
+        <a href="#contact" className="hire-btn">Hire Me</a>
+      </nav>
 
-/* PORTFOLIO — plain cream */
-.portfolio { padding: 80px 64px; position: relative; overflow: hidden; background: var(--cream-warm); }
-.portfolio-header { max-width: 600px; margin: 0 auto 40px; text-align: center; position: relative; z-index: 1; }
-.portfolio-note { font-family: var(--font-body); font-size: 15px; color: rgba(13,27,46,0.5); font-style: italic; margin-top: 8px; }
-.portfolio-cats { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; position: relative; z-index: 1; }
-.portfolio-cat-card { display: block; text-decoration: none; background: #1a2d47; border-top: 3px solid rgba(155,123,58,0.4); position: relative; overflow: hidden; transition: border-color 0.25s, background 0.25s; }
-.portfolio-cat-card:hover { border-top-color: var(--gold); background: #213452; }
-.portfolio-cat-body { padding: 40px; }
-.portfolio-cat-body h3 { font-size: 26px; color: var(--cream); margin-bottom: 10px; font-weight: 400; }
-.portfolio-cat-body p { font-family: var(--font-body); font-size: 16px; color: rgba(250,247,242,0.65); line-height: 1.7; margin-bottom: 16px; }
-.portfolio-cat-link { font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+      <section className="hero">
+        <div className="hero-content">
+          <div className="hero-eyebrow fade-up fade-up-1">Professional Writing · Nova Scotia, Canada</div>
+          <h1 className="fade-up fade-up-2">
+            Every Word,<br /><span className="script-accent">Anchored</span> in Purpose
+          </h1>
+          <div className="hero-ctas fade-up fade-up-3">
+            <a href="#services" className="btn-gold">See What I Do</a>
+            <a href="#portfolio" className="btn-ghost">Read My Work</a>
+          </div>
+        </div>
+      </section>
 
-/* PORTFOLIO CARDS — used on subpages */
-.portfolio-card { background: #1a2d47; border-top: 3px solid rgba(155,123,58,0.4); padding: 40px 36px; cursor: pointer; transition: border-color 0.25s; outline: none; position: relative; overflow: hidden; }
-.portfolio-card:hover, .portfolio-card:focus { border-top-color: var(--gold); }
-.portfolio-type { font-family: var(--font-body); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; position: relative; z-index: 1; }
-.portfolio-card h3 { font-size: 24px; color: var(--cream); margin-bottom: 8px; font-weight: 400; position: relative; z-index: 1; }
-.portfolio-meta { font-size: 14px; color: rgba(250,247,242,0.45); margin-bottom: 20px; font-family: var(--font-body); position: relative; z-index: 1; }
-.portfolio-pull { font-family: var(--font-display); font-style: italic; font-size: 17px; color: rgba(250,247,242,0.85); border-left: 2px solid var(--gold); padding-left: 16px; margin-bottom: 24px; line-height: 1.5; position: relative; z-index: 1; }
-.portfolio-excerpt { margin-bottom: 24px; position: relative; z-index: 1; }
-.portfolio-excerpt p { font-size: 16px; line-height: 1.85; color: rgba(250,247,242,0.7); margin-bottom: 16px; font-family: var(--font-body); }
-.portfolio-link { font-family: var(--font-body); font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); position: relative; z-index: 1; }
+      <section className="about" id="about">
+        <div className="about-grid">
+          <div className="about-image-wrap">
+            <div className="about-image-inner">
+              <Image
+                src="/headshot.png"
+                alt="Julianna Melnick-MacDonald — Anchored Prose"
+                width={500}
+                height={380}
+                style={{ width: '100%', height: 380, objectFit: 'cover', objectPosition: 'center 25%', display: 'block' }}
+              />
+            </div>
+            <div className="about-gold-bar"></div>
+            <div className="about-caption">
+              <p>The Voice Behind the Work</p>
+              <span>Julianna Melnick-MacDonald</span>
+            </div>
+          </div>
+          <div className="about-text">
+            <div className="section-label">About</div>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px,3vw,46px)', fontWeight: 300, lineHeight: 1.1, marginBottom: '28px', whiteSpace: 'nowrap', color: 'var(--navy)' }}>
+              Writing for the <span style={{ fontFamily: 'var(--font-script)', fontSize: '1em', color: 'var(--gold)', fontStyle: 'normal', display: 'inline', verticalAlign: 'baseline', position: 'relative', top: '0.1em' }}>moments that count</span>
+            </h2>
+            <p className="about-body">
+              Hi! I&apos;m Julianna, a writer, educator, mom, wannabe farmer, and the founder of Anchored Prose. I hold a Master of Professional Education and a few other degrees that cost me a lot of time and money, and I&apos;ve spent over a decade helping people find the right words for the moments that count.
+            </p>
+            <p className="about-body">
+              I&apos;ve always loved to write. It was where I went to make sense of things, to hold onto moments, to make myself laugh, and to feel understood. For a long time, writing felt like mine alone... something personal and quietly important, but not necessarily something I could build a life around. It took years of teaching, advocating, and working alongside people navigating systems that weren&apos;t built with them in mind before I realized that the thing I&apos;d always done for myself was exactly what other people needed too.
+            </p>
+            <p className="about-body">
+              My years as an educator shaped how I write now. They taught me how to take something complicated and make it clear, how to find the right words for people who couldn&apos;t find their own, and how to build a voice that actually sounds like the person it belongs to. That work lives in everything I do at Anchored Prose, whether that&apos;s a wedding speech, a brand identity, a keynote, or a curriculum guide.
+            </p>
+          </div>
+        </div>
+      </section>
 
-/* TESTIMONIALS — blue floral, dark boxes */
-.testimonials { background: var(--navy); padding: 56px 64px; position: relative; overflow: hidden; text-align: center; }
-.testimonials::before { content: ''; position: absolute; inset: 0; background-image: url('/background3.jpg'); background-size: 1200px; opacity: 0.95; pointer-events: none; }
-.testimonials-header { display: inline-block; margin: 0 auto 40px; text-align: center; position: relative; z-index: 1; background: rgba(13,27,46,0.75); padding: 20px 40px; border: 1px solid rgba(155,123,58,0.2); }
-.testimonials-featured { max-width: 700px; margin: 0 auto 32px; text-align: center; position: relative; z-index: 1; padding: 36px 48px; background: rgba(13,27,46,0.85); border: 1px solid rgba(184,150,62,0.2); }
-.testimonials-featured blockquote { font-family: var(--font-display); font-size: clamp(20px, 2.5vw, 28px); font-style: italic; color: var(--cream); line-height: 1.6; margin-bottom: 20px; }
-.testimonial-name { font-family: var(--font-body); font-size: 15px; color: var(--gold); font-weight: 600; margin-bottom: 2px; }
-.testimonial-role { font-family: var(--font-body); font-size: 12px; color: rgba(250,247,242,0.5); font-style: italic; }
-.testimonials-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; position: relative; z-index: 1; text-align: left; }
-.testimonial-card { background: rgba(13,27,46,0.85); border: 1px solid rgba(184,150,62,0.15); padding: 16px 20px; }
-.testimonial-card blockquote { font-family: var(--font-body); font-size: 13px; font-style: italic; color: rgba(250,247,242,0.85); line-height: 1.5; margin-bottom: 10px; }
-.testimonial-card .testimonial-name { font-size: 14px; color: var(--gold); }
-.testimonial-card .testimonial-role { font-size: 13px; color: rgba(250,247,242,0.5); }
+      <section className="services" id="services">
+        <div className="services-header">
+          <div className="section-label" style={{ color: 'var(--gold)' }}>Services</div>
+          <h2 className="section-title" style={{ color: 'var(--cream)' }}>
+            What I <span className="script-accent">Offer</span>
+          </h2>
+        </div>
+        <div className="services-grid">
+          {SERVICES.map((s, i) => (
+            <div key={i} className={activeService === i ? 'service-card open' : 'service-card'} onClick={() => setActiveService(activeService === i ? null : i)}>
+              <div className="service-card-header">
+                <h3>{s.title}</h3>
+                <span className="service-card-toggle">{activeService === i ? '−' : '+'}</span>
+              </div>
+              <p className="service-tagline">{s.tagline}</p>
+              <div className={activeService === i ? 'service-card-body open' : 'service-card-body'}>
+                <p className="service-desc">{s.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
-/* HOW IT WORKS — plain cream, navy cards */
-.how-it-works { background: var(--cream-warm); padding: 80px 64px; position: relative; overflow: hidden; }
-.hiw-header { max-width: 1100px; margin: 0 auto 48px; text-align: center; position: relative; z-index: 1; }
-.hiw-header .section-title { color: var(--navy); }
-.hiw-header .section-label { color: var(--gold); }
-.hiw-steps { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; z-index: 1; }
-.hiw-step { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1; background: #1a2d47; padding: 36px 28px; border-top: 3px solid rgba(184,150,62,0.5); }
-.hiw-step-num { font-family: var(--font-body); font-size: 11px; letter-spacing: 2px; color: var(--gold); margin-bottom: 8px; }
-.hiw-step-icon { width: 64px; height: 64px; border-radius: 50%; background: rgba(13,27,46,0.5); border: 1px solid rgba(184,150,62,0.4); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-.hiw-step-title { font-family: var(--font-display); font-size: 20px; font-weight: 400; color: var(--cream); margin-bottom: 12px; }
-.hiw-step-desc { font-family: var(--font-body); font-size: 15px; color: rgba(250,247,242,0.65); line-height: 1.75; }
-.hiw-note { text-align: center; margin-top: 40px; font-family: var(--font-body); font-size: 16px; font-style: italic; color: rgba(13,27,46,0.6); position: relative; z-index: 1; }
-.hiw-note a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(184,150,62,0.3); }
+      <section className="portfolio" id="portfolio">
+        <div className="portfolio-header">
+          <div className="section-label">Portfolio</div>
+          <h2 className="section-title">
+            Selected <span className="script-accent">Work</span>
+          </h2>
+          <p className="portfolio-note">Excerpts from client projects and personal writing. Names changed where noted.</p>
+        </div>
+        <div className="portfolio-cats">
+          {PORTFOLIO_CATEGORIES.map((cat, i) => (
+            cat.comingSoon ? (
+              <div key={i} className="portfolio-cat-card" style={{ cursor: 'default', opacity: 0.75 }}>
+                <div className="portfolio-cat-body">
+                  <h3>{cat.title}</h3>
+                  <p>{cat.desc}</p>
+                  <span className="portfolio-cat-link">Coming soon</span>
+                </div>
+              </div>
+            ) : (
+              <a key={i} href={cat.href} className="portfolio-cat-card">
+                <div className="portfolio-cat-body">
+                  <h3>{cat.title}</h3>
+                  <p>{cat.desc}</p>
+                  <span className="portfolio-cat-link">View Work →</span>
+                </div>
+              </a>
+            )
+          ))}
+        </div>
+      </section>
 
-/* BLOG — blue floral, cream cards */
-.blog { background: var(--navy); padding: 80px 64px; position: relative; overflow: hidden; }
+      <section className="testimonials" id="testimonials">
+        <div className="testimonials-header">
+          <div className="section-label" style={{ color: 'var(--gold)' }}>Kind Words</div>
+          <h2 className="section-title" style={{ color: 'var(--cream)' }}>
+            What Clients <span className="script-accent">Say</span>
+          </h2>
+        </div>
+        <div className="testimonials-featured" onClick={() => setExpandedTest(expandedTest === 'featured' ? null : 'featured')} style={{ cursor: 'pointer' }}>
+          <blockquote>&ldquo;{expandedTest === 'featured' ? TESTIMONIALS[0].quote : TESTIMONIALS[0].pull}&rdquo;</blockquote>
+          <p className="testimonial-name" style={{ marginTop: '20px' }}>{TESTIMONIALS[0].name}</p>
+          <p className="testimonial-role">{TESTIMONIALS[0].role}</p>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(155,123,58,0.7)', marginTop: '12px' }}>{expandedTest === 'featured' ? '— Less' : '+ Read full'}</p>
+        </div>
+        <div className="testimonials-grid">
+          {TESTIMONIALS.slice(1).map((t, i) => (
+            <div key={i} className="testimonial-card" onClick={() => setExpandedTest(expandedTest === i ? null : i)} style={{ cursor: 'pointer' }}>
+              {expandedTest === i ? (
+                <blockquote style={{ marginBottom: '16px' }}>&ldquo;{t.quote}&rdquo;</blockquote>
+              ) : (
+                <p style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '16px', color: 'var(--cream)', lineHeight: 1.5, marginBottom: '16px' }}>&ldquo;{t.pull}&rdquo;</p>
+              )}
+              <p className="testimonial-name">{t.name}</p>
+              {t.role && <p className="testimonial-role">{t.role}</p>}
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(155,123,58,0.6)', marginTop: '12px' }}>{expandedTest === i ? '— Less' : '+ Read more'}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-.blog-header { max-width: 480px; margin: 0 auto 48px; text-align: center; position: relative; z-index: 2; background: rgba(13,27,46,0.75); padding: 24px 48px; border: 1px solid rgba(184,150,62,0.2); }
-.blog .section-label { color: var(--gold); }
-.blog .section-title { color: var(--navy); }
-.blog-carousel { max-width: 1100px; margin: 0 auto; position: relative; overflow: hidden; z-index: 2; }
-.blog-cards { display: flex; transition: transform 0.5s ease; }
-.blog-card { flex: 0 0 100%; padding: 48px; background: rgba(250,247,242,0.95); border-top: 3px solid var(--gold); position: relative; z-index: 2; }
-.blog-card-category { font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; position: relative; z-index: 1; }
-.blog-card h3 { font-family: var(--font-display); font-size: 28px; color: var(--cream); margin-bottom: 16px; font-weight: 400; }
-.blog-card p { font-size: 17px; color: rgba(250,247,242,0.7); line-height: 1.8; margin-bottom: 24px; }
-.blog-dots { display: flex; justify-content: center; gap: 12px; margin-top: 32px; position: relative; z-index: 2; }
-.blog-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(13,27,46,0.2); border: none; cursor: pointer; transition: background 0.3s; }
-.blog-dot.active { background: var(--gold); }
 
-/* SECTION DIVIDER */
-.section-divider { height: 1px; background: linear-gradient(to right, transparent, rgba(184,150,62,0.4), transparent); margin: 0; }
+      <div className="section-divider" />
 
-/* CONTACT — blue floral */
-.contact { background: var(--navy); padding: 80px 64px; position: relative; overflow: hidden; }
-.contact::before { content: ''; position: absolute; inset: 0; background-image: url('/background4.jpg'); background-size: 1050px; opacity: 0.85; pointer-events: none; }
-.contact-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: stretch; position: relative; z-index: 1; }
-.contact-info { background: rgba(245,240,232,0.95); padding: 48px; display: flex; flex-direction: column; }
-.contact-title { font-size: clamp(32px, 3.5vw, 46px); color: var(--navy); font-weight: 300; margin-bottom: 20px; line-height: 1.15; }
-.contact-intro { font-size: 16px; color: rgba(13,27,46,0.65); line-height: 1.85; margin-bottom: 36px; font-family: var(--font-body); }
-.contact-detail { border-top: 1px solid rgba(13,27,46,0.1); padding: 16px 0; }
-.contact-detail-label { font-family: var(--font-body); font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
-.contact-detail-value { font-family: var(--font-body); font-size: 16px; color: var(--navy); text-decoration: none; }
-.contact-detail-value:hover { color: var(--gold); }
-.contact-form { background: rgba(245,240,232,0.95); padding: 48px; border-top: 4px solid var(--gold); display: flex; flex-direction: column; }
-.form-group { margin-bottom: 24px; }
-.form-group label { display: block; font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--navy); margin-bottom: 10px; }
-.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px 16px; font-family: var(--font-body); font-size: 16px; border: 1px solid rgba(13,27,46,0.15); background: white; color: var(--navy); transition: border-color 0.2s; }
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--gold); }
-.form-submit { width: 100%; padding: 16px; font-family: var(--font-body); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; background: var(--gold); color: var(--navy); border: none; cursor: pointer; font-weight: 600; transition: background 0.2s; margin-top: auto; }
-.form-submit:hover { background: var(--gold-light); }
-.form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
-.form-status { margin-top: 16px; font-size: 15px; color: var(--gold); text-align: center; }
+      <section className="blog" id="blog">
+        <div className="blog-header">
+          <div className="section-label">Captain&apos;s Log</div>
+          <h2 className="section-title">
+            Latest <span className="script-accent">Writing</span>
+          </h2>
+        </div>
+        <div className="blog-carousel">
+          <div className="blog-cards" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+            {BLOG_POSTS.map((post, i) => (
+              <div key={i} className="blog-card">
+                <div className="blog-card-category">{post.category} · {post.date}{post.tag ? <span style={{marginLeft:'10px',background:'rgba(155,123,58,0.15)',color:'var(--gold)',padding:'2px 8px',fontSize:'11px',letterSpacing:'1px',textTransform:'uppercase',borderRadius:'2px'}}>{post.tag}</span> : null}</div>
+                <h3>{post.title}</h3>
+                <p>{post.excerpt}</p>
+                <p style={{fontFamily:"'Crimson Pro',Georgia,serif",fontSize:'13px',letterSpacing:'2px',textTransform:'uppercase',color:'var(--gold)',marginTop:'16px'}}>Coming soon to Captain&apos;s Log</p>
+              </div>
+            ))}
+          </div>
+          <div className="blog-dots">
+            {BLOG_POSTS.map((_, i) => (
+              <button key={i} className={`blog-dot ${currentSlide === i ? 'active' : ''}`} onClick={() => setCurrentSlide(i)} aria-label={`Go to slide ${i + 1}`} />
+            ))}
+          </div>
+        </div>
+      </section>
 
-/* FOOTER */
-.footer { background: var(--navy); padding: 56px 64px 40px; }
-.footer-content { max-width: 1100px; margin: 0 auto; text-align: center; }
-.footer-brand { margin-bottom: 32px; }
-.footer-tagline { font-family: var(--font-display); font-size: clamp(24px, 3vw, 40px); font-style: italic; color: var(--cream); margin-top: 28px; margin-bottom: 12px; white-space: nowrap; }
-.footer-tagline .script-accent { font-size: 1.25em; display: inline-block; vertical-align: baseline; position: relative; top: 0.12em; }
-.footer-brand p { font-family: var(--font-body); font-size: 18px; color: rgba(250,247,242,0.7); margin-top: 8px; }
-.footer-links { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid rgba(184,150,62,0.15); }
-.footer-links a { font-family: var(--font-body); font-size: 14px; color: rgba(250,247,242,0.6); text-decoration: none; transition: color 0.2s; }
-.footer-links a:hover { color: var(--gold); }
-.footer-bottom p { font-family: var(--font-body); font-size: 13px; color: rgba(250,247,242,0.35); }
+      <div className="section-divider" />
 
-/* ANIMATIONS */
-.fade-up { opacity: 0; transform: translateY(24px); animation: fadeUp 0.8s ease forwards; }
-.fade-up-1 { animation-delay: 0.1s; }
-.fade-up-2 { animation-delay: 0.2s; }
-.fade-up-3 { animation-delay: 0.3s; }
-@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+      <section className="contact" id="contact">
+        <div className="contact-grid">
+          <div className="contact-info">
+            <div className="section-label">Get in Touch</div>
+            <h2 className="contact-title">
+              Let&apos;s create<br /><span className="script-accent">something</span> together
+            </h2>
+            <p className="contact-intro">
+              Whether you have a clear project in mind or just a sense that the words aren&apos;t quite right yet, I&apos;d love to hear from you. Tell me what you&apos;re working on, and we&apos;ll figure out the rest.
+            </p>
+            <div className="contact-detail">
+              <p className="contact-detail-label">Email</p>
+              <a href="mailto:hello@anchoredprose.ca" className="contact-detail-value">hello@anchoredprose.ca</a>
+            </div>
+            <div className="contact-detail">
+              <p className="contact-detail-label">Based In</p>
+              <p className="contact-detail-value">Nova Scotia, Canada</p>
+            </div>
+            <div className="contact-detail">
+              <p className="contact-detail-label">Availability</p>
+              <p className="contact-detail-value">Currently booking for Spring 2026</p>
+            </div>
+          </div>
+          <div className="contact-form">
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="project">What are you working on?</label>
+                <select id="project" name="project">
+                  <option value="">Select a service...</option>
+                  <option value="wedding">Wedding &amp; Event Speeches</option>
+                  <option value="memorial">Memorials &amp; Tributes</option>
+                  <option value="keynote">Keynotes &amp; Public Speaking</option>
+                  <option value="education">Educational Content</option>
+                  <option value="brand">Brand &amp; Content Strategy</option>
+                  <option value="other">Something else</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <label htmlFor="message">Tell me more</label>
+                <textarea id="message" name="message" rows={5} required></textarea>
+              </div>
+              <button type="submit" className="form-submit" disabled={formSubmitting}>
+                {formSubmitting ? 'Sending...' : 'Send Message'}
+              </button>
+              {formStatus && <p className="form-status">{formStatus}</p>}
+            </form>
+          </div>
+        </div>
+      </section>
 
-/* SUBPAGE */
-.subpage { min-height: 100vh; background: var(--cream-warm); }
-.subpage-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--navy); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 80px; border-bottom: 1px solid rgba(184,150,62,0.15); }
-.back-link { font-family: var(--font-body); font-size: 13px; color: var(--gold); text-decoration: none; }
-.back-link:hover { opacity: 0.7; }
-.subpage-banner { position: relative; min-height: 220px; margin-top: 80px; display: flex; align-items: center; justify-content: center; overflow: hidden; background-image: url('/creamseashellfloral.jpg'); background-size: 550px; background-attachment: scroll; }
-.subpage-banner-overlay { position: absolute; inset: 0; background: rgba(250,247,242,0.35); pointer-events: none; }
-.subpage-banner-title { position: relative; z-index: 2; text-align: center; background: rgba(245,240,232,0.88); padding: 28px 64px; border: 1px solid rgba(184,150,62,0.25); }
-.subpage-banner-title h1 { font-size: clamp(32px, 5vw, 54px); color: var(--navy); font-weight: 300; line-height: 1.15; }
-.subpage-portfolio-grid { max-width: 1100px; margin: 0 auto; padding: 48px 48px 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-.subpage-body { background: var(--cream-warm); position: relative; z-index: 1; padding-bottom: 64px; isolation: isolate; }
-.subpage-category-label { max-width: 100%; margin: 0; padding: 24px 48px; font-family: var(--font-body); font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--cream); display: flex; align-items: center; gap: 16px; position: relative; z-index: 1; background: var(--navy); }
-.subpage-category-label::before, .subpage-category-label::after { content: ''; flex: 1; height: 1px; background: rgba(13,27,46,0.15); max-width: 120px; }
-.subpage-cta-bar { background: var(--navy); padding: 48px; text-align: center; margin-top: 64px; }
-.subpage-cta-bar p { font-family: var(--font-body); font-size: 18px; color: rgba(250,247,242,0.8); font-style: italic; }
-.subpage-cta-bar a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(184,150,62,0.4); }
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
-  .hiw-steps { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 768px) {
-  nav { padding: 0 24px; height: 70px; }
-  .nav-links { display: none; }
-  .hero { padding-top: 70px; }
-  .hero-content { padding: 40px 24px; margin: 20px; }
-  .about { padding: 60px 0; }
-  .about-grid { grid-template-columns: 1fr; gap: 48px; padding: 0 24px; }
-  .about .section-label { justify-content: center; }
-  .about .section-title { text-align: center; }
-  .about-image-wrap { position: relative; top: auto; }
-  .services { padding: 60px 24px; }
-  .services-grid { grid-template-columns: 1fr; }
-  .portfolio { padding: 60px 24px; }
-  .portfolio-cats { grid-template-columns: 1fr; }
-  .testimonials { padding: 60px 24px; }
-  .testimonials-grid { grid-template-columns: 1fr; }
-  .testimonials-featured { padding: 32px 24px; }
-  .how-it-works { padding: 60px 24px; }
-  .hiw-steps { grid-template-columns: 1fr 1fr; gap: 24px; }
-  .blog { padding: 60px 24px; }
-  .contact { padding: 60px 24px; }
-  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
-  .footer { padding: 60px 24px 32px; }
-  .subpage-nav { padding: 0 24px; }
-  .subpage-portfolio-grid { grid-template-columns: 1fr; padding: 32px 24px 0; }
-  .subpage-banner { min-height: 180px; }
-}
-@media (max-width: 480px) {
-  .hiw-steps { grid-template-columns: 1fr; }
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-brand">
+            <Image src="/logo.png" alt="Anchored Prose" width={360} height={90} style={{ height: 90, width: 'auto' }} />
+            <p className="footer-tagline">Every word, <span className="script-accent">anchored</span> in purpose.</p>
+            <p>Nova Scotia, Canada</p>
+          </div>
+          <div className="footer-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#testimonials">Kind Words</a>
+            <a href="#blog">Captain&apos;s Log</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div className="footer-bottom">
+            <p>© 2026 Anchored Prose. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </>
+  )
 }
