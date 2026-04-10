@@ -203,15 +203,16 @@ nav {
 .portfolio-cat-link { font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
 
 /* Portfolio card styles (used on subpages) */
-.portfolio-card { background: white; border-top: 3px solid transparent; padding: 40px 36px; cursor: pointer; transition: border-color 0.25s, box-shadow 0.25s; outline: none; }
-.portfolio-card:hover, .portfolio-card:focus { border-top-color: var(--gold); box-shadow: 0 4px 32px rgba(13,27,46,0.08); }
-.portfolio-type { font-family: var(--font-body); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
-.portfolio-card h3 { font-size: 24px; color: var(--navy); margin-bottom: 8px; font-weight: 400; }
-.portfolio-meta { font-size: 14px; color: rgba(13,27,46,0.45); margin-bottom: 20px; font-family: var(--font-body); }
-.portfolio-pull { font-family: var(--font-display); font-style: italic; font-size: 17px; color: var(--navy); border-left: 2px solid var(--gold); padding-left: 16px; margin-bottom: 24px; line-height: 1.5; }
-.portfolio-excerpt { margin-bottom: 24px; }
-.portfolio-excerpt p { font-size: 16px; line-height: 1.85; color: rgba(13,27,46,0.7); margin-bottom: 16px; font-family: var(--font-body); }
-.portfolio-link { font-family: var(--font-body); font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); }
+.portfolio-card { background: rgba(13,27,46,0.88); border-top: 3px solid rgba(184,150,62,0.4); padding: 40px 36px; cursor: pointer; transition: border-color 0.25s; outline: none; position: relative; overflow: hidden; }
+.portfolio-card::before { content: ''; position: absolute; inset: 0; background-image: url('/rope-pattern.jpg'); background-size: 300px; opacity: 0.05; pointer-events: none; }
+.portfolio-card:hover, .portfolio-card:focus { border-top-color: var(--gold); }
+.portfolio-type { font-family: var(--font-body); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; position: relative; z-index: 1; }
+.portfolio-card h3 { font-size: 24px; color: var(--cream); margin-bottom: 8px; font-weight: 400; position: relative; z-index: 1; }
+.portfolio-meta { font-size: 14px; color: rgba(250,247,242,0.45); margin-bottom: 20px; font-family: var(--font-body); position: relative; z-index: 1; }
+.portfolio-pull { font-family: var(--font-display); font-style: italic; font-size: 17px; color: rgba(250,247,242,0.85); border-left: 2px solid var(--gold); padding-left: 16px; margin-bottom: 24px; line-height: 1.5; position: relative; z-index: 1; }
+.portfolio-excerpt { margin-bottom: 24px; position: relative; z-index: 1; }
+.portfolio-excerpt p { font-size: 16px; line-height: 1.85; color: rgba(250,247,242,0.7); margin-bottom: 16px; font-family: var(--font-body); }
+.portfolio-link { font-family: var(--font-body); font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); position: relative; z-index: 1; }
 
 /* TESTIMONIALS — blue floral */
 .testimonials { background: var(--navy); padding: 80px 64px; position: relative; overflow: hidden; text-align: center; }
@@ -247,14 +248,9 @@ nav {
 .testimonial-card .testimonial-name { font-size: 14px; }
 .testimonial-card .testimonial-role { font-size: 13px; }
 
-/* HOW IT WORKS — blue floral like services */
-.how-it-works { background: var(--navy); padding: 80px 64px; position: relative; overflow: hidden; }
-.how-it-works::before {
-  content: ''; position: absolute; inset: 0;
-  background-image: url('/coastal-blue.jpg');
-  background-size: 500px; opacity: 0.5; pointer-events: none;
-}
-.hiw-header { max-width: 480px; margin: 0 auto 48px; text-align: center; position: relative; z-index: 1; background: rgba(13,27,46,0.75); padding: 24px 48px; border: 1px solid rgba(184,150,62,0.2); }
+/* HOW IT WORKS — plain cream */
+.how-it-works { background: var(--cream-warm); padding: 80px 64px; position: relative; overflow: hidden; }
+.hiw-header { max-width: 480px; margin: 0 auto 48px; text-align: center; position: relative; z-index: 1; }
 .hiw-steps {
   max-width: 1100px; margin: 0 auto;
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
@@ -273,11 +269,12 @@ nav {
   width: 64px; height: 64px; border-radius: 50%;
   background: white; border: 1px solid rgba(184,150,62,0.35);
   display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(13,27,46,0.08);
 }
 .hiw-step-title { font-family: var(--font-display); font-size: 20px; font-weight: 400; color: var(--navy); margin-bottom: 12px; }
 .hiw-step-desc { font-family: var(--font-body); font-size: 15px; color: rgba(13,27,46,0.65); line-height: 1.75; }
-.hiw-note { text-align: center; margin-top: 40px; font-family: var(--font-body); font-size: 16px; font-style: italic; color: rgba(250,247,242,0.6); position: relative; z-index: 1; }
-.hiw-note a { color: var(--gold-light); text-decoration: none; border-bottom: 1px solid rgba(184,150,62,0.3); }
+.hiw-note { text-align: center; margin-top: 40px; font-family: var(--font-body); font-size: 16px; font-style: italic; color: rgba(13,27,46,0.55); position: relative; z-index: 1; }
+.hiw-note a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(184,150,62,0.3); }
 
 /* BLOG */
 .blog { background: var(--cream-dark); padding: 80px 64px; position: relative; overflow: hidden; }
@@ -293,11 +290,10 @@ nav {
 .blog-header { max-width: 1100px; margin: 0 auto 56px; text-align: center; }
 .blog-carousel { max-width: 1100px; margin: 0 auto; position: relative; overflow: hidden; }
 .blog-cards { display: flex; transition: transform 0.5s ease; }
-.blog-card { flex: 0 0 100%; padding: 48px; background: rgba(13,27,46,0.82); border-top: 3px solid rgba(184,150,62,0.4); position: relative; overflow: hidden; }
-.blog-card::before { content: ''; position: absolute; inset: 0; background-image: url('/rope-pattern.jpg'); background-size: 300px; opacity: 0.06; pointer-events: none; }
-.blog-card-category { font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; position: relative; z-index: 1; }
-.blog-card h3 { font-family: var(--font-display); font-size: 28px; color: var(--cream); margin-bottom: 16px; font-weight: 400; position: relative; z-index: 1; }
-.blog-card p { font-size: 17px; color: rgba(250,247,242,0.7); line-height: 1.8; margin-bottom: 24px; position: relative; z-index: 1; }
+.blog-card { flex: 0 0 100%; padding: 48px; background: white; border-top: 3px solid var(--gold); }
+.blog-card-category { font-family: var(--font-body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.blog-card h3 { font-family: var(--font-display); font-size: 28px; color: var(--navy); margin-bottom: 16px; font-weight: 400; }
+.blog-card p { font-size: 17px; color: rgba(13,27,46,0.7); line-height: 1.8; margin-bottom: 24px; }
 .blog-dots { display: flex; justify-content: center; gap: 12px; margin-top: 32px; }
 .blog-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(13,27,46,0.2); border: none; cursor: pointer; transition: background 0.3s; }
 .blog-dot.active { background: var(--gold); }
@@ -359,14 +355,6 @@ nav {
 
 /* SUBPAGE */
 .subpage { min-height: 100vh; background: var(--cream-warm); position: relative; }
-.subpage-portfolio-section {
-  position: relative;
-}
-.subpage-portfolio-section::before {
-  content: ''; position: fixed; inset: 0;
-  background-image: url('/coastal-cream.jpg');
-  background-size: 500px; opacity: 0.35; pointer-events: none; z-index: 0;
-}
 .subpage-nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   background: var(--navy); display: flex; align-items: center; justify-content: space-between;
@@ -375,17 +363,18 @@ nav {
 .back-link { font-family: var(--font-body); font-size: 13px; color: var(--gold); text-decoration: none; }
 .back-link:hover { opacity: 0.7; }
 .subpage-banner {
-  position: relative; height: 300px; margin-top: 80px;
+  position: relative; min-height: 220px; margin-top: 80px;
   display: flex; align-items: center; justify-content: center; overflow: hidden;
+  background-image: url('/creamseashellfloral.jpg');
+  background-size: 550px;
 }
-.subpage-banner-overlay { position: absolute; inset: 0; background: rgba(13,27,46,0.3); }
+.subpage-banner-overlay { position: absolute; inset: 0; background: rgba(245,240,232,0.45); }
 .subpage-banner-title {
   position: relative; z-index: 2; text-align: center;
-  background: rgba(13,27,46,0.45); padding: 24px 56px;
-  border: 1px solid rgba(184,150,62,0.2);
-  backdrop-filter: blur(2px);
+  background: rgba(245,240,232,0.88); padding: 28px 64px;
+  border: 1px solid rgba(184,150,62,0.25);
 }
-.subpage-banner-title h1 { font-size: clamp(36px, 5vw, 60px); color: var(--cream); font-weight: 300; line-height: 1.15; }
+.subpage-banner-title h1 { font-size: clamp(32px, 5vw, 54px); color: var(--navy); font-weight: 300; line-height: 1.15; }
 .subpage-content {
   position: relative;
   background-image: url('/creamseashellfloral.jpg');
