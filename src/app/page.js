@@ -4,6 +4,11 @@ import { useState } from 'react'
 
 const SERVICES = [
   {
+    title: 'Brand & Content Strategy',
+    tagline: "You've built something worth talking about. Let's make sure the world knows it.",
+    desc: "I work with small businesses, realtors, creatives, and entrepreneurs to figure out who they are and why they're worth noticing, then build the words, the web copy, the content strategy, and sometimes the website itself to show it. Whether you need a brand voice guide, a full site rewrite, newsletter copy and design, or a content plan you'll actually follow, we start with the whole picture and build from there.",
+  },
+  {
     title: 'Wedding & Event Speeches',
     tagline: 'The perfect words crafted to sound just like you.',
     desc: "Toasts, vows, ceremony scripts, and full wedding writing. Whether you're the best man, a couple building a ceremony from scratch, a parent feeling all the feels, or anyone else standing up to speak on a day that matters, we work through it together and I write words that hold the room and hold up over time.",
@@ -22,11 +27,6 @@ const SERVICES = [
     title: 'Educational Content',
     tagline: 'Thoughtful learning deserves thoughtful language.',
     desc: "Curriculum, lesson materials, course development, and learning experience writing grounded in structure, clarity, and respect for learners, whether that's a K-12 curriculum, a professional development series, or a full online course build.",
-  },
-  {
-    title: 'Brand & Content Strategy',
-    tagline: "You've built something worth talking about. Let's make sure the world knows it.",
-    desc: "I work with small businesses, realtors, creatives, and entrepreneurs to figure out who they are and why they're worth noticing, then build the words, the web copy, the content strategy, and sometimes the website itself to show it. Whether you need a brand voice guide, a full site rewrite, newsletter copy and design, or a content plan you'll actually follow, we start with the whole picture and build from there.",
   },
 ]
 
