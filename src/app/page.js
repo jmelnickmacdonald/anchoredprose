@@ -265,7 +265,7 @@ export default function Home() {
       <section className="testimonials" id="testimonials">
         <div className="testimonials-header">
           <div className="section-label" style={{ color: 'var(--gold)' }}>Kind Words</div>
-          <h2 className="section-title" style={{ color: 'var(--cream)' }}>
+          <h2 className="section-title" style={{ color: 'var(--navy)' }}>
             What Clients <span className="script-accent">Say</span>
           </h2>
         </div>
