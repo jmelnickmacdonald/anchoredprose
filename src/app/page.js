@@ -5,23 +5,23 @@ import { useState } from 'react'
 const SERVICES = [
   {
     title: 'Wedding & Event Speeches',
-    tagline: "The perfect words crafted to sound just like you.",
+    tagline: 'The perfect words crafted to sound just like you.',
     desc: "Toasts, vows, ceremony scripts, and full wedding writing. Whether you're the best man, a couple building a ceremony from scratch, a parent feeling all the feels, or anyone else standing up to speak on a day that matters, we work through it together and I write words that hold the room and hold up over time.",
   },
   {
     title: 'Memorials & Tributes',
-    tagline: "The hardest words to find are often the most important ones.",
+    tagline: 'The hardest words to find are often the most important ones.',
     desc: "Eulogies, tributes, memorial services, and celebrations of life. I'll help you say what needs to be said with care, honesty, and the kind of warmth that honours a life fully lived. You don't have to find the words alone.",
   },
   {
     title: 'Keynotes & Public Speaking',
     tagline: 'From the conference stage to the commencement address, a talk that holds a room.',
-    desc: "Keynotes, TEDx talks, professional development sessions, panel prep. Whatever you need to deliver, I work with founders, educators, and leaders to find the through-line and write the words that make their expertise land.",
+    desc: "Whether it's a keynote, a TEDx, a professional development session, or panel prep, I work with founders, educators, and leaders to find the through-line and write the words that make their expertise land.",
   },
   {
     title: 'Educational Content',
     tagline: 'Thoughtful learning deserves thoughtful language.',
-    desc: 'Curriculum, lesson materials, course development, and learning experience writing grounded in structure, clarity, and respect for learners. From K-12 to professional development to full online course builds.',
+    desc: "Curriculum, lesson materials, course development, and learning experience writing grounded in structure, clarity, and respect for learners, whether that's a K-12 curriculum, a professional development series, or a full online course build.",
   },
   {
     title: 'Brand & Content Strategy',
@@ -35,25 +35,21 @@ const PORTFOLIO_CATEGORIES = [
     title: 'Weddings & Speeches',
     desc: 'Ceremony scripts, toasts, vows, and the words people remember long after the day.',
     href: '/portfolio/weddings-speeches',
-    image: null,
   },
   {
     title: 'Writing',
     desc: 'Essays, satire, opinion, and personal writing that earns its space on the page.',
     href: '/portfolio/writing',
-    image: '/portfolio/for-a-minute-quote.png',
   },
   {
     title: 'Educational Content',
     desc: 'Curriculum, training programs, and learning resources built for real-world application.',
     href: '/portfolio/educational-content',
-    image: null,
   },
   {
     title: 'Brand & Content',
     desc: 'Social media, real estate copy, video scripts, and content that sounds like the brand behind it.',
     href: '/portfolio/brand-content',
-    image: '/portfolio/raven-house-social-2.png',
   },
 ]
 
@@ -76,7 +72,7 @@ const HOW_IT_WORKS = [
   {
     num: '04',
     title: 'You launch it.',
-    desc: "Whether you're stepping up to the mic, hitting publish, or unveiling something you've worked hard on — you do it knowing everything is exactly right.",
+    desc: "Whether you're stepping up to the mic, hitting publish, or unveiling something you've worked hard on, you do it knowing everything is exactly right.",
   },
 ]
 
@@ -139,7 +135,6 @@ export default function Home() {
   const [formStatus, setFormStatus] = useState('')
   const [formSubmitting, setFormSubmitting] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [lightboxVideo, setLightboxVideo] = useState(null)
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -192,7 +187,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT */}
       <section className="about" id="about">
         <div className="about-grid">
           <div className="about-image-wrap">
@@ -201,7 +195,7 @@ export default function Home() {
                 src="/headshot.png"
                 alt="Julianna Melnick-MacDonald — Anchored Prose"
                 width={500}
-                height={420}
+                height={380}
                 style={{ width: '100%', height: 380, objectFit: 'cover', objectPosition: 'center 25%', display: 'block' }}
               />
             </div>
@@ -229,7 +223,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICES */}
       <section className="services" id="services">
         <div className="services-header">
           <div className="section-label" style={{ color: 'var(--gold)' }}>Services</div>
@@ -248,7 +241,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PORTFOLIO — category cards */}
       <section className="portfolio" id="portfolio">
         <div className="portfolio-header">
           <div className="section-label">Portfolio</div>
@@ -260,21 +252,6 @@ export default function Home() {
         <div className="portfolio-cats">
           {PORTFOLIO_CATEGORIES.map((cat, i) => (
             <a key={i} href={cat.href} className="portfolio-cat-card">
-              <div className="portfolio-cat-image">
-                {cat.image ? (
-                  <Image src={cat.image} alt={cat.title} fill style={{ objectFit: 'cover', objectPosition: 'top' }} />
-                ) : (
-                  <div className="portfolio-cat-placeholder">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                      <path d="M8,12 L40,12 L40,36 L8,36 Z" stroke="rgba(184,150,62,0.4)" strokeWidth="1" fill="none"/>
-                      <line x1="8" y1="18" x2="40" y2="18" stroke="rgba(184,150,62,0.2)" strokeWidth="1"/>
-                      <line x1="8" y1="24" x2="40" y2="24" stroke="rgba(184,150,62,0.2)" strokeWidth="1"/>
-                      <line x1="8" y1="30" x2="32" y2="30" stroke="rgba(184,150,62,0.2)" strokeWidth="1"/>
-                    </svg>
-                  </div>
-                )}
-                <div className="portfolio-cat-overlay" />
-              </div>
               <div className="portfolio-cat-body">
                 <h3>{cat.title}</h3>
                 <p>{cat.desc}</p>
@@ -285,7 +262,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
       <section className="testimonials" id="testimonials">
         <div className="testimonials-header">
           <div className="section-label" style={{ color: 'var(--gold)' }}>Kind Words</div>
@@ -309,11 +285,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
       <section className="how-it-works" id="process">
         <div className="hiw-header">
-          <div className="section-label">The Process</div>
-          <h2 className="section-title">
+          <div className="section-label" style={{ color: 'var(--gold)' }}>The Process</div>
+          <h2 className="section-title" style={{ color: 'var(--cream)' }}>
             How we <span className="script-accent">work together.</span>
           </h2>
         </div>
@@ -333,11 +308,10 @@ export default function Home() {
           ))}
         </div>
         <p className="hiw-note">
-          Need help with the delivery itself, not just the words? I offer consulting on that too — <a href="#contact">reach out and we&apos;ll figure it out.</a>
+          Need help with the delivery itself, not just the words? I offer consulting on that too. <a href="#contact">Reach out and we&apos;ll figure it out.</a>
         </p>
       </section>
 
-      {/* BLOG */}
       <section className="blog" id="blog">
         <div className="blog-header">
           <div className="section-label">Captain&apos;s Log</div>
@@ -363,7 +337,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTACT */}
       <section className="contact" id="contact">
         <div className="contact-grid">
           <div className="contact-info">
