@@ -68,8 +68,7 @@ export default function WritingPage() {
       </div>
 
       <div style={{ background: '#F5F0E8', position: 'relative', zIndex: 10 }}>
-        <div style={{ height: '3px', background: 'var(--navy)', width: '100%' }} />
-        <div className="subpage-portfolio-grid">
+          <div className="subpage-portfolio-grid">
           {PIECES.map((p, i) => (
             <div key={i} className="portfolio-card" onClick={() => setExpanded(expanded === i ? null : i)}>
               <div className="portfolio-type">{p.type}</div>
