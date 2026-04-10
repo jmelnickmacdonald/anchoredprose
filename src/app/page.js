@@ -41,11 +41,7 @@ const PORTFOLIO_CATEGORIES = [
     desc: 'Essays, satire, opinion, and personal writing that earns its space on the page.',
     href: '/portfolio/writing',
   },
-  {
-    title: 'Educational Content',
-    desc: 'Curriculum, training programs, and learning resources built for real-world application.',
-    href: '/portfolio/educational-content',
-  },
+
   {
     title: 'Brand & Content',
     desc: 'Social media, real estate copy, video scripts, and content that sounds like the brand behind it.',
@@ -285,32 +281,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="how-it-works" id="process">
-        <div className="hiw-header">
-          <div className="section-label" style={{ color: 'var(--gold)' }}>The Process</div>
-          <h2 className="section-title" style={{ color: 'var(--cream)' }}>
-            How we <span className="script-accent">work together.</span>
-          </h2>
-        </div>
-        <div className="hiw-steps">
-          {HOW_IT_WORKS.map((step, i) => (
-            <div key={i} className="hiw-step">
-              <div className="hiw-step-num">{step.num}</div>
-              <div className="hiw-step-icon">
-                {i === 0 && <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M4,6 L28,6 L28,20 L16,20 L10,26 L10,20 L4,20 Z" stroke="var(--gold)" strokeWidth="1.2" fill="none" strokeLinejoin="round"/><line x1="10" y1="12" x2="22" y2="12" stroke="var(--gold)" strokeWidth="1" opacity="0.6"/><line x1="10" y1="15.5" x2="17" y2="15.5" stroke="var(--gold)" strokeWidth="1" opacity="0.6"/></svg>}
-                {i === 1 && <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" stroke="var(--gold)" strokeWidth="1.2"/><circle cx="16" cy="16" r="2.5" fill="var(--gold)"/><polygon points="16,7 17.5,14.5 16,13.5 14.5,14.5" fill="var(--gold)"/><polygon points="16,25 17.5,17.5 16,18.5 14.5,17.5" fill="var(--gold)" opacity="0.4"/></svg>}
-                {i === 2 && <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M7,25 L11,21 L23,9 L25,11 L13,23 Z" stroke="var(--gold)" strokeWidth="1.2" fill="none" strokeLinejoin="round"/><line x1="21" y1="7" x2="25" y2="11" stroke="var(--gold)" strokeWidth="1.2"/><line x1="7" y1="25" x2="12" y2="25" stroke="var(--gold)" strokeWidth="1.2"/></svg>}
-                {i === 3 && <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16,4 L18.5,12 L27,12.5 L21,17.5 L23,26 L16,21.5 L9,26 L11,17.5 L5,12.5 L13.5,12 Z" stroke="var(--gold)" strokeWidth="1.2" fill="none" strokeLinejoin="round"/></svg>}
-              </div>
-              <h3 className="hiw-step-title">{step.title}</h3>
-              <p className="hiw-step-desc">{step.desc}</p>
-            </div>
-          ))}
-        </div>
-        <p className="hiw-note">
-          Need help with the delivery itself, not just the words? I offer consulting on that too. <a href="#contact">Reach out and we&apos;ll figure it out.</a>
-        </p>
-      </section>
 
       <section className="blog" id="blog">
         <div className="blog-header">
@@ -326,6 +296,7 @@ export default function Home() {
                 <div className="blog-card-category">{post.category} · {post.date}</div>
                 <h3>{post.title}</h3>
                 <p>{post.excerpt}</p>
+                <p style={{fontFamily:"'Crimson Pro',Georgia,serif",fontSize:'13px',letterSpacing:'2px',textTransform:'uppercase',color:'var(--gold)',marginTop:'16px'}}>Coming soon to Captain&apos;s Log</p>
               </div>
             ))}
           </div>
